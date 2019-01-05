@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>IA Registration</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <div id="signupbox" style=" margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <div class="panel-title">Registration Form</div>
+        </div>
+        <div class="panel-body" >
+          <form method="get" action="">
+            <form  class="form-horizontal" method="post" >
+              <div class="form-group">
+                <label for="ques"  class="col-md-12"> Are you a student or an entrepreneur?</label>
+                <div class="controls col-md-12 "  style="margin-bottom: 10px">
+                  <label class="radio-inline"><input type="radio" name="ques" value="student" onclick="showblockstu()" style="margin-bottom: 10px">Student</label>
+                  <label class="radio-inline"><input type="radio" name="ques" value="entre" onclick="showblockent()"style="margin-bottom: 10px">Entrepreneur</label>
+                  </div>
+              </div>
+
+						  <div id="stusection" style="display: none">
+							  <div class="form-group">
+                  <label class="control-label col-md-5">Your Name </label>
+                  <div class="col-md-7 ">
+                    <input class="form-control" style="margin-bottom: 10px" type="text" />
+                  </div>
+							  </div>
+							  <div class="form-group required">
+								  <label class="control-label col-md-5">College/University Name </label>
+								  <div class="col-md-7 ">
+									  <input class="form-control" style="margin-bottom: 10px" type="text" />
+								  </div>
+							  </div>
+						  </div>
+
+						  <div id="entresection" style="display: none">
+							  <div id="div_id_username" class="form-group">
+                  <label class="col-md-5">Company's Name </label>
+                  <div class="col-md-7 ">
+                    <input class="form-control" style="margin-bottom: 10px" type="text" />
+                  </div>
+							  </div>
+							  <div class="form-group required">
+								  <label class="col-md-5">Number of Co-founders </label>
+								  <div class="controls col-md-2 ">
+									  <input class="form-control" id="num" type="number" min="1" onchange="viewDetail()" style="margin-bottom: 10px" type="number"/>
+							  	</div>
+							  </div>
+						  	<div class="alert alert-danger col-md-12">
+								  <strong>Note:</strong> Rs.1000 for the first Co-founder and Rs.500 for the additionals.
+							  </div>
+							  <div id="entrepreneurFounder">
+
+							  </div>
+						  </div>
+
+              <div id="secondques" class="form-group">
+                <label class="control-label col-md-12  requiredField">Are you interested in showing your startup with a Staff? (Rs.5000)</label>
+                <div class="controls col-md-12 "  style="margin-bottom: 10px">
+                  <label class="radio-inline"> <input type="radio" name="choice" value="yes" style="margin-bottom: 10px">Yes</label>
+                  <label class="radio-inline"> <input type="radio" name="choice" value="no" style="margin-bottom: 10px">No</label>
+                </div>
+              </div>
+
+  						<div id="thirdques" class="form-group">
+                <label class="control-label col-md-12">Are you interested in attending dinner and net? (Rs.800/person)</label>
+                <div class="col-md-12 "  style="margin-bottom: 10px">
+                  <label class="radio-inline"> <input type="radio" name="third" value="yes" style="margin-bottom: 10px">Yes</label>
+                  <label class="radio-inline"> <input type="radio" name="third" value="no" style="margin-bottom: 10px">No</label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="col-md-5"></div>
+                <div class="col-md-7">
+                  <input type="submit" name="Register" value="Register" class="btn btn-primary"/>
+                </div>
+              </div>
+            </form>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+</body>
+<html>
