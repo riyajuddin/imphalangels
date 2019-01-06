@@ -102,7 +102,7 @@ $this->load->view ( 'registration/payment_checkout');
                 $errorMSG = "Co-founder name is required";
             }
             // **********************MULTIPLE FILE UPLOAD START *****************************************
-            
+         /*   
             $file_path = "./uploads/file/";
             $uploadFiles = array();
             $is_file_error = FALSE;
@@ -162,6 +162,7 @@ $this->load->view ( 'registration/payment_checkout');
                 $errorMSG = "File upload Error !!! Please try again later ...";
             }
             
+			*/
             //***********END OF MULTIPLE FILE UPLOAD*****************************************
             
             
