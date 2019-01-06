@@ -54,6 +54,9 @@ $route['default_controller'] = "home";
 $route['event'] = "home/event";
 
 $route['registration'] = "registration";
+$route['payment_checkout'] = "registration/payment_checkout";
+
+
 
 
 $route['404_override'] = '';

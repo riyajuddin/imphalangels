@@ -26,11 +26,21 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800" rel="stylesheet">
 	<!-- Montserrat for title -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
- 
+
  
 
   </head>
-  <body>
+  <script>
+    var hash = '<?php echo $hash ?>';
+    function submitPayuForm() {
+      if(hash == '') {
+        return;
+      }
+      var payuForm = document.forms.payuForm;
+      payuForm.submit();
+    }
+  </script>
+  <body >
   	
   	<!-- Start Header -->
 	<header id="mu-hero" class="" role="banner">

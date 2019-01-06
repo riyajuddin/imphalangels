@@ -14,8 +14,75 @@ class Registration extends CI_Controller
        $this->load->view ( 'registration/home');
     }
 	
-//
+public function payment_checkout()
+{
+$this->load->view ( 'registration/payment_checkout');
+}
+
  public function student_form() 
+    {                             
+      // $_POST = json_decode(trim(file_get_contents('php://input')), true);
+      $errorMSG ='';
+      // print_r($_POST["name"]); die();   
+    try {
+        if (empty($_POST["name"])) {
+            $errorMSG = "Name is required";
+        }
+        elseif (empty($_POST["college"])) {
+            $errorMSG = "University/College name is required";
+        }
+        elseif (empty($_POST["email"])) {
+            $errorMSG = "Email is required";
+        } 
+        elseif (empty($_POST["contact"])) {
+            $errorMSG = "Mobile number is required !";
+        } 
+           
+   
+
+        $status = array("success"=>false,"msg"=>$errorMSG);
+        if(empty($errorMSG)){
+
+            $name = $this->input->post('name', TRUE); 
+            $college =$this->input->post('college', TRUE); 
+            $email = $this->input->post('email', TRUE); 
+            $contact = $this->input->post('contact', TRUE); 
+            $dinner_attend = $this->input->post('dinner_attend', TRUE); 
+            if($dinner_attend=='')
+            {
+
+              $dinner_attend="0";
+            }
+            $amount = "500"; 
+            $type="stuent";
+
+            $datas['name'] = $name;
+            $datas['college'] = $college;
+            $datas['email'] = $email;
+            $datas['contact'] = $contact;
+            $datas['type']='stuent';
+            $datas['dinner_attend']=$dinner_attend;
+            $datas['amount']="800";
+
+            $result = $this->transaction->student_form_add($name,$college,$email,$contact,$dinner_attend,$type,$amount); 
+
+           
+            $status = array('success' => true,
+                             'html'=>$this->load->view('registration/datafragment/payment_form',$datas, true),
+                            'msg'=> "Page successfully generated"
+            );
+        }else{
+              $status = array("success" => false,"msg" => $errorMSG); 
+            }
+        } catch (Exception $ex) {
+            $status = array("success" => false,"msg" => $ex->getMessage());
+        }
+
+      echo json_encode($status); 
+    }
+
+
+    public function ent_form() 
     {                             
       // $_POST = json_decode(trim(file_get_contents('php://input')), true);
       $errorMSG ='';
@@ -124,6 +191,7 @@ class Registration extends CI_Controller
 
             $result = $this->transaction->student_form_add($name,$college,$email,$contact,$dinner_attend,$type,$amount); 
 
+           
             $status = array('success' => true,
                              'html'=>$this->load->view('registration/datafragment/payment_form',$datas, true),
                             'msg'=> "Page successfully generated"
@@ -137,9 +205,6 @@ class Registration extends CI_Controller
 
       echo json_encode($status); 
     }
-
-
-
 
 
 

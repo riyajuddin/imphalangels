@@ -476,10 +476,10 @@
 									
 				
 								
-									<a class="mu-register-btn" onclick="showblockstu()" href="#mu-register"> Student</a>
-									<a class="mu-register-btn" onclick="showblockent()" href="#mu-register"> Entrepeneur</a>
-									
-
+									<div align="center">
+										<a class="mu-register-btn" onclick="showblockstu()" href="#mu-register"> Student</a>
+										<a class="mu-register-btn" onclick="showblockent()" href="#mu-register"> Entrepeneur</a>
+									</div>
 								</div>
 							</div>
 
@@ -499,31 +499,34 @@
 							<div class="mu-title-area">
 								<h2 class="mu-title">Registar as Student</h2>
 							</div>
-
+								<p align="center">Access to all sessions
+Include light lunch
+*Limited to only 1 person
+</p>
 							<div class="mu-register-content">
 								<form class="mu-register-form" id="student_form_field"  >
 
 									<div class="row">
 										<div class="col-md-6">
 											<div class="form-group">                
-												<input type="text" class="form-control name" placeholder="Your Full Name" id="name" name="name" >
+												<input type="text" class="form-control name" required placeholder="Your Full Name" id="name" name="name" >
 											</div>
 										</div>
 
 										<div class="col-md-6">
 											<div class="form-group">                
-												<input type="text" class="form-control name" placeholder="College/University Name" id="college" name="college" >
+												<input type="text" class="form-control name" required placeholder="College/University Name" id="college" name="college" >
 											</div>     
 										</div>
 										<div class="col-md-6">
 											<div class="form-group">                
-												<input type="text" class="form-control number" maxlength="10" placeholder="Mobile" id="contact" name="contact" >
+												<input type="text" class="form-control number" required maxlength="10" placeholder="Mobile" id="contact" name="contact" >
 											</div>
 										</div>
 
 										<div class="col-md-6">
 											<div class="form-group">                
-												<input type="email" class="form-control email" placeholder="Email" id="email" name="email" required="">
+											<input type="email" class="form-control " required placeholder="Email" id="email" name="email"  >
 											</div>     
 										</div>
 										<div class="col-md-12">
@@ -541,7 +544,11 @@
 							<div class="mu-title-area">
 								<h2 class="mu-title">Registar as Entrepeneur</h2>
 							</div>
-
+								<p align="center">Access to all sessions
+								Include light lunch
+								Opportunity to pitch to Investors
+								Limited to only 1 person  
+								</p>
 							<div class="mu-register-content">
 								<form class="mu-register-form">
 
@@ -550,18 +557,48 @@
 									<div class="container-fluid">	
 										<div class="col-md-8">
 											<div class="form-group">                
-												<input type="text" class="form-control" placeholder="Company Name" id="name" name="name" required="">
+												<input type="text" class="form-control name" placeholder="Company Name" id="company_name" name="company_name" required="">
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">                
+												<input type="text" class="form-control number" placeholder=" Contact" id="company_contact" name="company_name" required="">
+											</div>
+										</div>
+										<div class="col-md-8">
+											<div class="form-group">                
+												<input type="email" class="form-control email" placeholder=" email" id="company_email" name="company_name" required="">
 											</div>
 										</div>
 
 										<div class="col-md-4">
 											<div class="form-group">                
-												<input id="num" type="number" min="1" onchange="viewDetail()" onkeyup="viewDetail()" class="form-control" placeholder="No. of Co-founder"  name="college" required="">
+												<input id="founder_no" type="number" min="1" onchange="viewDetail()" onkeyup="viewDetail()" class="form-control number" placeholder="No. of Co-founder"  name="founder_no" required="">
 											</div>     
 										</div>
 										
 											<div id="entrepreneurFounder">
-											</div>  
+											</div> 
+											
+										  <div class="" align="left">
+											<label class="radio-inline" style="color:white;padding-left: 0px;"><input type="checkbox" name="file_upload" id="get_chance"   style="margin: 0px 15px;margin-bottom: 10px; color:white;">Are you interested in showcasing your startup with a startup stall? (Rs. 3000 per stall )
+</label>
+					 					</div>
+					 					<br>
+
+											<div class="" align="left">
+											<label class="radio-inline" style="color:white;padding-left: 0px;"><input type="checkbox" name="file_upload" id="viewFileUpload" onclick="myFunction()"  style="margin: 0px 15px;margin-bottom: 10px; color:white;">
+
+											*10 startups will be selected to pitch in front of the investors and also get a chance to win Rs.2 Lakhs on the spot. Are you intersted in pitching?
+</label>
+					 					</div>
+					 					<div class="col-md-4">
+											<div class="form-group">   
+											<br>             
+												<input id="pitch_file" type="file" min="1"  class=" number" style=" display: none;color:white;" placeholder="No. of Co-founder"  name="pitch_file" required="">
+											</div>     
+										</div>
+
 										</div>
 									</div>
 
@@ -831,11 +868,10 @@
     
       <!-- Modal content-->
       <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title">Payment details</h4>
-        </div>
+       
         <div class="modal-body">
 	         <div id="payment_modal"></div>
+	         
         </div>
        
 
@@ -852,7 +888,7 @@
 
 		$(document).ready(function(){
 
-			// Function to get input value.
+			// student to get input value.
 			$('#student_form').click(function() {
 
 
@@ -869,18 +905,85 @@
 				     flag=1;
 					return false;
 					}else{ $('#name').removeClass("warning_color");}
-				if($('#email').val().trim() == '') {
-					 $('#email').focus();
-				     $('#email').addClass("warning_color");
-				     flag=1;
-					return false;
-					}else{ $('#name').removeClass("warning_color");}
+				
 				if($('#contact').val().trim() == '') {
 					 $('#contact').focus();
 				     $('#contact').addClass("warning_color");
 				     flag=1;
 					return false;
 					}else{ $('#name').removeClass("warning_color");}
+				if($('#email').val().trim() == '') {
+					 $('#email').focus();
+				     $('#email').addClass("warning_color");
+				     flag=1;
+					return false;
+					}else{ $('#name').removeClass("warning_color");}
+
+					if(flag!=1)
+					{
+
+
+						 var form_data = new FormData($('#student_form_field')[0]); 
+					
+				         $.ajax({
+				          type: "post",
+				          url: "<?php echo site_url() . '/registration/student_form'; ?>",
+				          data: form_data,
+				          processData: false,
+				          contentType: false,
+				          dataType: 'json',
+				          success: function(response){
+				      
+				            
+				          try{       
+				               if (response.success)
+				               {
+
+				                 //   swal(response.msg);
+				                    $('#payment_modal').html(response.html);
+				                    $('.modal').modal('show');
+				                   
+				               } else
+				               { 
+				                   swal(response.msg);
+				               }
+				          }catch(e) {  
+				              swal(e);
+				          }  
+				          },
+				          error: function(){      
+				              swal("Error while request..");
+				          }
+				         });
+											
+					}
+				
+					
+					});
+				
+
+				});
+		//student data end here
+		
+		/* Entrepeneur to get input value.
+			$('#Entrepeneur_form').click(function() {
+
+
+				var flag="";
+				if($('#company_name').val().trim() == '') {
+					 $('#company_name').focus();
+				     $('#company_name').addClass("warning_color");
+				     flag=1;
+					return false;
+					}else{ $('#company_name').removeClass("warning_color");}
+				if($('#founder_no').val().trim() == '') {
+					$('#founder_no').focus();
+				     $('#founder_no').addClass("warning_color");
+				     flag=1;
+					return false;
+					}else{ $('#founder_no').removeClass("warning_color");}
+				
+
 
 
 					if(flag!=1)
@@ -927,12 +1030,22 @@
 				
 
 				});
-		
+		/Entrepeneur data end here
+*/
 
 
 
-
-   
+  
+ function myFunction(){
+  var viewFileUpload = document.getElementById("viewFileUpload");
+  var pitch_file = document.getElementById("pitch_file");
+  if (viewFileUpload.checked == true){
+    pitch_file.style.display = "block";
+  }
+   else {
+     pitch_file.style.display = "none";
+  }
+}
 	
 		function showblockstu() {
 			document.getElementById('entresection').style.display = "none";
@@ -945,7 +1058,7 @@
 		}
 
 		function viewDetail() {
-		var num = document.getElementById('num').value;
+		var num = document.getElementById('founder_no').value;
 		$('#entrepreneurFounder').empty();
 		
 		if(num > 25)
@@ -956,7 +1069,7 @@
 		{
 			for(var i=0;i<num;i++) 
 		{
-		$('#entrepreneurFounder').append('<div class="col-md-8"><div class="form-group"><input type="text" class="form-control" placeholder="Co-founder name '+(i+1)+'" id="name" name="cofounderName[]" required=""></div></div><div class="col-md-4" style="text-align:left;"><label class="radio-inline" style="color:white; "><input type="checkbox" name="ques" value="student" onclick="showblockstu()" style="margin: 19px 10px 0px 0px; color:white;">Dinner attend</label></div>');
+		$('#entrepreneurFounder').append('<div class="col-md-8"><div class="form-group"><input type="text" class="form-control" placeholder="Co-founder name '+(i+1)+'" id="name" name="cofounderName[]" required=""></div></div><div class="col-md-4" style="text-align:left;"><label class="radio-inline" style="color:white; "><input type="checkbox" name="ques" value="1"  style="margin: 19px 10px 0px 0px; color:white;">Dinner attend</label></div>');
 		}
 		}
 		

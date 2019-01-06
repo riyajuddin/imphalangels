@@ -1,45 +1,35 @@
-                            <!-- form card cc payment -->
-                    <div class="card card-outline-secondary">
-                        <div class="card-body">
-                         
-<?php
-echo $this->session->userdata('user_id');
-echo $this->session->userdata('user_amount');
-echo $this->session->userdata('user_type');
 
-
-
-
-
-
-
-//
-
+                <?php
+$this->session->set_userdata('pay',0);
 // Merchant key here as provided by Payu
 $MERCHANT_KEY = "ej6pDHZi";
- 
+
 // Merchant Salt as provided by Payu
 $SALT = "MVpQVkMo1R";
- 
+
 // End point - change to https://secure.payu.in for LIVE mode
-$PAYU_BASE_URL = "https://test.payu.in";
- 
+$PAYU_BASE_URL = "https://secure.payu.in";
+
 $action = '';
- 
+
 $posted = array();
 if(!empty($_POST)) {
     //print_r($_POST);
   foreach($_POST as $key => $value) {    
     $posted[$key] = $value; 
- 
+    
   }
 }
- 
+
 $formError = 0;
- 
+
 if(empty($posted['txnid'])) {
   // Generate random transaction id
   $txnid = substr(hash('sha256', mt_rand() . microtime()), 0, 20);
+  $hashKey=generateRandomString(50);
+//$sql="INSERT INTO `payment`(`amount`, `status`, `tranc_id`, `ref_id`)VALUES ('$amount','INCOMPLETE','$txnid','$hashKey')";
+  
+ //$query=$this->db->query($sql);
 } else {
   $txnid = $posted['txnid'];
 }
@@ -57,21 +47,21 @@ if(empty($posted['hash']) && sizeof($posted) > 0) {
           || empty($posted['productinfo'])
           || empty($posted['surl'])
           || empty($posted['furl'])
-   || empty($posted['service_provider'])
+          || empty($posted['service_provider'])
   ) {
     $formError = 1;
   } else {
     //$posted['productinfo'] = json_encode(json_decode('[{"name":"tutionfee","description":"","value":"500","isRequired":"false"},{"name":"developmentfee","description":"monthly tution fee","value":"1500","isRequired":"false"}]'));
- $hashVarsSeq = explode('|', $hashSequence);
-    $hash_string = ''; 
- foreach($hashVarsSeq as $hash_var) {
+    $hashVarsSeq = explode('|', $hashSequence);
+    $hash_string = '';  
+    foreach($hashVarsSeq as $hash_var) {
       $hash_string .= isset($posted[$hash_var]) ? $posted[$hash_var] : '';
       $hash_string .= '|';
     }
- 
+
     $hash_string .= $SALT;
- 
- 
+
+
     $hash = strtolower(hash('sha512', $hash_string));
     $action = $PAYU_BASE_URL . '/_payment';
   }
@@ -80,63 +70,81 @@ if(empty($posted['hash']) && sizeof($posted) > 0) {
   $action = $PAYU_BASE_URL . '/_payment';
 }
 
+function generateRandomString($length = 20) {
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyz981u9unakhkkjhJHJGYFUFGKUGWW';
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, strlen($characters) - 1)];
+    }
+    return $randomString;
+}
+
+
 ?>
-                           <form action="<?php echo $action; ?>" method="post" name="payuForm">
-      <input type="hidden" name="key" value="<?php echo $MERCHANT_KEY ?>" />
+
+ 
+   
+    
+
+    
+    <div class="">
+    <div class="row">
+    <div class="col-md-12">
+  <div id="Checkout" class="inline">
+      <h1>Pay Invoice</h1>
+      <div class="card-row">
+         <img src="https://www.payumoney.com//media/images/payby_payumoney/buttons/213.png" />
+      </div>
+          <br/>
+ 
+
+        <form action="<?php echo $action; ?>" method="post" name="payuForm">
+       
+          <div class="form-group">
+              <label for="PaymentAmount">Payment amount</label>
+              <div class="amount-placeholder">
+                  <span>Rs.</span>
+                  <span><?php echo $this->session->userdata('user_amount');?>.00</span>
+              </div>
+          </div>
+             <?php if($formError) { ?>
+      <span style="color:red">Please fill all mandatory fields.</span>   
+    <?php } ?>
+          <input type="hidden" name="amount" value="<?php echo $this->session->userdata('user_amount');?>"/>
+           <input type="hidden" name="key" value="<?php echo $MERCHANT_KEY ?>" />
       <input type="hidden" name="hash" value="<?php echo $hash ?>"/>
       <input type="hidden" name="txnid" value="<?php echo $txnid ?>" />
+          <div class="form-group">
+              <label for="firstname">Firstname<span style="color:red" >*</span></label>
+              <input name="firstname" class="form-control" id="firstname" value="<?php echo $name;?>" />
+            
+          </div>
+          <div class="form-group">
+              <label for="email">Email<span style="color:red" >*</span></label>
+              <input class="form-control" name="email" id="email" value="<?php echo $email;?>" />
+          </div>
 
+          <div class="form-group">
+              <label for="phone">Phone<span style="color:red" >*</span></label>
+              <input id="phone" class="form-control" name="phone" value="<?php echo $contact;?>" />
+          </div>
 
-                                <input type="hidden" name="service_provider" value="payu_paisa" size="64" />
+       
+         <input type="hidden"  name="surl" value="<?php echo base_url();?>registration/payment/payment_success" size="64" />
+         <input type="hidden" name="furl" value="<?php echo base_url();?>registration/payment/payment_fail" size="64" />
+         <input type="hidden" name="service_provider" value="payu_paisa" size="64" />
+            <?php if(!$hash) { ?>
+           <button id="PayButton" class="btn btn-block btn-success submit-button" type="submit">
+              <span class="align-middle">Pay Rs.<?php echo $this->session->userdata('user_amount');?>.00</span>
+          </button>
+          <?php } ?>
+          
+      </form>
+  </div>
+  </div>
+  </div>
+</div>
 
-                                    <div class="form-group">
-                                        <label>University/College</label>
-                                        <input type="text" class="form-control name" readonly="" id="college" value="<?php echo $college;?>" maxlength="20"  required="">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
+  
 
-                                <div class="col-md-6">    
-                                    <div class="form-group">
-                                        <label for="name">Name</label>
-                        <input type="text" class="form-control name" readonly="" id="name" value="<?php echo $name;?>"  required="required">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label>Mobile</label>
-                                        <input type="text" class="form-control number" readonly="" id="contact"  value="<?php echo $contact;?>" maxlength="10"  required="">
-                                    </div>
-                                </div>
-                                
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label>Email</label>
-                                        <input type="text" class="form-control email" readonly="" id="email" value="<?php echo $email;?>"  maxlength="50"  required="">
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <p>
-                                            *Access to all sessions Include light lunch
-                                        <br>*You are allowed to attend dinner and net
-                                        <br>*Limited to only 1 person
-
-                                    </p>
-                                </div>
-
-                               
-
-                                <div class="form-group row">
-                                    <div class="col-md-6">
-                                        <button type="reset" class="btn btn-danger btn-lg btn-block" data-dismiss="modal" id="payment_canceled">Cancel</button>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <button type="submit" id="PayButton" class="btn btn-success btn-lg btn-block">Pay Rs.<?php echo $this->session->userdata('user_amount');?> </button>
-                                    </div>
-                                </div>
-                            </form>
-
-
-                        </div>
-                    </div>
-                    <!-- /form card cc payment -->
+             </div>
