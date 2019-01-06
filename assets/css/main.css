@@ -2398,7 +2398,9 @@ html.no-csstransitions .home-content__main {
         display: block;
         height: 1px;
         width: 250px;
-        background-color: rgba(255, 255, 255, 0.25);
+/*        background-color: rgba(255, 255, 255, 0.25);
+*/
+        background-color: transparent;
         position: absolute;
         bottom: 0;
         left: 50%;
@@ -2576,7 +2578,7 @@ html.no-csstransitions .home-content__main {
 
 .event__inside {
     font-family: "montserrat-bold", sans-serif;
-    font-size: 8.4rem;
+    font-size: 7.4rem;
     line-height: 1;
     color: #FFFFFF;
     position: relative;

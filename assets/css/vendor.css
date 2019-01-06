@@ -1916,3 +1916,43 @@ a.pswp__share--download:hover {
 
 
 /*# sourceMappingURL=vendor.css.map */
+
+
+
+
+/*SWEET ALERT STYLE HERE*/
+.swal-button {
+    background-color: transparent !important;
+    color: #b3b3b3 !important;
+    border: 2px solid !important;
+    box-shadow: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 0px 16px !important; 
+    margin: 0;
+    cursor: pointer;
+}
+
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.upload_btn {
+    border: 2px solid #ffffff;
+    color: white;
+    background-color: transparent;
+    border-radius: 0px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
