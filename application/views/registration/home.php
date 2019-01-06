@@ -520,14 +520,14 @@ Include light lunch
 										</div>
 										<div class="col-md-6">
 											<div class="form-group">                
-												<input type="text" class="form-control number" required maxlength="10" placeholder="Mobile" id="contact" name="contact" >
+												<input type="text" class="form-control number" required maxlength="10"  placeholder="Mobile" id="contact" name="contact" >
 											</div>
 										</div>
 
 										<div class="col-md-6">
 											<div class="form-group">                
-											<input type="email" class="form-control " required placeholder="Email" id="email" name="email"  >
-											</div>     
+												<input type="email" class="form-control email" placeholder=" Email" id="email" name="email" required="">
+											</div>   
 										</div>
 										<div class="col-md-12">
 											<label class="radio-inline" style="color:white; "><input type="checkbox" name="dinner_attend" id="dinner_attend" value="1"  style="margin: 0px 15px;margin-bottom: 10px; color:white;">Are you interested in attending dinner and net? (Rs.800/person)</label>
@@ -540,7 +540,7 @@ Include light lunch
 							</div>
 						</div>
 						
-						<div class="mu-register-area" id="entresection">
+						<div class="mu-register-area" id="enterepeneur">
 							<div class="mu-title-area">
 								<h2 class="mu-title">Registar as Entrepeneur</h2>
 							</div>
@@ -550,8 +550,8 @@ Include light lunch
 								Limited to only 1 person  
 								</p>
 							<div class="mu-register-content">
-								<form class="mu-register-form">
-
+								
+								<?php echo form_open('registration/ent_form', 'class="mu-register-form"' ); ?>
 									<div class="row">
 										
 									<div class="container-fluid">	
@@ -573,7 +573,7 @@ Include light lunch
 
 										<div class="col-md-4">
 											<div class="form-group">                
-												<input id="founder_no" type="number" min="1" onchange="viewDetail()" onkeyup="viewDetail()" class="form-control number" placeholder="No. of Co-founder"  name="founder_no" required="">
+												<input id="founder_no" type="number" min="1" onchange="viewDetail()" onkeyup="viewDetail()" class="form-control number" placeholder="No. of Co-founder"   name="founder_no" required="">
 											</div>     
 										</div>
 										
@@ -595,14 +595,14 @@ Include light lunch
 					 					<div class="col-md-4">
 											<div class="form-group">   
 											<br>             
-												<input id="pitch_file" type="file" min="1"  class=" number" style=" display: none;color:white;" placeholder="No. of Co-founder"  name="pitch_file" required="">
+												<input id="pitch_file" type="file" min="1"  class=" number" style=" display: none;color:white;" placeholder="No. of Co-founder"  name="pitch_file" >
 											</div>     
 										</div>
 
 										</div>
 									</div>
 
-									<button type="submit" class="mu-reg-submit-btn">SUBMIT</button>
+									<button type="submit" class="mu-reg-submit-btn" >SUBMIT</button>
 
 					            </form>
 							</div>
@@ -816,48 +816,7 @@ Include light lunch
 		<!-- End Sponsors -->
 
 
-		<!-- Start Contact -->
-		<section id="mu-contact">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="mu-contact-area">
-
-							<div class="mu-title-area">
-								<h2 class="mu-heading-title">Contact Us</h2>
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
-							</div>
-
-							<!-- Start Contact Content -->
-							<div class="mu-contact-content">
-								<div class="row">
-
-								<div class="col-md-12">
-									<div class="mu-contact-form-area">
-										<div id="form-messages"></div>
-											<form id="ajax-contact" method="post" action="mailer.php" class="mu-contact-form">
-												<div class="form-group">                
-													<input type="text" class="form-control" placeholder="Name" id="name" name="name" required>
-												</div>
-												<div class="form-group">                
-													<input type="email" class="form-control" placeholder="Enter Email" id="email" name="email" required>
-												</div>              
-												<div class="form-group">
-													<textarea class="form-control" placeholder="Message" id="message" name="message" required></textarea>
-												</div>
-												<button type="submit" class="mu-send-msg-btn"><span>SUBMIT</span></button>
-								            </form>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- End Contact Content -->
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- End Contact -->
+		
 
 	</main>
 
@@ -965,8 +924,8 @@ Include light lunch
 				});
 		//student data end here
 		
-		/* Entrepeneur to get input value.
-			$('#Entrepeneur_form').click(function() {
+		// Entrepeneur to get input value.
+			$('#ent_form').click(function() {
 
 
 				var flag="";
@@ -976,6 +935,28 @@ Include light lunch
 				     flag=1;
 					return false;
 					}else{ $('#company_name').removeClass("warning_color");}
+				
+				if($('#company_contact').val().trim() == '') {
+					 $('#company_contact').focus();
+				     $('#company_contact').addClass("warning_color");
+				     flag=1;
+					return false;
+					}else{ 
+						if($('#company_contact').val().length < 10)
+						{
+						 $('#company_contact').addClass("warning_color");
+					     flag=1;
+						 return false;
+						}
+						
+						$('#company_contact').removeClass("warning_color");
+					}
+				if($('#company_email').val().trim() == '') {
+					 $('#company_email').focus();
+				     $('#company_email').addClass("warning_color");
+				     flag=1;
+					return false;
+					}else{ $('#company_email').removeClass("warning_color");}
 				if($('#founder_no').val().trim() == '') {
 					$('#founder_no').focus();
 				     $('#founder_no').addClass("warning_color");
@@ -990,11 +971,11 @@ Include light lunch
 					{
 
 
-						 var form_data = new FormData($('#student_form_field')[0]); 
+						 var form_data = new FormData($('#ent_form_field')[0]); 
 					
 				         $.ajax({
 				          type: "post",
-				          url: "<?php echo site_url() . '/registration/student_form'; ?>",
+				          url: "<?php echo site_url() . '/registration/ent_form'; ?>",
 				          data: form_data,
 				          processData: false,
 				          contentType: false,
@@ -1029,9 +1010,8 @@ Include light lunch
 					});
 				
 
-				});
-		/Entrepeneur data end here
-*/
+	//Entrepeneur data end here
+
 
 
 
@@ -1048,12 +1028,12 @@ Include light lunch
 }
 	
 		function showblockstu() {
-			document.getElementById('entresection').style.display = "none";
+			document.getElementById('enterepeneur').style.display = "none";
 			document.getElementById('stusection').style.display = "block";
 		}
 
 		function showblockent() {
-			document.getElementById('entresection').style.display = "block";
+			document.getElementById('enterepeneur').style.display = "block";
 			document.getElementById('stusection').style.display = "none";
 		}
 

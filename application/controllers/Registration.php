@@ -84,126 +84,29 @@ $this->load->view ( 'registration/payment_checkout');
 
     public function ent_form() 
     {                             
-      // $_POST = json_decode(trim(file_get_contents('php://input')), true);
-      $errorMSG ='';
-      // print_r($_POST["name"]); die();   
-    try {
-        if (empty($_POST["name"])) {
-            $errorMSG = "Name is required";
-        }
-        elseif (empty($_POST["college"])) {
-            $errorMSG = "University/College name is required";
-        }
-        elseif (empty($_POST["email"])) {
-            $errorMSG = "Email is required";
-        } 
-        elseif (empty($_POST["contact"])) {
-            $errorMSG = "Mobile number is required !";
-        } 
-           
-    /*    
-        // ********************** MULTIPLE FILE UPLOAD START *****************************************
+            
 
-            $file_path = "./uploads/" . $GLOBALS['db'] . "/issue/";
-            $uploadFiles = array();
-            $is_file_error = FALSE;
+        $company_name = $_POST["company_name"];
+        $company_contact = $_POST["company_contact"];
+        $company_email = $_POST["company_email"];
+        $founder_no = $_POST["founder_no"];
 
-            if (isset($_FILES['files'])) { 
-                if (!is_dir('uploads/' . $GLOBALS['db'] . '/issue')) {
-                    mkdir('./uploads/' . $GLOBALS['db'] . '/issue', 0777, TRUE);
+        $this->form_validation->set_rules('company_name', 'Company Name', 'trim|required|min_length[5]');
+        $this->form_validation->set_rules('company_contact', 'Company contact', 'trim|required|numeric|min_length[10]|max_length[10]');
+        $this->form_validation->set_rules('company_email', 'Company email', 'trim|required|valid_email');
+        $this->form_validation->set_rules('founder_no', 'Co-founder no.', 'trim|required'); 
+
+         if ($this->form_validation->run() == FALSE)
+                {
+                        $this->load->view('myform');
                 }
-
-                // Count total files
-                $countfiles = count($_FILES['files']['name']);
-
-                // Looping all files
-                for($i=0;$i<$countfiles;$i++){
-         
-                    if(!empty($_FILES['files']['name'][$i])){
-             
-                         // Define new $_FILES array - $_FILES['file']
-                         $new_name = time().$_FILES['files']['name'][$i];
-
-                          $_FILES['file']['name'] = $new_name;
-                          $_FILES['file']['type'] = $_FILES['files']['type'][$i];
-                          $_FILES['file']['tmp_name'] = $_FILES['files']['tmp_name'][$i];
-                          $_FILES['file']['error'] = $_FILES['files']['error'][$i];
-                          $_FILES['file']['size'] = $_FILES['files']['size'][$i];
-
-                          // Set preference
-                          $config['upload_path'] = $file_path; 
-                          $config['allowed_types'] = 'jpg|jpeg|png|gif|zip|rar|avi|flv|wmv|mp3|wav|mp4|pdf|doc|docx|txt|xlsx|';
-                          $config['max_size'] = '100000'; // max_size in kb
-                          $config['file_name'] = $new_name;
-                 
-                          //Load upload library
-                          $this->load->library('upload',$config); 
-                 
-                          // File upload
-                          if($this->upload->do_upload('file')){
-                          // Get data about the file
-                            $uploadFiles[$i] = $this->upload->data();
-                          }
-                          else {
-                            $is_file_error = TRUE;
-                          }
-                    }
+                else
+                {
+                        $this->load->view('formsuccess');
+                }
+        
+           
  
-                }
-            }
-
-            // There were errors, we have to delete the uploaded files
-            if ($is_file_error) {
-                for ($i = 0; $i < count($uploadFiles); $i++) {
-                    $file = $file_path . $uploadFiles[$i]['file_name'];
-                    if (file_exists($file)) {
-                        unlink($file);
-                    }
-                } 
-                $errorMSG = "File upload Error !!! Please try again later ...";
-            }
-
-      */  //***********END OF MULTIPLE FILE UPLOAD***************************************** 
-
-        $status = array("success"=>false,"msg"=>$errorMSG);
-        if(empty($errorMSG)){
-
-            $name = $this->input->post('name', TRUE); 
-            $college =$this->input->post('college', TRUE); 
-            $email = $this->input->post('email', TRUE); 
-            $contact = $this->input->post('contact', TRUE); 
-            $dinner_attend = $this->input->post('dinner_attend', TRUE); 
-            if($dinner_attend=='')
-            {
-
-              $dinner_attend="0";
-            }
-            $amount = "500"; 
-            $type="stuent";
-
-            $datas['name'] = $name;
-            $datas['college'] = $college;
-            $datas['email'] = $email;
-            $datas['contact'] = $contact;
-            $datas['type']='stuent';
-            $datas['dinner_attend']=$dinner_attend;
-            $datas['amount']="800";
-
-            $result = $this->transaction->student_form_add($name,$college,$email,$contact,$dinner_attend,$type,$amount); 
-
-           
-            $status = array('success' => true,
-                             'html'=>$this->load->view('registration/datafragment/payment_form',$datas, true),
-                            'msg'=> "Page successfully generated"
-            );
-        }else{
-              $status = array("success" => false,"msg" => $errorMSG); 
-            }
-        } catch (Exception $ex) {
-            $status = array("success" => false,"msg" => $ex->getMessage());
-        }
-
-      echo json_encode($status); 
     }
 
 
