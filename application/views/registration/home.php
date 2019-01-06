@@ -593,8 +593,8 @@ Include light lunch
 					 					</div>
 					 					<div class="col-md-4">
 											<div class="form-group">   
-											<br>             
-												<input id="pitch_file" type="file" class=" number" style=" display: none;color:white;" name="pitch_file" >
+											<br>            
+												<input id="pitch_file" type="file" style=" display: none;color:white;" name="files[]" multiple="multiple">
 											</div>     
 										</div>
 

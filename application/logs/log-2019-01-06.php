@@ -2482,6 +2482,7 @@ INFO - 2019-01-06 16:33:31 --> Model "Transaction_modal" initialized
 INFO - 2019-01-06 16:33:31 --> Helper loaded: security_helper
 ERROR - 2019-01-06 16:33:31 --> Severity: Notice --> Undefined property: Registration::$project F:\wamp64\www\imphalangels\application\controllers\Registration.php 175
 ERROR - 2019-01-06 16:33:31 --> Severity: Error --> Call to a member function AddRegEntrepeneur() on null F:\wamp64\www\imphalangels\application\controllers\Registration.php 175
+<<<<<<< HEAD
 INFO - 2019-01-06 16:34:35 --> Config Class Initialized
 INFO - 2019-01-06 16:34:35 --> Hooks Class Initialized
 DEBUG - 2019-01-06 16:34:35 --> UTF-8 Support Enabled
@@ -2659,3 +2660,610 @@ INFO - 2019-01-06 16:35:41 --> Model "Transaction_modal" initialized
 INFO - 2019-01-06 16:35:41 --> Helper loaded: security_helper
 ERROR - 2019-01-06 16:35:41 --> Severity: Notice --> Undefined property: Registration::$project D:\wamp64\www\imphalangels\application\controllers\Registration.php 175
 ERROR - 2019-01-06 16:35:41 --> Severity: Error --> Call to a member function AddRegEntrepeneur() on null D:\wamp64\www\imphalangels\application\controllers\Registration.php 175
+=======
+INFO - 2019-01-06 16:36:06 --> Config Class Initialized
+INFO - 2019-01-06 16:36:06 --> Hooks Class Initialized
+DEBUG - 2019-01-06 16:36:06 --> UTF-8 Support Enabled
+INFO - 2019-01-06 16:36:06 --> Utf8 Class Initialized
+INFO - 2019-01-06 16:36:06 --> URI Class Initialized
+INFO - 2019-01-06 16:36:06 --> Router Class Initialized
+INFO - 2019-01-06 16:36:06 --> Output Class Initialized
+INFO - 2019-01-06 16:36:06 --> Security Class Initialized
+DEBUG - 2019-01-06 16:36:06 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-06 16:36:06 --> Input Class Initialized
+INFO - 2019-01-06 16:36:06 --> Language Class Initialized
+INFO - 2019-01-06 16:36:06 --> Loader Class Initialized
+INFO - 2019-01-06 16:36:06 --> Helper loaded: url_helper
+INFO - 2019-01-06 16:36:06 --> Helper loaded: text_helper
+INFO - 2019-01-06 16:36:06 --> Helper loaded: form_helper
+INFO - 2019-01-06 16:36:06 --> Database Driver Class Initialized
+DEBUG - 2019-01-06 16:36:06 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-01-06 16:36:06 --> Session: Class initialized using 'files' driver.
+INFO - 2019-01-06 16:36:06 --> Form Validation Class Initialized
+INFO - 2019-01-06 16:36:06 --> Controller Class Initialized
+INFO - 2019-01-06 16:36:06 --> Model "Transaction_modal" initialized
+INFO - 2019-01-06 16:36:06 --> Helper loaded: security_helper
+INFO - 2019-01-06 16:36:06 --> File loaded: F:\wamp64\www\imphalangels\application\views\registration/reg_header.php
+INFO - 2019-01-06 16:36:06 --> File loaded: F:\wamp64\www\imphalangels\application\views\registration/reg_footer.php
+INFO - 2019-01-06 16:36:06 --> File loaded: F:\wamp64\www\imphalangels\application\views\registration/home.php
+INFO - 2019-01-06 16:36:06 --> Final output sent to browser
+DEBUG - 2019-01-06 16:36:06 --> Total execution time: 0.6201
+INFO - 2019-01-06 16:36:07 --> Config Class Initialized
+INFO - 2019-01-06 16:36:07 --> Config Class Initialized
+INFO - 2019-01-06 16:36:07 --> Hooks Class Initialized
+INFO - 2019-01-06 16:36:07 --> Config Class Initialized
+INFO - 2019-01-06 16:36:07 --> Hooks Class Initialized
+DEBUG - 2019-01-06 16:36:07 --> UTF-8 Support Enabled
+INFO - 2019-01-06 16:36:07 --> Utf8 Class Initialized
+INFO - 2019-01-06 16:36:07 --> URI Class Initialized
+INFO - 2019-01-06 16:36:07 --> Hooks Class Initialized
+DEBUG - 2019-01-06 16:36:07 --> UTF-8 Support Enabled
+INFO - 2019-01-06 16:36:07 --> Utf8 Class Initialized
+DEBUG - 2019-01-06 16:36:07 --> UTF-8 Support Enabled
+INFO - 2019-01-06 16:36:07 --> Config Class Initialized
+INFO - 2019-01-06 16:36:07 --> URI Class Initialized
+INFO - 2019-01-06 16:36:07 --> Router Class Initialized
+INFO - 2019-01-06 16:36:07 --> Output Class Initialized
+INFO - 2019-01-06 16:36:07 --> Security Class Initialized
+INFO - 2019-01-06 16:36:07 --> Hooks Class Initialized
+DEBUG - 2019-01-06 16:36:07 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-06 16:36:07 --> Utf8 Class Initialized
+INFO - 2019-01-06 16:36:07 --> Router Class Initialized
+DEBUG - 2019-01-06 16:36:07 --> UTF-8 Support Enabled
+INFO - 2019-01-06 16:36:07 --> Output Class Initialized
+INFO - 2019-01-06 16:36:07 --> URI Class Initialized
+INFO - 2019-01-06 16:36:07 --> Input Class Initialized
+INFO - 2019-01-06 16:36:07 --> Config Class Initialized
+INFO - 2019-01-06 16:36:07 --> Utf8 Class Initialized
+INFO - 2019-01-06 16:36:07 --> URI Class Initialized
+INFO - 2019-01-06 16:36:07 --> Router Class Initialized
+INFO - 2019-01-06 16:36:08 --> Output Class Initialized
+INFO - 2019-01-06 16:36:08 --> Security Class Initialized
+DEBUG - 2019-01-06 16:36:08 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-06 16:36:08 --> Input Class Initialized
+INFO - 2019-01-06 16:36:08 --> Language Class Initialized
+ERROR - 2019-01-06 16:36:08 --> 404 Page Not Found: Assets/registration_assets
+INFO - 2019-01-06 16:36:08 --> Language Class Initialized
+INFO - 2019-01-06 16:36:08 --> Security Class Initialized
+INFO - 2019-01-06 16:36:08 --> Hooks Class Initialized
+INFO - 2019-01-06 16:36:08 --> Router Class Initialized
+ERROR - 2019-01-06 16:36:08 --> 404 Page Not Found: Assets/registration_assets
+DEBUG - 2019-01-06 16:36:08 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-06 16:36:08 --> Input Class Initialized
+INFO - 2019-01-06 16:36:08 --> Language Class Initialized
+ERROR - 2019-01-06 16:36:08 --> 404 Page Not Found: Assets/registration_assets
+INFO - 2019-01-06 16:36:08 --> Output Class Initialized
+INFO - 2019-01-06 16:36:08 --> Security Class Initialized
+DEBUG - 2019-01-06 16:36:08 --> UTF-8 Support Enabled
+DEBUG - 2019-01-06 16:36:08 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-06 16:36:08 --> Input Class Initialized
+INFO - 2019-01-06 16:36:08 --> Utf8 Class Initialized
+INFO - 2019-01-06 16:36:08 --> Language Class Initialized
+ERROR - 2019-01-06 16:36:08 --> 404 Page Not Found: Assets/registration_assets
+INFO - 2019-01-06 16:36:08 --> URI Class Initialized
+INFO - 2019-01-06 16:36:08 --> Router Class Initialized
+INFO - 2019-01-06 16:36:09 --> Output Class Initialized
+INFO - 2019-01-06 16:36:09 --> Security Class Initialized
+DEBUG - 2019-01-06 16:36:09 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-06 16:36:09 --> Input Class Initialized
+INFO - 2019-01-06 16:36:09 --> Language Class Initialized
+ERROR - 2019-01-06 16:36:09 --> 404 Page Not Found: Assets/js
+INFO - 2019-01-06 16:36:49 --> Config Class Initialized
+INFO - 2019-01-06 16:36:49 --> Hooks Class Initialized
+DEBUG - 2019-01-06 16:36:49 --> UTF-8 Support Enabled
+INFO - 2019-01-06 16:36:49 --> Utf8 Class Initialized
+INFO - 2019-01-06 16:36:49 --> URI Class Initialized
+INFO - 2019-01-06 16:36:49 --> Router Class Initialized
+INFO - 2019-01-06 16:36:49 --> Output Class Initialized
+INFO - 2019-01-06 16:36:49 --> Security Class Initialized
+DEBUG - 2019-01-06 16:36:49 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-06 16:36:49 --> Input Class Initialized
+INFO - 2019-01-06 16:36:49 --> Language Class Initialized
+INFO - 2019-01-06 16:36:49 --> Loader Class Initialized
+INFO - 2019-01-06 16:36:49 --> Helper loaded: url_helper
+INFO - 2019-01-06 16:36:49 --> Helper loaded: text_helper
+INFO - 2019-01-06 16:36:49 --> Helper loaded: form_helper
+INFO - 2019-01-06 16:36:49 --> Database Driver Class Initialized
+DEBUG - 2019-01-06 16:36:49 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-01-06 16:36:49 --> Session: Class initialized using 'files' driver.
+INFO - 2019-01-06 16:36:49 --> Form Validation Class Initialized
+INFO - 2019-01-06 16:36:49 --> Controller Class Initialized
+INFO - 2019-01-06 16:36:49 --> Model "Transaction_modal" initialized
+INFO - 2019-01-06 16:36:49 --> Helper loaded: security_helper
+ERROR - 2019-01-06 16:36:49 --> Severity: Notice --> Undefined property: Registration::$project F:\wamp64\www\imphalangels\application\controllers\Registration.php 175
+ERROR - 2019-01-06 16:36:49 --> Severity: Error --> Call to a member function AddRegEntrepeneur() on null F:\wamp64\www\imphalangels\application\controllers\Registration.php 175
+INFO - 2019-01-06 16:37:03 --> Config Class Initialized
+INFO - 2019-01-06 16:37:04 --> Hooks Class Initialized
+INFO - 2019-01-06 16:37:04 --> Config Class Initialized
+DEBUG - 2019-01-06 16:37:04 --> UTF-8 Support Enabled
+INFO - 2019-01-06 16:37:04 --> Hooks Class Initialized
+INFO - 2019-01-06 16:37:04 --> Utf8 Class Initialized
+INFO - 2019-01-06 16:37:04 --> URI Class Initialized
+DEBUG - 2019-01-06 16:37:04 --> UTF-8 Support Enabled
+INFO - 2019-01-06 16:37:04 --> Utf8 Class Initialized
+INFO - 2019-01-06 16:37:04 --> Router Class Initialized
+INFO - 2019-01-06 16:37:04 --> URI Class Initialized
+INFO - 2019-01-06 16:37:04 --> Output Class Initialized
+INFO - 2019-01-06 16:37:04 --> Security Class Initialized
+INFO - 2019-01-06 16:37:04 --> Router Class Initialized
+DEBUG - 2019-01-06 16:37:04 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-06 16:37:04 --> Output Class Initialized
+INFO - 2019-01-06 16:37:04 --> Input Class Initialized
+INFO - 2019-01-06 16:37:04 --> Security Class Initialized
+INFO - 2019-01-06 16:37:04 --> Language Class Initialized
+DEBUG - 2019-01-06 16:37:04 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-06 16:37:04 --> Input Class Initialized
+ERROR - 2019-01-06 16:37:04 --> 404 Page Not Found: Assets/js
+INFO - 2019-01-06 16:37:04 --> Language Class Initialized
+ERROR - 2019-01-06 16:37:04 --> 404 Page Not Found: Assets/registration_assets
+INFO - 2019-01-06 16:37:14 --> Config Class Initialized
+INFO - 2019-01-06 16:37:14 --> Hooks Class Initialized
+DEBUG - 2019-01-06 16:37:14 --> UTF-8 Support Enabled
+INFO - 2019-01-06 16:37:14 --> Utf8 Class Initialized
+INFO - 2019-01-06 16:37:14 --> URI Class Initialized
+INFO - 2019-01-06 16:37:14 --> Router Class Initialized
+INFO - 2019-01-06 16:37:14 --> Output Class Initialized
+INFO - 2019-01-06 16:37:14 --> Security Class Initialized
+DEBUG - 2019-01-06 16:37:14 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-06 16:37:14 --> Input Class Initialized
+INFO - 2019-01-06 16:37:14 --> Language Class Initialized
+INFO - 2019-01-06 16:37:14 --> Loader Class Initialized
+INFO - 2019-01-06 16:37:14 --> Helper loaded: url_helper
+INFO - 2019-01-06 16:37:14 --> Helper loaded: text_helper
+INFO - 2019-01-06 16:37:14 --> Helper loaded: form_helper
+INFO - 2019-01-06 16:37:14 --> Database Driver Class Initialized
+DEBUG - 2019-01-06 16:37:14 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-01-06 16:37:14 --> Session: Class initialized using 'files' driver.
+INFO - 2019-01-06 16:37:14 --> Form Validation Class Initialized
+INFO - 2019-01-06 16:37:14 --> Controller Class Initialized
+INFO - 2019-01-06 16:37:14 --> Model "Transaction_modal" initialized
+INFO - 2019-01-06 16:37:14 --> Helper loaded: security_helper
+ERROR - 2019-01-06 16:37:14 --> Severity: Notice --> Undefined property: Registration::$project F:\wamp64\www\imphalangels\application\controllers\Registration.php 175
+ERROR - 2019-01-06 16:37:14 --> Severity: Error --> Call to a member function AddRegEntrepeneur() on null F:\wamp64\www\imphalangels\application\controllers\Registration.php 175
+INFO - 2019-01-06 16:44:15 --> Config Class Initialized
+INFO - 2019-01-06 16:44:15 --> Hooks Class Initialized
+DEBUG - 2019-01-06 16:44:15 --> UTF-8 Support Enabled
+INFO - 2019-01-06 16:44:15 --> Utf8 Class Initialized
+INFO - 2019-01-06 16:44:15 --> URI Class Initialized
+INFO - 2019-01-06 16:44:16 --> Router Class Initialized
+INFO - 2019-01-06 16:44:16 --> Output Class Initialized
+INFO - 2019-01-06 16:44:16 --> Security Class Initialized
+DEBUG - 2019-01-06 16:44:16 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-06 16:44:16 --> Input Class Initialized
+INFO - 2019-01-06 16:44:16 --> Language Class Initialized
+INFO - 2019-01-06 16:44:16 --> Loader Class Initialized
+INFO - 2019-01-06 16:44:16 --> Helper loaded: url_helper
+INFO - 2019-01-06 16:44:16 --> Helper loaded: text_helper
+INFO - 2019-01-06 16:44:16 --> Helper loaded: form_helper
+INFO - 2019-01-06 16:44:16 --> Database Driver Class Initialized
+DEBUG - 2019-01-06 16:44:16 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-01-06 16:44:16 --> Session: Class initialized using 'files' driver.
+INFO - 2019-01-06 16:44:16 --> Form Validation Class Initialized
+INFO - 2019-01-06 16:44:16 --> Controller Class Initialized
+INFO - 2019-01-06 16:44:16 --> Model "Transaction_modal" initialized
+INFO - 2019-01-06 16:44:16 --> Helper loaded: security_helper
+INFO - 2019-01-06 16:44:16 --> File loaded: F:\wamp64\www\imphalangels\application\views\registration/reg_header.php
+INFO - 2019-01-06 16:44:16 --> File loaded: F:\wamp64\www\imphalangels\application\views\registration/reg_footer.php
+INFO - 2019-01-06 16:44:16 --> File loaded: F:\wamp64\www\imphalangels\application\views\registration/home.php
+INFO - 2019-01-06 16:44:16 --> Final output sent to browser
+DEBUG - 2019-01-06 16:44:16 --> Total execution time: 0.5680
+INFO - 2019-01-06 16:44:16 --> Config Class Initialized
+INFO - 2019-01-06 16:44:16 --> Config Class Initialized
+INFO - 2019-01-06 16:44:16 --> Config Class Initialized
+INFO - 2019-01-06 16:44:16 --> Hooks Class Initialized
+INFO - 2019-01-06 16:44:16 --> Hooks Class Initialized
+INFO - 2019-01-06 16:44:16 --> Hooks Class Initialized
+DEBUG - 2019-01-06 16:44:16 --> UTF-8 Support Enabled
+DEBUG - 2019-01-06 16:44:16 --> UTF-8 Support Enabled
+DEBUG - 2019-01-06 16:44:16 --> UTF-8 Support Enabled
+INFO - 2019-01-06 16:44:16 --> Utf8 Class Initialized
+INFO - 2019-01-06 16:44:16 --> Utf8 Class Initialized
+INFO - 2019-01-06 16:44:16 --> URI Class Initialized
+INFO - 2019-01-06 16:44:16 --> Utf8 Class Initialized
+INFO - 2019-01-06 16:44:16 --> URI Class Initialized
+INFO - 2019-01-06 16:44:16 --> Config Class Initialized
+INFO - 2019-01-06 16:44:16 --> URI Class Initialized
+INFO - 2019-01-06 16:44:16 --> Router Class Initialized
+INFO - 2019-01-06 16:44:16 --> Router Class Initialized
+INFO - 2019-01-06 16:44:16 --> Output Class Initialized
+INFO - 2019-01-06 16:44:16 --> Hooks Class Initialized
+INFO - 2019-01-06 16:44:16 --> Router Class Initialized
+INFO - 2019-01-06 16:44:17 --> Security Class Initialized
+INFO - 2019-01-06 16:44:17 --> Output Class Initialized
+INFO - 2019-01-06 16:44:17 --> Output Class Initialized
+DEBUG - 2019-01-06 16:44:17 --> UTF-8 Support Enabled
+INFO - 2019-01-06 16:44:17 --> Utf8 Class Initialized
+DEBUG - 2019-01-06 16:44:17 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-06 16:44:17 --> Security Class Initialized
+INFO - 2019-01-06 16:44:17 --> URI Class Initialized
+DEBUG - 2019-01-06 16:44:17 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-06 16:44:17 --> Input Class Initialized
+INFO - 2019-01-06 16:44:17 --> Security Class Initialized
+INFO - 2019-01-06 16:44:17 --> Router Class Initialized
+INFO - 2019-01-06 16:44:17 --> Input Class Initialized
+INFO - 2019-01-06 16:44:17 --> Output Class Initialized
+INFO - 2019-01-06 16:44:17 --> Language Class Initialized
+DEBUG - 2019-01-06 16:44:17 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-06 16:44:17 --> Input Class Initialized
+INFO - 2019-01-06 16:44:17 --> Language Class Initialized
+INFO - 2019-01-06 16:44:17 --> Language Class Initialized
+INFO - 2019-01-06 16:44:17 --> Config Class Initialized
+ERROR - 2019-01-06 16:44:17 --> 404 Page Not Found: Assets/registration_assets
+ERROR - 2019-01-06 16:44:17 --> 404 Page Not Found: Assets/registration_assets
+INFO - 2019-01-06 16:44:17 --> Hooks Class Initialized
+DEBUG - 2019-01-06 16:44:17 --> UTF-8 Support Enabled
+INFO - 2019-01-06 16:44:17 --> Utf8 Class Initialized
+INFO - 2019-01-06 16:44:17 --> URI Class Initialized
+INFO - 2019-01-06 16:44:17 --> Router Class Initialized
+INFO - 2019-01-06 16:44:17 --> Output Class Initialized
+INFO - 2019-01-06 16:44:17 --> Security Class Initialized
+ERROR - 2019-01-06 16:44:17 --> 404 Page Not Found: Assets/registration_assets
+INFO - 2019-01-06 16:44:17 --> Security Class Initialized
+DEBUG - 2019-01-06 16:44:17 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-06 16:44:18 --> Input Class Initialized
+INFO - 2019-01-06 16:44:18 --> Language Class Initialized
+ERROR - 2019-01-06 16:44:18 --> 404 Page Not Found: Assets/js
+DEBUG - 2019-01-06 16:44:18 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-06 16:44:18 --> Input Class Initialized
+INFO - 2019-01-06 16:44:18 --> Language Class Initialized
+ERROR - 2019-01-06 16:44:18 --> 404 Page Not Found: Assets/registration_assets
+INFO - 2019-01-06 16:45:08 --> Config Class Initialized
+INFO - 2019-01-06 16:45:08 --> Hooks Class Initialized
+DEBUG - 2019-01-06 16:45:08 --> UTF-8 Support Enabled
+INFO - 2019-01-06 16:45:08 --> Utf8 Class Initialized
+INFO - 2019-01-06 16:45:08 --> URI Class Initialized
+INFO - 2019-01-06 16:45:08 --> Router Class Initialized
+INFO - 2019-01-06 16:45:08 --> Output Class Initialized
+INFO - 2019-01-06 16:45:08 --> Security Class Initialized
+DEBUG - 2019-01-06 16:45:08 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-06 16:45:08 --> Input Class Initialized
+INFO - 2019-01-06 16:45:08 --> Language Class Initialized
+INFO - 2019-01-06 16:45:08 --> Loader Class Initialized
+INFO - 2019-01-06 16:45:08 --> Helper loaded: url_helper
+INFO - 2019-01-06 16:45:08 --> Helper loaded: text_helper
+INFO - 2019-01-06 16:45:08 --> Helper loaded: form_helper
+INFO - 2019-01-06 16:45:08 --> Database Driver Class Initialized
+DEBUG - 2019-01-06 16:45:08 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-01-06 16:45:08 --> Session: Class initialized using 'files' driver.
+INFO - 2019-01-06 16:45:08 --> Form Validation Class Initialized
+INFO - 2019-01-06 16:45:08 --> Controller Class Initialized
+INFO - 2019-01-06 16:45:08 --> Model "Transaction_modal" initialized
+INFO - 2019-01-06 16:45:08 --> Helper loaded: security_helper
+INFO - 2019-01-06 16:45:08 --> Upload Class Initialized
+ERROR - 2019-01-06 16:45:08 --> Severity: Notice --> Undefined property: Registration::$project F:\wamp64\www\imphalangels\application\controllers\Registration.php 175
+ERROR - 2019-01-06 16:45:08 --> Severity: Error --> Call to a member function AddRegEntrepeneur() on null F:\wamp64\www\imphalangels\application\controllers\Registration.php 175
+INFO - 2019-01-06 16:46:00 --> Config Class Initialized
+INFO - 2019-01-06 16:46:01 --> Hooks Class Initialized
+DEBUG - 2019-01-06 16:46:01 --> UTF-8 Support Enabled
+INFO - 2019-01-06 16:46:01 --> Utf8 Class Initialized
+INFO - 2019-01-06 16:46:01 --> URI Class Initialized
+INFO - 2019-01-06 16:46:01 --> Router Class Initialized
+INFO - 2019-01-06 16:46:01 --> Output Class Initialized
+INFO - 2019-01-06 16:46:01 --> Security Class Initialized
+DEBUG - 2019-01-06 16:46:01 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-06 16:46:01 --> Input Class Initialized
+INFO - 2019-01-06 16:46:01 --> Language Class Initialized
+INFO - 2019-01-06 16:46:01 --> Loader Class Initialized
+INFO - 2019-01-06 16:46:01 --> Helper loaded: url_helper
+INFO - 2019-01-06 16:46:01 --> Helper loaded: text_helper
+INFO - 2019-01-06 16:46:01 --> Helper loaded: form_helper
+INFO - 2019-01-06 16:46:01 --> Database Driver Class Initialized
+DEBUG - 2019-01-06 16:46:01 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-01-06 16:46:01 --> Session: Class initialized using 'files' driver.
+INFO - 2019-01-06 16:46:01 --> Form Validation Class Initialized
+INFO - 2019-01-06 16:46:01 --> Controller Class Initialized
+INFO - 2019-01-06 16:46:01 --> Model "Transaction_modal" initialized
+INFO - 2019-01-06 16:46:01 --> Helper loaded: security_helper
+INFO - 2019-01-06 16:46:01 --> File loaded: F:\wamp64\www\imphalangels\application\views\registration/reg_header.php
+INFO - 2019-01-06 16:46:01 --> File loaded: F:\wamp64\www\imphalangels\application\views\registration/reg_footer.php
+INFO - 2019-01-06 16:46:01 --> File loaded: F:\wamp64\www\imphalangels\application\views\registration/home.php
+INFO - 2019-01-06 16:46:01 --> Final output sent to browser
+DEBUG - 2019-01-06 16:46:01 --> Total execution time: 0.5863
+INFO - 2019-01-06 16:46:01 --> Config Class Initialized
+INFO - 2019-01-06 16:46:01 --> Config Class Initialized
+INFO - 2019-01-06 16:46:01 --> Hooks Class Initialized
+INFO - 2019-01-06 16:46:02 --> Config Class Initialized
+DEBUG - 2019-01-06 16:46:02 --> UTF-8 Support Enabled
+INFO - 2019-01-06 16:46:02 --> Utf8 Class Initialized
+INFO - 2019-01-06 16:46:02 --> URI Class Initialized
+INFO - 2019-01-06 16:46:02 --> Router Class Initialized
+INFO - 2019-01-06 16:46:02 --> Config Class Initialized
+INFO - 2019-01-06 16:46:02 --> Output Class Initialized
+INFO - 2019-01-06 16:46:02 --> Security Class Initialized
+DEBUG - 2019-01-06 16:46:02 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-06 16:46:02 --> Input Class Initialized
+INFO - 2019-01-06 16:46:02 --> Language Class Initialized
+INFO - 2019-01-06 16:46:02 --> Hooks Class Initialized
+ERROR - 2019-01-06 16:46:02 --> 404 Page Not Found: Assets/registration_assets
+INFO - 2019-01-06 16:46:02 --> Hooks Class Initialized
+INFO - 2019-01-06 16:46:02 --> Hooks Class Initialized
+DEBUG - 2019-01-06 16:46:02 --> UTF-8 Support Enabled
+DEBUG - 2019-01-06 16:46:02 --> UTF-8 Support Enabled
+DEBUG - 2019-01-06 16:46:02 --> UTF-8 Support Enabled
+INFO - 2019-01-06 16:46:02 --> Config Class Initialized
+INFO - 2019-01-06 16:46:02 --> Utf8 Class Initialized
+INFO - 2019-01-06 16:46:02 --> URI Class Initialized
+INFO - 2019-01-06 16:46:02 --> Router Class Initialized
+INFO - 2019-01-06 16:46:02 --> Output Class Initialized
+INFO - 2019-01-06 16:46:02 --> Security Class Initialized
+DEBUG - 2019-01-06 16:46:03 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-06 16:46:03 --> Input Class Initialized
+INFO - 2019-01-06 16:46:03 --> Language Class Initialized
+ERROR - 2019-01-06 16:46:03 --> 404 Page Not Found: Assets/registration_assets
+INFO - 2019-01-06 16:46:03 --> Utf8 Class Initialized
+INFO - 2019-01-06 16:46:03 --> Utf8 Class Initialized
+INFO - 2019-01-06 16:46:03 --> Hooks Class Initialized
+INFO - 2019-01-06 16:46:03 --> URI Class Initialized
+INFO - 2019-01-06 16:46:03 --> Router Class Initialized
+INFO - 2019-01-06 16:46:03 --> Output Class Initialized
+INFO - 2019-01-06 16:46:03 --> Security Class Initialized
+DEBUG - 2019-01-06 16:46:03 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-06 16:46:03 --> Input Class Initialized
+INFO - 2019-01-06 16:46:03 --> Language Class Initialized
+ERROR - 2019-01-06 16:46:03 --> 404 Page Not Found: Assets/registration_assets
+INFO - 2019-01-06 16:46:03 --> URI Class Initialized
+DEBUG - 2019-01-06 16:46:03 --> UTF-8 Support Enabled
+INFO - 2019-01-06 16:46:03 --> Utf8 Class Initialized
+INFO - 2019-01-06 16:46:03 --> Router Class Initialized
+INFO - 2019-01-06 16:46:03 --> URI Class Initialized
+INFO - 2019-01-06 16:46:03 --> Router Class Initialized
+INFO - 2019-01-06 16:46:04 --> Output Class Initialized
+INFO - 2019-01-06 16:46:04 --> Output Class Initialized
+INFO - 2019-01-06 16:46:04 --> Security Class Initialized
+DEBUG - 2019-01-06 16:46:04 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-06 16:46:04 --> Input Class Initialized
+INFO - 2019-01-06 16:46:04 --> Language Class Initialized
+INFO - 2019-01-06 16:46:04 --> Security Class Initialized
+ERROR - 2019-01-06 16:46:04 --> 404 Page Not Found: Assets/js
+DEBUG - 2019-01-06 16:46:04 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-06 16:46:04 --> Input Class Initialized
+INFO - 2019-01-06 16:46:04 --> Language Class Initialized
+ERROR - 2019-01-06 16:46:04 --> 404 Page Not Found: Assets/registration_assets
+INFO - 2019-01-06 16:48:10 --> Config Class Initialized
+INFO - 2019-01-06 16:48:10 --> Hooks Class Initialized
+DEBUG - 2019-01-06 16:48:10 --> UTF-8 Support Enabled
+INFO - 2019-01-06 16:48:10 --> Utf8 Class Initialized
+INFO - 2019-01-06 16:48:10 --> URI Class Initialized
+INFO - 2019-01-06 16:48:10 --> Router Class Initialized
+INFO - 2019-01-06 16:48:10 --> Output Class Initialized
+INFO - 2019-01-06 16:48:10 --> Security Class Initialized
+DEBUG - 2019-01-06 16:48:10 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-06 16:48:10 --> Input Class Initialized
+INFO - 2019-01-06 16:48:10 --> Language Class Initialized
+INFO - 2019-01-06 16:48:10 --> Loader Class Initialized
+INFO - 2019-01-06 16:48:10 --> Helper loaded: url_helper
+INFO - 2019-01-06 16:48:10 --> Helper loaded: text_helper
+INFO - 2019-01-06 16:48:10 --> Helper loaded: form_helper
+INFO - 2019-01-06 16:48:10 --> Database Driver Class Initialized
+DEBUG - 2019-01-06 16:48:10 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-01-06 16:48:10 --> Session: Class initialized using 'files' driver.
+INFO - 2019-01-06 16:48:10 --> Form Validation Class Initialized
+INFO - 2019-01-06 16:48:10 --> Controller Class Initialized
+INFO - 2019-01-06 16:48:10 --> Model "Transaction_modal" initialized
+INFO - 2019-01-06 16:48:10 --> Helper loaded: security_helper
+INFO - 2019-01-06 16:48:10 --> File loaded: F:\wamp64\www\imphalangels\application\views\registration/reg_header.php
+INFO - 2019-01-06 16:48:10 --> File loaded: F:\wamp64\www\imphalangels\application\views\registration/reg_footer.php
+INFO - 2019-01-06 16:48:10 --> File loaded: F:\wamp64\www\imphalangels\application\views\registration/home.php
+INFO - 2019-01-06 16:48:10 --> Final output sent to browser
+DEBUG - 2019-01-06 16:48:10 --> Total execution time: 0.6171
+INFO - 2019-01-06 16:48:11 --> Config Class Initialized
+INFO - 2019-01-06 16:48:11 --> Config Class Initialized
+INFO - 2019-01-06 16:48:11 --> Config Class Initialized
+INFO - 2019-01-06 16:48:11 --> Hooks Class Initialized
+INFO - 2019-01-06 16:48:11 --> Hooks Class Initialized
+INFO - 2019-01-06 16:48:11 --> Hooks Class Initialized
+DEBUG - 2019-01-06 16:48:11 --> UTF-8 Support Enabled
+INFO - 2019-01-06 16:48:11 --> Utf8 Class Initialized
+INFO - 2019-01-06 16:48:11 --> URI Class Initialized
+INFO - 2019-01-06 16:48:11 --> Router Class Initialized
+INFO - 2019-01-06 16:48:11 --> Config Class Initialized
+DEBUG - 2019-01-06 16:48:11 --> UTF-8 Support Enabled
+DEBUG - 2019-01-06 16:48:11 --> UTF-8 Support Enabled
+INFO - 2019-01-06 16:48:11 --> Utf8 Class Initialized
+INFO - 2019-01-06 16:48:11 --> Hooks Class Initialized
+INFO - 2019-01-06 16:48:11 --> Output Class Initialized
+DEBUG - 2019-01-06 16:48:11 --> UTF-8 Support Enabled
+INFO - 2019-01-06 16:48:11 --> Utf8 Class Initialized
+INFO - 2019-01-06 16:48:11 --> URI Class Initialized
+INFO - 2019-01-06 16:48:11 --> Router Class Initialized
+INFO - 2019-01-06 16:48:11 --> Output Class Initialized
+INFO - 2019-01-06 16:48:11 --> Security Class Initialized
+DEBUG - 2019-01-06 16:48:11 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-06 16:48:12 --> Config Class Initialized
+INFO - 2019-01-06 16:48:12 --> URI Class Initialized
+INFO - 2019-01-06 16:48:12 --> Utf8 Class Initialized
+INFO - 2019-01-06 16:48:12 --> Security Class Initialized
+INFO - 2019-01-06 16:48:12 --> Input Class Initialized
+INFO - 2019-01-06 16:48:12 --> Language Class Initialized
+ERROR - 2019-01-06 16:48:12 --> 404 Page Not Found: Assets/registration_assets
+INFO - 2019-01-06 16:48:12 --> Hooks Class Initialized
+DEBUG - 2019-01-06 16:48:12 --> UTF-8 Support Enabled
+INFO - 2019-01-06 16:48:12 --> Utf8 Class Initialized
+INFO - 2019-01-06 16:48:12 --> URI Class Initialized
+DEBUG - 2019-01-06 16:48:12 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-06 16:48:12 --> Router Class Initialized
+INFO - 2019-01-06 16:48:12 --> URI Class Initialized
+INFO - 2019-01-06 16:48:12 --> Router Class Initialized
+INFO - 2019-01-06 16:48:12 --> Input Class Initialized
+INFO - 2019-01-06 16:48:12 --> Language Class Initialized
+ERROR - 2019-01-06 16:48:12 --> 404 Page Not Found: Assets/registration_assets
+INFO - 2019-01-06 16:48:12 --> Router Class Initialized
+INFO - 2019-01-06 16:48:12 --> Output Class Initialized
+INFO - 2019-01-06 16:48:12 --> Output Class Initialized
+INFO - 2019-01-06 16:48:12 --> Output Class Initialized
+INFO - 2019-01-06 16:48:12 --> Security Class Initialized
+DEBUG - 2019-01-06 16:48:12 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-06 16:48:13 --> Input Class Initialized
+INFO - 2019-01-06 16:48:13 --> Security Class Initialized
+INFO - 2019-01-06 16:48:13 --> Security Class Initialized
+INFO - 2019-01-06 16:48:13 --> Language Class Initialized
+ERROR - 2019-01-06 16:48:13 --> 404 Page Not Found: Assets/registration_assets
+DEBUG - 2019-01-06 16:48:13 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2019-01-06 16:48:13 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-06 16:48:13 --> Input Class Initialized
+INFO - 2019-01-06 16:48:13 --> Input Class Initialized
+INFO - 2019-01-06 16:48:13 --> Language Class Initialized
+INFO - 2019-01-06 16:48:13 --> Language Class Initialized
+ERROR - 2019-01-06 16:48:13 --> 404 Page Not Found: Assets/registration_assets
+ERROR - 2019-01-06 16:48:13 --> 404 Page Not Found: Assets/js
+INFO - 2019-01-06 16:49:01 --> Config Class Initialized
+INFO - 2019-01-06 16:49:01 --> Hooks Class Initialized
+DEBUG - 2019-01-06 16:49:01 --> UTF-8 Support Enabled
+INFO - 2019-01-06 16:49:01 --> Utf8 Class Initialized
+INFO - 2019-01-06 16:49:01 --> URI Class Initialized
+INFO - 2019-01-06 16:49:01 --> Router Class Initialized
+INFO - 2019-01-06 16:49:01 --> Output Class Initialized
+INFO - 2019-01-06 16:49:01 --> Security Class Initialized
+DEBUG - 2019-01-06 16:49:01 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-06 16:49:01 --> Input Class Initialized
+INFO - 2019-01-06 16:49:01 --> Language Class Initialized
+INFO - 2019-01-06 16:49:01 --> Loader Class Initialized
+INFO - 2019-01-06 16:49:02 --> Helper loaded: url_helper
+INFO - 2019-01-06 16:49:02 --> Helper loaded: text_helper
+INFO - 2019-01-06 16:49:02 --> Helper loaded: form_helper
+INFO - 2019-01-06 16:49:02 --> Database Driver Class Initialized
+DEBUG - 2019-01-06 16:49:02 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-01-06 16:49:02 --> Session: Class initialized using 'files' driver.
+INFO - 2019-01-06 16:49:02 --> Form Validation Class Initialized
+INFO - 2019-01-06 16:49:02 --> Controller Class Initialized
+INFO - 2019-01-06 16:49:02 --> Model "Transaction_modal" initialized
+INFO - 2019-01-06 16:49:02 --> Helper loaded: security_helper
+INFO - 2019-01-06 16:49:02 --> Upload Class Initialized
+ERROR - 2019-01-06 16:49:02 --> Severity: Notice --> Undefined property: Registration::$project F:\wamp64\www\imphalangels\application\controllers\Registration.php 178
+ERROR - 2019-01-06 16:49:02 --> Severity: Error --> Call to a member function AddRegEntrepeneur() on null F:\wamp64\www\imphalangels\application\controllers\Registration.php 178
+INFO - 2019-01-06 16:49:49 --> Config Class Initialized
+INFO - 2019-01-06 16:49:49 --> Hooks Class Initialized
+DEBUG - 2019-01-06 16:49:49 --> UTF-8 Support Enabled
+INFO - 2019-01-06 16:49:49 --> Utf8 Class Initialized
+INFO - 2019-01-06 16:49:49 --> URI Class Initialized
+INFO - 2019-01-06 16:49:49 --> Router Class Initialized
+INFO - 2019-01-06 16:49:50 --> Output Class Initialized
+INFO - 2019-01-06 16:49:50 --> Security Class Initialized
+DEBUG - 2019-01-06 16:49:50 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-06 16:49:50 --> Input Class Initialized
+INFO - 2019-01-06 16:49:50 --> Language Class Initialized
+INFO - 2019-01-06 16:49:50 --> Loader Class Initialized
+INFO - 2019-01-06 16:49:50 --> Helper loaded: url_helper
+INFO - 2019-01-06 16:49:50 --> Helper loaded: text_helper
+INFO - 2019-01-06 16:49:50 --> Helper loaded: form_helper
+INFO - 2019-01-06 16:49:50 --> Database Driver Class Initialized
+DEBUG - 2019-01-06 16:49:50 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-01-06 16:49:50 --> Session: Class initialized using 'files' driver.
+INFO - 2019-01-06 16:49:50 --> Form Validation Class Initialized
+INFO - 2019-01-06 16:49:50 --> Controller Class Initialized
+INFO - 2019-01-06 16:49:50 --> Model "Transaction_modal" initialized
+INFO - 2019-01-06 16:49:50 --> Helper loaded: security_helper
+INFO - 2019-01-06 16:49:50 --> Upload Class Initialized
+ERROR - 2019-01-06 16:49:50 --> Severity: Notice --> Undefined variable: result F:\wamp64\www\imphalangels\application\controllers\Registration.php 179
+ERROR - 2019-01-06 16:49:50 --> Severity: Notice --> Undefined variable: result F:\wamp64\www\imphalangels\application\controllers\Registration.php 184
+INFO - 2019-01-06 16:49:50 --> Final output sent to browser
+DEBUG - 2019-01-06 16:49:50 --> Total execution time: 0.4985
+INFO - 2019-01-06 16:50:14 --> Config Class Initialized
+INFO - 2019-01-06 16:50:14 --> Hooks Class Initialized
+DEBUG - 2019-01-06 16:50:14 --> UTF-8 Support Enabled
+INFO - 2019-01-06 16:50:14 --> Utf8 Class Initialized
+INFO - 2019-01-06 16:50:14 --> URI Class Initialized
+INFO - 2019-01-06 16:50:14 --> Router Class Initialized
+INFO - 2019-01-06 16:50:15 --> Output Class Initialized
+INFO - 2019-01-06 16:50:15 --> Security Class Initialized
+DEBUG - 2019-01-06 16:50:15 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-06 16:50:15 --> Input Class Initialized
+INFO - 2019-01-06 16:50:15 --> Language Class Initialized
+INFO - 2019-01-06 16:50:15 --> Loader Class Initialized
+INFO - 2019-01-06 16:50:15 --> Helper loaded: url_helper
+INFO - 2019-01-06 16:50:15 --> Helper loaded: text_helper
+INFO - 2019-01-06 16:50:15 --> Helper loaded: form_helper
+INFO - 2019-01-06 16:50:15 --> Database Driver Class Initialized
+DEBUG - 2019-01-06 16:50:15 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-01-06 16:50:15 --> Session: Class initialized using 'files' driver.
+INFO - 2019-01-06 16:50:15 --> Form Validation Class Initialized
+INFO - 2019-01-06 16:50:15 --> Controller Class Initialized
+INFO - 2019-01-06 16:50:15 --> Model "Transaction_modal" initialized
+INFO - 2019-01-06 16:50:15 --> Helper loaded: security_helper
+INFO - 2019-01-06 16:50:15 --> Upload Class Initialized
+ERROR - 2019-01-06 16:50:15 --> Severity: Notice --> Undefined variable: result F:\wamp64\www\imphalangels\application\controllers\Registration.php 179
+ERROR - 2019-01-06 16:50:15 --> Severity: Notice --> Undefined variable: result F:\wamp64\www\imphalangels\application\controllers\Registration.php 184
+INFO - 2019-01-06 16:50:15 --> Final output sent to browser
+DEBUG - 2019-01-06 16:50:15 --> Total execution time: 0.4733
+INFO - 2019-01-06 16:50:28 --> Config Class Initialized
+INFO - 2019-01-06 16:50:28 --> Hooks Class Initialized
+DEBUG - 2019-01-06 16:50:28 --> UTF-8 Support Enabled
+INFO - 2019-01-06 16:50:28 --> Utf8 Class Initialized
+INFO - 2019-01-06 16:50:28 --> URI Class Initialized
+INFO - 2019-01-06 16:50:28 --> Router Class Initialized
+INFO - 2019-01-06 16:50:28 --> Output Class Initialized
+INFO - 2019-01-06 16:50:28 --> Security Class Initialized
+DEBUG - 2019-01-06 16:50:28 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-06 16:50:28 --> Input Class Initialized
+INFO - 2019-01-06 16:50:28 --> Language Class Initialized
+INFO - 2019-01-06 16:50:28 --> Loader Class Initialized
+INFO - 2019-01-06 16:50:28 --> Helper loaded: url_helper
+INFO - 2019-01-06 16:50:28 --> Helper loaded: text_helper
+INFO - 2019-01-06 16:50:28 --> Helper loaded: form_helper
+INFO - 2019-01-06 16:50:28 --> Database Driver Class Initialized
+DEBUG - 2019-01-06 16:50:28 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-01-06 16:50:28 --> Session: Class initialized using 'files' driver.
+INFO - 2019-01-06 16:50:28 --> Form Validation Class Initialized
+INFO - 2019-01-06 16:50:28 --> Controller Class Initialized
+INFO - 2019-01-06 16:50:28 --> Model "Transaction_modal" initialized
+INFO - 2019-01-06 16:50:28 --> Helper loaded: security_helper
+INFO - 2019-01-06 16:50:28 --> Upload Class Initialized
+ERROR - 2019-01-06 16:50:28 --> Severity: Notice --> Undefined variable: result F:\wamp64\www\imphalangels\application\controllers\Registration.php 179
+ERROR - 2019-01-06 16:50:28 --> Severity: Notice --> Undefined variable: result F:\wamp64\www\imphalangels\application\controllers\Registration.php 184
+INFO - 2019-01-06 16:50:28 --> Final output sent to browser
+DEBUG - 2019-01-06 16:50:28 --> Total execution time: 0.5173
+INFO - 2019-01-06 16:51:00 --> Config Class Initialized
+INFO - 2019-01-06 16:51:00 --> Hooks Class Initialized
+DEBUG - 2019-01-06 16:51:00 --> UTF-8 Support Enabled
+INFO - 2019-01-06 16:51:00 --> Utf8 Class Initialized
+INFO - 2019-01-06 16:51:00 --> URI Class Initialized
+INFO - 2019-01-06 16:51:00 --> Router Class Initialized
+INFO - 2019-01-06 16:51:00 --> Output Class Initialized
+INFO - 2019-01-06 16:51:00 --> Security Class Initialized
+DEBUG - 2019-01-06 16:51:00 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-06 16:51:00 --> Input Class Initialized
+INFO - 2019-01-06 16:51:00 --> Language Class Initialized
+INFO - 2019-01-06 16:51:00 --> Loader Class Initialized
+INFO - 2019-01-06 16:51:00 --> Helper loaded: url_helper
+INFO - 2019-01-06 16:51:00 --> Helper loaded: text_helper
+INFO - 2019-01-06 16:51:00 --> Helper loaded: form_helper
+INFO - 2019-01-06 16:51:00 --> Database Driver Class Initialized
+DEBUG - 2019-01-06 16:51:00 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-01-06 16:51:00 --> Session: Class initialized using 'files' driver.
+INFO - 2019-01-06 16:51:00 --> Form Validation Class Initialized
+INFO - 2019-01-06 16:51:00 --> Controller Class Initialized
+INFO - 2019-01-06 16:51:00 --> Model "Transaction_modal" initialized
+INFO - 2019-01-06 16:51:00 --> Helper loaded: security_helper
+INFO - 2019-01-06 16:51:00 --> Upload Class Initialized
+ERROR - 2019-01-06 16:51:00 --> Severity: Notice --> Undefined variable: result F:\wamp64\www\imphalangels\application\controllers\Registration.php 179
+ERROR - 2019-01-06 16:51:00 --> Severity: Notice --> Undefined variable: result F:\wamp64\www\imphalangels\application\controllers\Registration.php 184
+INFO - 2019-01-06 16:51:00 --> Final output sent to browser
+DEBUG - 2019-01-06 16:51:00 --> Total execution time: 0.6223
+INFO - 2019-01-06 16:51:08 --> Config Class Initialized
+INFO - 2019-01-06 16:51:08 --> Hooks Class Initialized
+DEBUG - 2019-01-06 16:51:08 --> UTF-8 Support Enabled
+INFO - 2019-01-06 16:51:08 --> Utf8 Class Initialized
+INFO - 2019-01-06 16:51:08 --> URI Class Initialized
+INFO - 2019-01-06 16:51:08 --> Router Class Initialized
+INFO - 2019-01-06 16:51:08 --> Output Class Initialized
+INFO - 2019-01-06 16:51:08 --> Security Class Initialized
+DEBUG - 2019-01-06 16:51:08 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-06 16:51:08 --> Input Class Initialized
+INFO - 2019-01-06 16:51:08 --> Language Class Initialized
+INFO - 2019-01-06 16:51:08 --> Loader Class Initialized
+INFO - 2019-01-06 16:51:08 --> Helper loaded: url_helper
+INFO - 2019-01-06 16:51:08 --> Helper loaded: text_helper
+INFO - 2019-01-06 16:51:08 --> Helper loaded: form_helper
+INFO - 2019-01-06 16:51:08 --> Database Driver Class Initialized
+DEBUG - 2019-01-06 16:51:08 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-01-06 16:51:08 --> Session: Class initialized using 'files' driver.
+INFO - 2019-01-06 16:51:08 --> Form Validation Class Initialized
+INFO - 2019-01-06 16:51:08 --> Controller Class Initialized
+INFO - 2019-01-06 16:51:08 --> Model "Transaction_modal" initialized
+INFO - 2019-01-06 16:51:08 --> Helper loaded: security_helper
+INFO - 2019-01-06 16:51:08 --> Upload Class Initialized
+ERROR - 2019-01-06 16:51:08 --> Severity: Notice --> Undefined variable: result F:\wamp64\www\imphalangels\application\controllers\Registration.php 179
+ERROR - 2019-01-06 16:51:08 --> Severity: Notice --> Undefined variable: result F:\wamp64\www\imphalangels\application\controllers\Registration.php 184
+INFO - 2019-01-06 16:51:08 --> Final output sent to browser
+DEBUG - 2019-01-06 16:51:08 --> Total execution time: 0.5117
+>>>>>>> 72ee1215e7b2940664e009e2354ed5dbfa55d6c1

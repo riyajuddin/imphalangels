@@ -173,7 +173,9 @@ $this->load->view ( 'registration/payment_checkout');
                 $company_email = trim(xss_clean($this->input->post('company_email')));
                 $cofounderName = trim(xss_clean(serialize($this->input->post('cofounderName'))));
                 $dinner = trim(xss_clean(serialize($this->input->post('dinner'))));
-                $result = $this->project->AddRegEntrepeneur($company_name,$company_contact,$company_email,$cofounderName,$dinner);
+                $checkbox1 = trim(xss_clean($this->input->post('checkbox1')));
+                $checkbox2 = trim(xss_clean($this->input->post('checkbox2')));
+                $result = $this->project->AddRegEntrepeneur($company_name,$company_contact,$company_email,$cofounderName,$dinner,$checkbox1,$checkbox2,$uploadFiles);
                 if($result['code']){
                     $status = array('success' => true,
                         'msg'=> $result['message']);
