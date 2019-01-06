@@ -36,10 +36,13 @@
     <!-- Ajax contact form  -->
     <script type="text/javascript" src="<?php echo base_url();?>assets/registration_assets/js/app.js"></script>
   
-       <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	
     <!-- Custom js -->
 	<script type="text/javascript" src="<?php echo base_url();?>assets/registration_assets/js/custom.js"></script>
+	
+	<!-- Validation -->
+	<script src="<?php echo base_url();?>assets/js/parsleyFormValidator/parsley.js"></script>
 
 
 	<script>

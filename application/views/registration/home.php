@@ -550,30 +550,29 @@ Include light lunch
 								Limited to only 1 person  
 								</p>
 							<div class="mu-register-content">
-								
-								<?php echo form_open('registration/ent_form', 'class="mu-register-form"' ); ?>
+							 <form class="mu-register-form" role="form" id="EntrepeneurForm"  data-parsley-validate="">
 									<div class="row">
 										
 									<div class="container-fluid">	
 										<div class="col-md-8">
 											<div class="form-group">                
-												<input type="text" class="form-control name" placeholder="Company Name" id="company_name" name="company_name" required="">
+												<input type="text" class="form-control name" placeholder="Company Name" id="company_name" name="company_name" data-parsley-required="true" data-parsley-error-message="Company name is required.">
 											</div>
 										</div>
 										<div class="col-md-4">
 											<div class="form-group">                
-												<input type="text" class="form-control number" placeholder=" Contact" id="company_contact" name="company_name" required="">
+												<input type="text" class="form-control number" placeholder=" Contact" id="company_contact" name="company_contact" data-parsley-required="true" data-parsley-error-message="Company contact is required.">
 											</div>
 										</div>
 										<div class="col-md-8">
 											<div class="form-group">                
-												<input type="email" class="form-control email" placeholder=" email" id="company_email" name="company_name" required="">
+												<input type="email" class="form-control email" placeholder=" email" id="company_email" name="company_email" data-parsley-required="true" data-parsley-error-message="Company email is required.">
 											</div>
 										</div>
 
 										<div class="col-md-4">
 											<div class="form-group">                
-												<input id="founder_no" type="number" min="1" onchange="viewDetail()" onkeyup="viewDetail()" class="form-control number" placeholder="No. of Co-founder"   name="founder_no" required="">
+												<input id="founder_no" type="number" min="1" onchange="viewDetail()" onkeyup="viewDetail()" class="form-control number" placeholder="No. of Co-founder"   name="founder_no" data-parsley-required="true" data-parsley-error-message="No of founder is required.">
 											</div>     
 										</div>
 										
@@ -581,13 +580,13 @@ Include light lunch
 											</div> 
 											
 										  <div class="" align="left">
-											<label class="radio-inline" style="color:white;padding-left: 0px;"><input type="checkbox" name="file_upload" id="get_chance"   style="margin: 0px 15px;margin-bottom: 10px; color:white;">Are you interested in showcasing your startup with a startup stall? (Rs. 3000 per stall )
+											<label class="radio-inline" style="color:white;padding-left: 0px;"><input type="checkbox" name="checkbox1" id="checkbox1" style="margin: 0px 15px;margin-bottom: 10px; color:white;">Are you interested in showcasing your startup with a startup stall? (Rs. 3000 per stall )
 </label>
 					 					</div>
 					 					<br>
 
 											<div class="" align="left">
-											<label class="radio-inline" style="color:white;padding-left: 0px;"><input type="checkbox" name="file_upload" id="viewFileUpload" onclick="myFunction()"  style="margin: 0px 15px;margin-bottom: 10px; color:white;">
+											<label class="radio-inline" style="color:white;padding-left: 0px;"><input type="checkbox" name="checkbox2" id="viewFileUpload" onclick="myFunction()" style="margin: 0px 15px;margin-bottom: 10px; color:white;">
 
 											*10 startups will be selected to pitch in front of the investors and also get a chance to win Rs.2 Lakhs on the spot. Are you intersted in pitching?
 </label>
@@ -595,14 +594,14 @@ Include light lunch
 					 					<div class="col-md-4">
 											<div class="form-group">   
 											<br>             
-												<input id="pitch_file" type="file" min="1"  class=" number" style=" display: none;color:white;" placeholder="No. of Co-founder"  name="pitch_file" >
+												<input id="pitch_file" type="file" class=" number" style=" display: none;color:white;" name="pitch_file" >
 											</div>     
 										</div>
 
 										</div>
 									</div>
 
-									<button type="submit" class="mu-reg-submit-btn" >SUBMIT</button>
+									<button onclick="RegEntrepeneur()" type="button" class="mu-reg-submit-btn" >SUBMIT</button>
 
 					            </form>
 							</div>
@@ -1049,10 +1048,49 @@ Include light lunch
 		{
 			for(var i=0;i<num;i++) 
 		{
-		$('#entrepreneurFounder').append('<div class="col-md-8"><div class="form-group"><input type="text" class="form-control" placeholder="Co-founder name '+(i+1)+'" id="name" name="cofounderName[]" required=""></div></div><div class="col-md-4" style="text-align:left;"><label class="radio-inline" style="color:white; "><input type="checkbox" name="ques" value="1"  style="margin: 19px 10px 0px 0px; color:white;">Dinner attend</label></div>');
+		$('#entrepreneurFounder').append('<div class="col-md-8"><div class="form-group"><input type="text" class="form-control" placeholder="Co-founder name '+(i+1)+'" id="name" name="cofounderName[]" data-parsley-required="true" data-parsley-error-message="Co-founder name '+(i+1)+' is required."></div></div><div class="col-md-4" style="text-align:left;"><label class="radio-inline" style="color:white; "><input type="checkbox" name="dinner[]" value="tomba"  style="margin: 19px 10px 0px 0px; color:white;">Dinner attend</label></div>');
 		}
 		}
 		
+		}
+
+
+
+
+
+		function RegEntrepeneur(){  
+		    if ( $('#EntrepeneurForm').parsley().validate({force: true}) )
+		    {    
+		        $('#EntrepeneurForm').parsley().reset();
+
+		        var dataString = new FormData($('#EntrepeneurForm')[0]);
+		        //dataString.append('task_desc', $(".ql-editor").html());
+		        console.log(dataString);
+		         $.ajax({
+		          type: "post",
+		          url: "<?php echo site_url() . 'index.php/registration/ent_form'; ?>",
+		          data: dataString,
+		          processData: false,
+		          contentType: false,
+		          dataType: 'json',
+		          success: function(response){   
+		          try{       
+		               if (response.success)
+		               {
+		                    alert(response.msg); 
+		               } else
+		               { 
+		                   alert(response.msg);
+		               }
+		          }catch(e) {  
+		              alert(e);
+		          }  
+		          },
+		          error: function(){      
+		              alert('Error while request..');
+		          }
+		         });
+		   }
 		}
 		  
 		  
