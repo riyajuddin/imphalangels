@@ -58,6 +58,9 @@ $route['team'] = "home/team";
 
 
 $route['registration'] = "registration";
+$route['registration/datafragment/payment_form'] = "registration/datafragment/payment_form";
+
+
 
 
 $route['404_override'] = '';

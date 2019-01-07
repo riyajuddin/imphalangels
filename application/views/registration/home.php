@@ -504,7 +504,7 @@ Include light lunch
 *Limited to only 1 person
 </p>
 							<div class="mu-register-content">
-								<form class="mu-register-form" id="student_form_field"  >
+								<form class="mu-register-form" id="student_form_field" data-parsley-validate="" >
 
 									<div class="row">
 										<div class="col-md-6">
@@ -526,7 +526,7 @@ Include light lunch
 
 										<div class="col-md-6">
 											<div class="form-group">                
-												<input type="email" class="form-control email" placeholder=" Email" id="email" name="email" data-parsley-required="true" data-parsley-error-message="Company email is required.">
+												<input type="email" class="form-control email" placeholder=" Email" id="email" name="email" data-parsley-required="true" data-parsley-error-message="Email is required.">
 											</div>   
 										</div>
 										<div class="col-md-12">

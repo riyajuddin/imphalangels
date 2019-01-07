@@ -15,10 +15,7 @@ class Registration extends CI_Controller
        $this->load->view ( 'registration/home');
     }
 	
-public function payment_checkout()
-{
-$this->load->view ( 'registration/payment_checkout');
-}
+
 
  public function student_form() 
     {                             
@@ -199,7 +196,7 @@ $this->load->view ( 'registration/payment_checkout');
 
 
 	public function test(){
-		$this->load->view("registration/datafragment/payment_form");
+		$this->load->view("payment/payment_form");
 	}
 
 	
