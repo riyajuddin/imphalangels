@@ -526,7 +526,7 @@ Include light lunch
 
 										<div class="col-md-6">
 											<div class="form-group">                
-												<input type="email" class="form-control email" placeholder=" Email" id="email" name="email" required="">
+												<input type="email" class="form-control email" placeholder=" Email" id="email" name="email" data-parsley-required="true" data-parsley-error-message="Company email is required.">
 											</div>   
 										</div>
 										<div class="col-md-12">

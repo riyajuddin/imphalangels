@@ -69,7 +69,8 @@ $this->load->view ( 'registration/payment_checkout');
 
            
             $status = array('success' => true,
-                             'html'=>$this->load->view('registration/datafragment/payment_form',$datas, true),
+                           'html'=>$this->load->view('registration/datafragment/payment_form',$datas, true),
+//                                'html'=>$this->load->view('payment/payment_checkout',$datas,true),
                             'msg'=> "Page successfully generated"
             );
         }else{
@@ -172,10 +173,12 @@ $this->load->view ( 'registration/payment_checkout');
                 $company_contact = trim(xss_clean($this->input->post('company_contact')));                
                 $company_email = trim(xss_clean($this->input->post('company_email')));
                 $cofounderName = trim(xss_clean(serialize($this->input->post('cofounderName'))));
+                $founder_no = trim(xss_clean(serialize($this->input->post('founder_no'))));
+                
                 $dinner = trim(xss_clean(serialize($this->input->post('dinner'))));
                 $checkbox1 = trim(xss_clean($this->input->post('checkbox1')));
                 $checkbox2 = trim(xss_clean($this->input->post('checkbox2')));
-                $result = $this->project->AddRegEntrepeneur($company_name,$company_contact,$company_email,$cofounderName,$dinner,$checkbox1,$checkbox2,$uploadFiles);
+                $result = $this->project->AddRegEntrepeneur($company_name,$company_contact,$company_email,$cofounderName,$dinner,$checkbox1,$checkbox2,$uploadFiles,$founder_no);
                 if($result['code']){
                     $status = array('success' => true,
                         'msg'=> $result['message']);

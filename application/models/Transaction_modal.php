@@ -47,26 +47,42 @@ class Transaction_modal extends CI_Model{
 	
 	
 	
-  function AddRegEntrepeneur($company_name,$company_contact,$company_email,$cofounderName,$dinner)
+function AddRegEntrepeneur($company_name,$company_contact,$company_email,$cofounderName,$dinner,$checkbox1,$checkbox2,$uploadFiles,$founder_no)
     {  
 
     	if($dinner_attend==1)
     	{$amount=500+800;
     	}else{$amount=500;}
 
-        $data = array(
-                        'student_name'=>$company_name,
-                        'college_name'=>$company_contact,
-						'student_email'=>$company_email,
-                        'student_contact'=>$cofounderName,                        
-                        'dinner_attend'=>$dinner,
-                        'user_amount'=>$amount,
-                        'isActive'=>1
-                    );
-            $this->db->trans_begin();
-            $this->db->insert('student_user',$data);
 
-            $student_id=$this->db->insert_id();
+        
+       
+            $data = array(
+                        'company_name'=>$company_name,
+                        'co_founder_no'=>$co_founder_no,
+                        'company_email'=>$company_email,
+                        'company_contact'=>$company_contact,                        
+                        'dinner_attend'=>$dinner,
+                        'startup_stall'=>$checkbox1,
+                        'pitching'=>$checkbox2
+            );
+                $this->db->trans_begin();
+            $this->db->insert('company_details', $data);
+            $company_id=$this->db->insert_id();
+      
+            $records = count($_POST['founder_no']);
+            for($i=0; $i<$records; $i++) 
+            {
+            $data = array(
+                        'company_id'=>$company_id,
+                        'user_name'=>$cofounderName[$i],
+						'user_amount'=>$amount,
+                        'dinner_attend'=>$dinner_attend, 
+                    );
+           
+            $this->db->insert('company_user_details',$data);
+
+            }
 
 
             if($this->db->trans_status() === FALSE)
@@ -79,9 +95,9 @@ class Transaction_modal extends CI_Model{
             {
                 $this->db->trans_commit();
 
- 				$this->session->set_userdata('user_id', $student_id);
+ 				$this->session->set_userdata('company_id', $company_id);
  				 $this->session->set_userdata('user_amount', $amount);
- 				 $this->session->set_userdata('user_type', $type);
+ 				 $this->session->set_userdata('user_type', "ent");
 
                  $msg = "Save sucessfull!";
                 $code = true;
