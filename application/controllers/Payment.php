@@ -12,16 +12,16 @@ public function checkout(){
 	}
 
 	public function process(){
-
+echo "hello world";
 		//Request hash
 			$merchantKey="ej6pDHZi";
-			$amount="500";
+			$amount="4300";
 			$salt="MVpQVkMo1R";
-			$txnNo="Txn" . rand(10000,99999999);
-			$productInfo="";
-			$name="";
-			$email="";
-			$udf5="";
+			$txnNo="df79cfccb85ff624b7b606f10800ad26283c6e5e";
+			$productInfo="imphalangels";
+			$name="IMPHAL";
+			$email="mdriya93@gmail.com ";
+			$udf5="enterprenure_reg";
 				$hash=hash('sha512', $merchantKey.'|'.$txnNo.'|'.$amount.'|'.$productInfo.'|'.$name.'|'.$email.'|||||'.$udf5.'||||||'.$salt);
 				$json=array();
 				$json['success'] = $hash;

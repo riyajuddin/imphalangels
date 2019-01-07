@@ -140,14 +140,43 @@ function AddRegEntrepeneur($company_name,$company_contact,$company_email,$cofoun
             }
             else
             {
-                $this->db->trans_commit();
+            
+            $this->db->trans_commit();
 
- 				$this->session->set_userdata('company_id', $company_id);
- 				 $this->session->set_userdata('user_amount', $amount);
- 				 $this->session->set_userdata('user_type', "ent");
+ 			//$txnNo = sha1(md5(time()));	
+            $txnNo="testing";
 
-                 $msg = "Save sucessfull!";
-                $code = true;
+            $merchantKey="ej6pDHZi";
+            $amount=$amount;
+            $salt="MVpQVkMo1R";
+            $txnNo=$txnNo;
+            $productInfo="imphalangels";
+            $name=$company_name;
+            $email=$company_email;
+            $udf5="enterprenure_reg";
+            $hash=hash('sha512', $merchantKey.'|'.$txnNo.'|'.$amount.'|'.$productInfo.'|'.$name.'|'.$email.'|||||'.$udf5.'||||||'.$salt);
+            /*    $json=array();
+                $json['success'] = $hash;
+                echo json_encode($json);
+               */ 
+
+            $this->session->set_userdata('company_id', $company_id);
+            $this->session->set_userdata('amount', $amount);
+            $this->session->set_userdata('user_type', "ent");
+            $this->session->set_userdata('merchantKey', $merchantKey);
+            $this->session->set_userdata('salt', $salt);
+            $this->session->set_userdata('txnNo', $txnNo);
+            $this->session->set_userdata('productInfo',$productInfo);
+            $this->session->set_userdata('name', $name); 
+            $this->session->set_userdata('company_email', $company_email); 
+            $this->session->set_userdata('company_contact', $company_contact);                         
+            $this->session->set_userdata('udf5', $udf5);                      
+            $this->session->set_userdata('hash', $hash);                                  
+        
+
+
+            $msg = "Save sucessfull!";
+            $code = true;
             }
         return array('code' => $code, 'message' =>  $msg);
     }

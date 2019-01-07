@@ -17,7 +17,13 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
 <!-- BOLT Production/Live //-->
 <!--// script id="bolt" src="https://checkout-static.citruspay.com/bolt/run/bolt.min.js" bolt-color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/Bolt-Logo-e14421724859591.png"></script //-->
 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
+
+
 
 <style type="text/css">
 	.main {
@@ -34,64 +40,72 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
 </style>
 <body>
 <div class="main">
+	 <div class="col-md-6 col-md-offset-3">
 	<div>
     	<img src="images/payumoney.png" />
     </div>
     <div>
-    	<h3>PHP7 BOLT Kit</h3>
+    	<h3>Payment checkout</h3>
     </div>
+   
 	<form action="#" id="payment_form">
-    <input type="hidden" id="udf5" name="udf5" value="BOLT_KIT_PHP7" />
+    <input type="hidden" id="udf5" name="udf5" value="<?php echo $this->session->userdata('udf5');?>" />
     <input type="hidden" id="surl" name="surl" value="<?php echo base_url();?>payment/response" />
      <input type="hidden" id="furl" name="furl" value="<?php echo base_url();?>payment/response" />
    <div class="dv">
     <span class="text"><label>Merchant Key:</label></span>
-    <span><input type="text" id="key" name="key" placeholder="Merchant Key" value="" /></span>
+    <span class="form-group"><input type="text" id="key" name="key" class="form-control" placeholder="Merchant Key" value="<?php echo $this->session->userdata('merchantKey'); ?>" /></span>
     </div>
     
     <div class="dv">
     <span class="text"><label>Merchant Salt:</label></span>
-    <span><input type="text" id="salt" name="salt" placeholder="Merchant Salt" value="" /></span>
+    <span class="form-group"><input type="text" id="salt" name="salt" class="form-control" placeholder="Merchant Salt" value="<?php echo $this->session->userdata('salt'); ?>" /></span>
     </div>
     
     <div class="dv">
     <span class="text"><label>Transaction/Order ID:</label></span>
-    <span><input type="text" id="txnid" name="txnid" placeholder="Transaction ID" value="<?php echo  "Txn" . rand(10000,99999999)?>" /></span>
+    <span class="form-group"><input type="text" id="txnid" name="txnid" class="form-control" placeholder="Transaction ID" value="<?php echo $this->session->userdata('txnNo'); ?>" /></span>
     </div>
     
     <div class="dv">
     <span class="text"><label>Amount:</label></span>
-    <span><input type="text" id="amount" name="amount" placeholder="Amount" value="6.00" /></span>    
+    <span class="form-group"><input type="text" id="amount" class="form-control" name="amount" placeholder="Amount" value="<?php echo $this->session->userdata('amount'); ?>" /></span>    
     </div>
     
     <div class="dv">
     <span class="text"><label>Product Info:</label></span>
-    <span><input type="text" id="pinfo" name="pinfo" placeholder="Product Info" value="P01,P02" /></span>
+    <span class="form-group"><input type="text" id="pinfo" class="form-control" name="pinfo" placeholder="Product Info" value="<?php echo $this->session->userdata('productInfo'); ?>" /></span>
     </div>
     
     <div class="dv">
-    <span class="text"><label>First Name:</label></span>
-    <span><input type="text" id="fname" name="fname" placeholder="First Name" value="" /></span>
+    <span class="text"><label>Name:</label></span>
+    <span class="form-group"><input type="text" id="fname" class="form-control" name="fname" placeholder="Name" value="<?php echo $this->session->userdata('name'); ?>" /></span>
     </div>
     
     <div class="dv">
     <span class="text"><label>Email ID:</label></span>
-    <span><input type="text" id="email" name="email" placeholder="Email ID" value="" /></span>
+    <span class="form-group"><input type="text" id="email" class="form-control" name="email" placeholder="Email ID" value="<?php echo $this->session->userdata('company_email'); ?> " /></span>
     </div>
     
     <div class="dv">
     <span class="text"><label>Mobile/Cell Number:</label></span>
-    <span><input type="text" id="mobile" name="mobile" placeholder="Mobile/Cell Number" value="" /></span>
+    <span class="form-group"><input type="text" id="mobile" class="form-control" name="mobile" placeholder="Mobile/Cell Number" value="<?php echo $this->session->userdata('company_contact'); ?>" /></span>
     </div>
     
     <div class="dv">
     <span class="text"><label>Hash:</label></span>
-    <span><input type="text" id="hash" name="hash" placeholder="Hash" value="" /></span>
+    <span class="form-group"><input type="text" id="hash" class="form-control"   name="hash" placeholder="Hash" value="<?php echo $this->session->userdata('hash');?>" /></span>
     </div>
     
     
-    <div><input type="submit" value="Pay" onclick="launchBOLT(); return false;" /></div>
+    
+    <div class="col-md-2">
+    <a href="<?php echo base_url()?>registration" class="btn btn-danger">Cancel</a>
+    	
+    </div>
+    <div class="col-md-2"><input type="submit" value="Pay" class="form-control btn btn-success"  onclick="launchBOLT(); return false;" /></div>
 	</form>
+	</div>
 </div>
 <script type="text/javascript"><!--
 function launchBOLT()
@@ -139,6 +153,7 @@ function launchBOLT()
 }
 //--
 </script>	
+
 
 </body>
 </html>

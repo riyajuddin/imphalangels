@@ -178,11 +178,13 @@ class Registration extends CI_Controller
 
 
                 $result = $this->transaction->AddRegEntrepeneur($company_name,$company_contact,$company_email,$cofounderName,$dinner,$checkbox1,$checkbox2,$uploadFiles,$founder_no);
-
+ 
                 if($result['code']){
                     $status = array('success' => true,
-                        'msg'=> $result['message']);
+                                    'msg'=> $result['message']);
                     
+                  
+
                 }else{
                     $status = array("success" => false,"msg" => $result['message']);
                 }
@@ -190,7 +192,7 @@ class Registration extends CI_Controller
         } catch (Exception $ex) {
             $status = array("success" => false,"msg" => $ex->getMessage());
         }
-        
+          
         echo json_encode($status) ;
     }
 
