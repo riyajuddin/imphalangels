@@ -16,8 +16,7 @@ class Transaction_modal extends CI_Model{
 						'student_email'=>$email,
                         'student_contact'=>$contact,                        
                         'dinner_attend'=>$dinner_attend,
-                        'user_amount'=>$amount,
-                        'isActive'=>1
+                        'user_amount'=>$amount
                     );
             $this->db->trans_begin();
             $this->db->insert('student_user',$data);
@@ -49,35 +48,83 @@ class Transaction_modal extends CI_Model{
 	
 function AddRegEntrepeneur($company_name,$company_contact,$company_email,$cofounderName,$dinner,$checkbox1,$checkbox2,$uploadFiles,$founder_no)
     {  
-
-    	if($dinner_attend==1)
-    	{$amount=500+800;
-    	}else{$amount=500;}
+     $cofounderName=unserialize($cofounderName);
+     $dinner_attend=sizeof(unserialize($dinner));
 
 
+     if($checkbox1=="on")
+     {
+      $checkbox1='1';  
+     }else
+     {
+        $checkbox1='0';
+     }
+
+     if($checkbox2=="on")
+     {
+      $checkbox2='1';  
+     }else
+     {
+        $checkbox2='0';
+     }
+     
+
+        if($dinner_attend > 0)
+        {   	
+             $diner_amount=$dinner_attend*800;
+        }else
+        {
+             $diner_amount=0;
+        }
+        if($checkbox1=="1")
+        {
+            $startup_stall=3000;
+        }else
+        {
+            $startup_stall=0;
+        }
+
+        $amount=$diner_amount+$startup_stall+500;
+
+        if($uploadFiles==" ")
+        {
+            $file_name="";
+            $file_ext="";
+            $file_size="";
+        }
+        else{
+            $file_name=$uploadFiles[0]['file_name'];
+            $file_ext=$uploadFiles[0]['file_ext'];
+            $file_size=$uploadFiles[0]['file_size'];
+        }
         
+
        
             $data = array(
                         'company_name'=>$company_name,
-                        'co_founder_no'=>$co_founder_no,
+                        'co_founder_no'=>$founder_no,
                         'company_email'=>$company_email,
                         'company_contact'=>$company_contact,                        
-                        'dinner_attend'=>$dinner,
+                        'dinner_attend'=>$dinner_attend,
+                        'user_amount'=>$amount,
                         'startup_stall'=>$checkbox1,
+                        'file_name'=>$file_name,
+                        'file_ext'=>$file_ext,
+                        'file_size'=>$file_size,
                         'pitching'=>$checkbox2
             );
                 $this->db->trans_begin();
             $this->db->insert('company_details', $data);
             $company_id=$this->db->insert_id();
       
-            $records = count($_POST['founder_no']);
-            for($i=0; $i<$records; $i++) 
+          
+         
+            foreach($cofounderName as $value) 
             {
             $data = array(
                         'company_id'=>$company_id,
-                        'user_name'=>$cofounderName[$i],
-						'user_amount'=>$amount,
-                        'dinner_attend'=>$dinner_attend, 
+                        'user_name'=>$value,
+						
                     );
            
             $this->db->insert('company_user_details',$data);

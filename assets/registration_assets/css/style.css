@@ -1007,7 +1007,7 @@ button:focus {
 }
 
 .mu-register-form .form-group {
-	margin-bottom: 25px;
+	margin-bottom: 15px;
 }
 
 .mu-register-form .form-control {
@@ -1775,4 +1775,18 @@ button:focus {
 {
 
 border:2px solid #ff0000 !important;
+}
+
+li.parsley-custom-error-message {
+    font-size: 13px;
+    line-height: 1.59;
+    list-style: none;
+    text-align: left;
+}
+
+li.parsley-required {
+	    font-size: 13px;
+    line-height: 1.59;
+    list-style: none;
+    text-align: left;
 }

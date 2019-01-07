@@ -594,7 +594,7 @@ Include light lunch
 					 					<div class="col-md-4">
 											<div class="form-group">   
 											<br>            
-												<input id="pitch_file" type="file" style=" display: none;color:white;" name="files[]" multiple="multiple">
+												<input id="pitch_file"  type="file"  style=" display: none;color:white;" name="files[]" >
 											</div>     
 										</div>
 
@@ -1020,9 +1020,18 @@ Include light lunch
   var pitch_file = document.getElementById("pitch_file");
   if (viewFileUpload.checked == true){
     pitch_file.style.display = "block";
+
+  
+$("#pitch_file").attr("data-parsley-required","true");
+$("#pitch_file").attr("data-parsley-error-message","Please upload a file");
+
+
   }
    else {
      pitch_file.style.display = "none";
+      $("#pitch_file").removeAttr("required");
+      $("#pitch_file").removeAttr("data-parsley-required","true");
+		$("#pitch_file").removeAttr("data-parsley-error-message","Please upload a file");
   }
 }
 	
@@ -1048,7 +1057,7 @@ Include light lunch
 		{
 			for(var i=0;i<num;i++) 
 		{
-		$('#entrepreneurFounder').append('<div class="col-md-8"><div class="form-group"><input type="text" class="form-control" placeholder="Co-founder name '+(i+1)+'" id="name" name="cofounderName[]" data-parsley-required="true" data-parsley-error-message="Co-founder name '+(i+1)+' is required."></div></div><div class="col-md-4" style="text-align:left;"><label class="radio-inline" style="color:white; "><input type="checkbox" name="dinner[]" value="tomba"  style="margin: 19px 10px 0px 0px; color:white;">Dinner attend</label></div>');
+		$('#entrepreneurFounder').append('<div class="col-md-8"><div class="form-group"><input type="text" class="form-control" placeholder="Co-founder name '+(i+1)+'" id="name" name="cofounderName[]" data-parsley-required="true" data-parsley-error-message="Co-founder name '+(i+1)+' is required."></div></div><div class="col-md-4" style="text-align:left;"><label class="radio-inline" style="color:white; "><input type="checkbox" name="dinner[]" value="1"  style="margin: 19px 10px 0px 0px; color:white;">Dinner attend</label></div>');
 		}
 		}
 		

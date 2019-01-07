@@ -68,10 +68,7 @@ $this->load->view ( 'registration/payment_checkout');
             $result = $this->transaction->student_form_add($name,$college,$email,$contact,$dinner_attend,$type,$amount); 
 
            
-            $status = array('success' => true,
-                           'html'=>$this->load->view('registration/datafragment/payment_form',$datas, true),
-//                                'html'=>$this->load->view('payment/payment_checkout',$datas,true),
-                            'msg'=> "Page successfully generated"
+           
             );
         }else{
               $status = array("success" => false,"msg" => $errorMSG); 
@@ -83,6 +80,78 @@ $this->load->view ( 'registration/payment_checkout');
       echo json_encode($status); 
     }
 
+    private function payment_checkout(){
+        
+// Merchant key here as provided by Payu
+$MERCHANT_KEY = "ej6pDHZi";
+
+// Merchant Salt as provided by Payu
+$SALT = "MVpQVkMo1R";
+
+// End point - change to https://secure.payu.in for LIVE mode
+$PAYU_BASE_URL = "https://secure.payu.in";
+
+$action = '';
+
+$posted = array();
+if(!empty($_POST)) {
+    //print_r($_POST);
+  foreach($_POST as $key => $value) {    
+    $posted[$key] = $value; 
+    
+  }
+}
+
+$formError = 0;
+
+if(empty($posted['txnid'])) {
+  // Generate random transaction id
+  $txnid = substr(hash('sha256', mt_rand() . microtime()), 0, 20);
+  $hashKey=generateRandomString(50);
+//$sql="INSERT INTO `payment`(`amount`, `status`, `tranc_id`, `ref_id`)VALUES ('$amount','INCOMPLETE','$txnid','$hashKey')";
+  
+ //$query=$this->db->query($sql);
+} else {
+  $txnid = $posted['txnid'];
+}
+$hash = '';
+// Hash Sequence
+$hashSequence = "key|txnid|amount|productinfo|firstname|email|udf1|udf2|udf3|udf4|udf5|udf6|udf7|udf8|udf9|udf10";
+if(empty($posted['hash']) && sizeof($posted) > 0) {
+  if(
+          empty($posted['key'])
+          || empty($posted['txnid'])
+          || empty($posted['amount'])
+          || empty($posted['firstname'])
+          || empty($posted['email'])
+          || empty($posted['phone'])
+          || empty($posted['productinfo'])
+          || empty($posted['surl'])
+          || empty($posted['furl'])
+          || empty($posted['service_provider'])
+  ) {
+    $formError = 1;
+  } else {
+    //$posted['productinfo'] = json_encode(json_decode('[{"name":"tutionfee","description":"","value":"500","isRequired":"false"},{"name":"developmentfee","description":"monthly tution fee","value":"1500","isRequired":"false"}]'));
+    $hashVarsSeq = explode('|', $hashSequence);
+    $hash_string = '';  
+    foreach($hashVarsSeq as $hash_var) {
+      $hash_string .= isset($posted[$hash_var]) ? $posted[$hash_var] : '';
+      $hash_string .= '|';
+    }
+
+    $hash_string .= $SALT;
+
+
+    $hash = strtolower(hash('sha512', $hash_string));
+    $action = $PAYU_BASE_URL . '/_payment';
+  }
+} elseif(!empty($posted['hash'])) {
+  $hash = $posted['hash'];
+  $action = $PAYU_BASE_URL . '/_payment';
+}
+
+    }
 
     public function ent_form() 
     {   
@@ -102,8 +171,27 @@ $this->load->view ( 'registration/payment_checkout');
             elseif (empty($_POST["cofounderName"])) {
                 $errorMSG = "Co-founder name is required";
             }
-            // **********************MULTIPLE FILE UPLOAD START *****************************************
-         /*   
+           
+			
+            //***********END OF MULTIPLE FILE UPLOAD*****************************************
+            
+            
+            $status = array("success"=>false,"msg"=>$errorMSG);
+            if(empty($errorMSG)){
+                $company_name = trim(xss_clean($this->input->post('company_name')));
+                $company_contact = trim(xss_clean($this->input->post('company_contact')));                
+                $company_email = trim(xss_clean($this->input->post('company_email')));
+                $cofounderName = trim(xss_clean(serialize($this->input->post('cofounderName'))));
+                $founder_no = trim(xss_clean(serialize($this->input->post('founder_no'))));
+                
+                $dinner = trim(xss_clean(serialize($this->input->post('dinner'))));
+                $checkbox1 = trim(xss_clean($this->input->post('checkbox1')));
+                $checkbox2 = trim(xss_clean($this->input->post('checkbox2')));
+             
+         
+
+         if($checkbox2=="on"){     // **********************MULTIPLE FILE UPLOAD START *****************************************
+          
             $file_path = "./uploads/file/";
             $uploadFiles = array();
             $is_file_error = FALSE;
@@ -162,23 +250,14 @@ $this->load->view ( 'registration/payment_checkout');
                 }
                 $errorMSG = "File upload Error !!! Please try again later ...";
             }
-            
-			*/
-            //***********END OF MULTIPLE FILE UPLOAD*****************************************
-            
-            
-            $status = array("success"=>false,"msg"=>$errorMSG);
-            if(empty($errorMSG)){
-                $company_name = trim(xss_clean($this->input->post('company_name')));
-                $company_contact = trim(xss_clean($this->input->post('company_contact')));                
-                $company_email = trim(xss_clean($this->input->post('company_email')));
-                $cofounderName = trim(xss_clean(serialize($this->input->post('cofounderName'))));
-                $founder_no = trim(xss_clean(serialize($this->input->post('founder_no'))));
-                
-                $dinner = trim(xss_clean(serialize($this->input->post('dinner'))));
-                $checkbox1 = trim(xss_clean($this->input->post('checkbox1')));
-                $checkbox2 = trim(xss_clean($this->input->post('checkbox2')));
-                $result = $this->project->AddRegEntrepeneur($company_name,$company_contact,$company_email,$cofounderName,$dinner,$checkbox1,$checkbox2,$uploadFiles,$founder_no);
+        }else
+        {
+            $uploadFiles=" ";
+        }
+
+
+                $result = $this->transaction->AddRegEntrepeneur($company_name,$company_contact,$company_email,$cofounderName,$dinner,$checkbox1,$checkbox2,$uploadFiles,$founder_no);
+
                 if($result['code']){
                     $status = array('success' => true,
                         'msg'=> $result['message']);
