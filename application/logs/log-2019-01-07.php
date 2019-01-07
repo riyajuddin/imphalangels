@@ -3450,3 +3450,202 @@ DEBUG - 2019-01-07 07:16:43 --> Global POST, GET and COOKIE data sanitized
 INFO - 2019-01-07 07:16:43 --> Input Class Initialized
 INFO - 2019-01-07 07:16:43 --> Language Class Initialized
 ERROR - 2019-01-07 07:16:43 --> 404 Page Not Found: Assets/registration_assets
+INFO - 2019-01-07 07:43:43 --> Config Class Initialized
+INFO - 2019-01-07 07:43:43 --> Hooks Class Initialized
+DEBUG - 2019-01-07 07:43:43 --> UTF-8 Support Enabled
+INFO - 2019-01-07 07:43:43 --> Utf8 Class Initialized
+INFO - 2019-01-07 07:43:43 --> URI Class Initialized
+INFO - 2019-01-07 07:43:43 --> Router Class Initialized
+INFO - 2019-01-07 07:43:43 --> Output Class Initialized
+INFO - 2019-01-07 07:43:43 --> Security Class Initialized
+DEBUG - 2019-01-07 07:43:43 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-07 07:43:43 --> Input Class Initialized
+INFO - 2019-01-07 07:43:43 --> Language Class Initialized
+ERROR - 2019-01-07 07:43:43 --> Severity: Compile Error --> Cannot redeclare Registration::payment_checkout() /Applications/AMPPS/www/imphalangels/application/controllers/Registration.php 85
+INFO - 2019-01-07 07:44:26 --> Config Class Initialized
+INFO - 2019-01-07 07:44:26 --> Hooks Class Initialized
+DEBUG - 2019-01-07 07:44:26 --> UTF-8 Support Enabled
+INFO - 2019-01-07 07:44:26 --> Utf8 Class Initialized
+INFO - 2019-01-07 07:44:26 --> URI Class Initialized
+INFO - 2019-01-07 07:44:26 --> Router Class Initialized
+INFO - 2019-01-07 07:44:26 --> Output Class Initialized
+INFO - 2019-01-07 07:44:26 --> Security Class Initialized
+DEBUG - 2019-01-07 07:44:26 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-07 07:44:26 --> Input Class Initialized
+INFO - 2019-01-07 07:44:26 --> Language Class Initialized
+INFO - 2019-01-07 07:44:26 --> Loader Class Initialized
+INFO - 2019-01-07 07:44:26 --> Helper loaded: url_helper
+INFO - 2019-01-07 07:44:26 --> Helper loaded: text_helper
+INFO - 2019-01-07 07:44:26 --> Helper loaded: form_helper
+INFO - 2019-01-07 07:44:26 --> Database Driver Class Initialized
+ERROR - 2019-01-07 07:44:26 --> Severity: Warning --> mysqli::real_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) /Applications/AMPPS/www/imphalangels/system/database/drivers/mysqli/mysqli_driver.php 201
+ERROR - 2019-01-07 07:44:26 --> Unable to connect to the database
+INFO - 2019-01-07 07:44:26 --> Language file loaded: language/english/db_lang.php
+INFO - 2019-01-07 07:45:37 --> Config Class Initialized
+INFO - 2019-01-07 07:45:37 --> Hooks Class Initialized
+DEBUG - 2019-01-07 07:45:37 --> UTF-8 Support Enabled
+INFO - 2019-01-07 07:45:37 --> Utf8 Class Initialized
+INFO - 2019-01-07 07:45:37 --> URI Class Initialized
+INFO - 2019-01-07 07:45:37 --> Router Class Initialized
+INFO - 2019-01-07 07:45:37 --> Output Class Initialized
+INFO - 2019-01-07 07:45:37 --> Security Class Initialized
+DEBUG - 2019-01-07 07:45:37 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-07 07:45:37 --> Input Class Initialized
+INFO - 2019-01-07 07:45:37 --> Language Class Initialized
+INFO - 2019-01-07 07:45:37 --> Loader Class Initialized
+INFO - 2019-01-07 07:45:37 --> Helper loaded: url_helper
+INFO - 2019-01-07 07:45:37 --> Helper loaded: text_helper
+INFO - 2019-01-07 07:45:37 --> Helper loaded: form_helper
+INFO - 2019-01-07 07:45:37 --> Database Driver Class Initialized
+DEBUG - 2019-01-07 07:45:37 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-01-07 07:45:37 --> Session: Class initialized using 'files' driver.
+INFO - 2019-01-07 07:45:37 --> Form Validation Class Initialized
+INFO - 2019-01-07 07:45:37 --> Controller Class Initialized
+INFO - 2019-01-07 07:45:37 --> Model "Transaction_modal" initialized
+INFO - 2019-01-07 07:45:37 --> Helper loaded: security_helper
+INFO - 2019-01-07 07:45:37 --> Final output sent to browser
+DEBUG - 2019-01-07 07:45:37 --> Total execution time: 0.0348
+INFO - 2019-01-07 07:45:41 --> Config Class Initialized
+INFO - 2019-01-07 07:45:41 --> Hooks Class Initialized
+DEBUG - 2019-01-07 07:45:41 --> UTF-8 Support Enabled
+INFO - 2019-01-07 07:45:41 --> Utf8 Class Initialized
+INFO - 2019-01-07 07:45:41 --> URI Class Initialized
+INFO - 2019-01-07 07:45:41 --> Router Class Initialized
+INFO - 2019-01-07 07:45:41 --> Output Class Initialized
+INFO - 2019-01-07 07:45:41 --> Security Class Initialized
+DEBUG - 2019-01-07 07:45:41 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-07 07:45:41 --> Input Class Initialized
+INFO - 2019-01-07 07:45:41 --> Language Class Initialized
+INFO - 2019-01-07 07:45:41 --> Loader Class Initialized
+INFO - 2019-01-07 07:45:41 --> Helper loaded: url_helper
+INFO - 2019-01-07 07:45:41 --> Helper loaded: text_helper
+INFO - 2019-01-07 07:45:41 --> Helper loaded: form_helper
+INFO - 2019-01-07 07:45:41 --> Database Driver Class Initialized
+DEBUG - 2019-01-07 07:45:41 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-01-07 07:45:41 --> Session: Class initialized using 'files' driver.
+INFO - 2019-01-07 07:45:41 --> Form Validation Class Initialized
+INFO - 2019-01-07 07:45:41 --> Controller Class Initialized
+INFO - 2019-01-07 07:45:41 --> Model "Transaction_modal" initialized
+INFO - 2019-01-07 07:45:41 --> Helper loaded: security_helper
+INFO - 2019-01-07 07:45:41 --> Final output sent to browser
+DEBUG - 2019-01-07 07:45:41 --> Total execution time: 0.0227
+INFO - 2019-01-07 07:49:22 --> Config Class Initialized
+INFO - 2019-01-07 07:49:22 --> Hooks Class Initialized
+DEBUG - 2019-01-07 07:49:22 --> UTF-8 Support Enabled
+INFO - 2019-01-07 07:49:22 --> Utf8 Class Initialized
+INFO - 2019-01-07 07:49:22 --> URI Class Initialized
+INFO - 2019-01-07 07:49:22 --> Router Class Initialized
+INFO - 2019-01-07 07:49:22 --> Output Class Initialized
+INFO - 2019-01-07 07:49:22 --> Security Class Initialized
+DEBUG - 2019-01-07 07:49:22 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-07 07:49:22 --> Input Class Initialized
+INFO - 2019-01-07 07:49:22 --> Language Class Initialized
+INFO - 2019-01-07 07:49:22 --> Loader Class Initialized
+INFO - 2019-01-07 07:49:22 --> Helper loaded: url_helper
+INFO - 2019-01-07 07:49:22 --> Helper loaded: text_helper
+INFO - 2019-01-07 07:49:22 --> Helper loaded: form_helper
+INFO - 2019-01-07 07:49:22 --> Database Driver Class Initialized
+DEBUG - 2019-01-07 07:49:22 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-01-07 07:49:22 --> Session: Class initialized using 'files' driver.
+INFO - 2019-01-07 07:49:22 --> Form Validation Class Initialized
+INFO - 2019-01-07 07:49:22 --> Controller Class Initialized
+INFO - 2019-01-07 07:49:22 --> Model "Transaction_modal" initialized
+INFO - 2019-01-07 07:49:22 --> Helper loaded: security_helper
+INFO - 2019-01-07 07:49:22 --> Final output sent to browser
+DEBUG - 2019-01-07 07:49:22 --> Total execution time: 0.0401
+INFO - 2019-01-07 07:49:34 --> Config Class Initialized
+INFO - 2019-01-07 07:49:34 --> Hooks Class Initialized
+DEBUG - 2019-01-07 07:49:34 --> UTF-8 Support Enabled
+INFO - 2019-01-07 07:49:34 --> Utf8 Class Initialized
+INFO - 2019-01-07 07:49:34 --> URI Class Initialized
+INFO - 2019-01-07 07:49:34 --> Router Class Initialized
+INFO - 2019-01-07 07:49:34 --> Output Class Initialized
+INFO - 2019-01-07 07:49:34 --> Security Class Initialized
+DEBUG - 2019-01-07 07:49:34 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-07 07:49:34 --> Input Class Initialized
+INFO - 2019-01-07 07:49:34 --> Language Class Initialized
+INFO - 2019-01-07 07:49:34 --> Loader Class Initialized
+INFO - 2019-01-07 07:49:34 --> Helper loaded: url_helper
+INFO - 2019-01-07 07:49:34 --> Helper loaded: text_helper
+INFO - 2019-01-07 07:49:34 --> Helper loaded: form_helper
+INFO - 2019-01-07 07:49:34 --> Database Driver Class Initialized
+DEBUG - 2019-01-07 07:49:34 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-01-07 07:49:34 --> Session: Class initialized using 'files' driver.
+INFO - 2019-01-07 07:49:34 --> Form Validation Class Initialized
+INFO - 2019-01-07 07:49:34 --> Controller Class Initialized
+INFO - 2019-01-07 07:49:34 --> Model "Transaction_modal" initialized
+INFO - 2019-01-07 07:49:34 --> Helper loaded: security_helper
+INFO - 2019-01-07 07:49:34 --> Final output sent to browser
+DEBUG - 2019-01-07 07:49:34 --> Total execution time: 0.0256
+INFO - 2019-01-07 07:49:47 --> Config Class Initialized
+INFO - 2019-01-07 07:49:47 --> Hooks Class Initialized
+DEBUG - 2019-01-07 07:49:47 --> UTF-8 Support Enabled
+INFO - 2019-01-07 07:49:47 --> Utf8 Class Initialized
+INFO - 2019-01-07 07:49:47 --> URI Class Initialized
+INFO - 2019-01-07 07:49:47 --> Router Class Initialized
+INFO - 2019-01-07 07:49:47 --> Output Class Initialized
+INFO - 2019-01-07 07:49:47 --> Security Class Initialized
+DEBUG - 2019-01-07 07:49:47 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-07 07:49:47 --> Input Class Initialized
+INFO - 2019-01-07 07:49:47 --> Language Class Initialized
+INFO - 2019-01-07 07:49:47 --> Loader Class Initialized
+INFO - 2019-01-07 07:49:47 --> Helper loaded: url_helper
+INFO - 2019-01-07 07:49:47 --> Helper loaded: text_helper
+INFO - 2019-01-07 07:49:47 --> Helper loaded: form_helper
+INFO - 2019-01-07 07:49:47 --> Database Driver Class Initialized
+DEBUG - 2019-01-07 07:49:47 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-01-07 07:49:47 --> Session: Class initialized using 'files' driver.
+INFO - 2019-01-07 07:49:47 --> Form Validation Class Initialized
+INFO - 2019-01-07 07:49:47 --> Controller Class Initialized
+INFO - 2019-01-07 07:49:47 --> Model "Transaction_modal" initialized
+INFO - 2019-01-07 07:49:47 --> Helper loaded: security_helper
+INFO - 2019-01-07 07:49:47 --> Final output sent to browser
+DEBUG - 2019-01-07 07:49:47 --> Total execution time: 0.0225
+INFO - 2019-01-07 07:49:59 --> Config Class Initialized
+INFO - 2019-01-07 07:49:59 --> Hooks Class Initialized
+DEBUG - 2019-01-07 07:49:59 --> UTF-8 Support Enabled
+INFO - 2019-01-07 07:49:59 --> Utf8 Class Initialized
+INFO - 2019-01-07 07:49:59 --> URI Class Initialized
+INFO - 2019-01-07 07:49:59 --> Router Class Initialized
+INFO - 2019-01-07 07:49:59 --> Output Class Initialized
+INFO - 2019-01-07 07:49:59 --> Security Class Initialized
+DEBUG - 2019-01-07 07:49:59 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-07 07:49:59 --> Input Class Initialized
+INFO - 2019-01-07 07:49:59 --> Language Class Initialized
+INFO - 2019-01-07 07:49:59 --> Loader Class Initialized
+INFO - 2019-01-07 07:49:59 --> Helper loaded: url_helper
+INFO - 2019-01-07 07:49:59 --> Helper loaded: text_helper
+INFO - 2019-01-07 07:49:59 --> Helper loaded: form_helper
+INFO - 2019-01-07 07:49:59 --> Database Driver Class Initialized
+DEBUG - 2019-01-07 07:49:59 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-01-07 07:49:59 --> Session: Class initialized using 'files' driver.
+INFO - 2019-01-07 07:49:59 --> Form Validation Class Initialized
+INFO - 2019-01-07 07:49:59 --> Controller Class Initialized
+INFO - 2019-01-07 07:49:59 --> Model "Transaction_modal" initialized
+INFO - 2019-01-07 07:49:59 --> Helper loaded: security_helper
+INFO - 2019-01-07 07:49:59 --> Final output sent to browser
+DEBUG - 2019-01-07 07:49:59 --> Total execution time: 0.0227
+INFO - 2019-01-07 07:50:18 --> Config Class Initialized
+INFO - 2019-01-07 07:50:18 --> Hooks Class Initialized
+DEBUG - 2019-01-07 07:50:18 --> UTF-8 Support Enabled
+INFO - 2019-01-07 07:50:18 --> Utf8 Class Initialized
+INFO - 2019-01-07 07:50:18 --> URI Class Initialized
+INFO - 2019-01-07 07:50:18 --> Router Class Initialized
+INFO - 2019-01-07 07:50:18 --> Output Class Initialized
+INFO - 2019-01-07 07:50:18 --> Security Class Initialized
+DEBUG - 2019-01-07 07:50:18 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-07 07:50:18 --> Input Class Initialized
+INFO - 2019-01-07 07:50:18 --> Language Class Initialized
+INFO - 2019-01-07 07:50:18 --> Loader Class Initialized
+INFO - 2019-01-07 07:50:18 --> Helper loaded: url_helper
+INFO - 2019-01-07 07:50:18 --> Helper loaded: text_helper
+INFO - 2019-01-07 07:50:18 --> Helper loaded: form_helper
+INFO - 2019-01-07 07:50:18 --> Database Driver Class Initialized
+DEBUG - 2019-01-07 07:50:18 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-01-07 07:50:18 --> Session: Class initialized using 'files' driver.
+INFO - 2019-01-07 07:50:18 --> Form Validation Class Initialized
+INFO - 2019-01-07 07:50:18 --> Controller Class Initialized
+INFO - 2019-01-07 07:50:18 --> Model "Transaction_modal" initialized
+INFO - 2019-01-07 07:50:18 --> Helper loaded: security_helper
+INFO - 2019-01-07 07:50:18 --> Final output sent to browser
+DEBUG - 2019-01-07 07:50:18 --> Total execution time: 0.0228
