@@ -3833,3 +3833,49 @@ DEBUG - 2019-01-07 09:12:26 --> Global POST, GET and COOKIE data sanitized
 INFO - 2019-01-07 09:12:26 --> Input Class Initialized
 INFO - 2019-01-07 09:12:26 --> Language Class Initialized
 ERROR - 2019-01-07 09:12:26 --> 404 Page Not Found: Registration/images
+INFO - 2019-01-07 11:30:14 --> Config Class Initialized
+INFO - 2019-01-07 11:30:14 --> Hooks Class Initialized
+DEBUG - 2019-01-07 11:30:14 --> UTF-8 Support Enabled
+INFO - 2019-01-07 11:30:14 --> Utf8 Class Initialized
+INFO - 2019-01-07 11:30:14 --> URI Class Initialized
+INFO - 2019-01-07 11:30:14 --> Router Class Initialized
+INFO - 2019-01-07 11:30:14 --> Output Class Initialized
+INFO - 2019-01-07 11:30:14 --> Security Class Initialized
+DEBUG - 2019-01-07 11:30:14 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-07 11:30:14 --> Input Class Initialized
+INFO - 2019-01-07 11:30:14 --> Language Class Initialized
+INFO - 2019-01-07 11:30:14 --> Loader Class Initialized
+INFO - 2019-01-07 11:30:14 --> Helper loaded: url_helper
+INFO - 2019-01-07 11:30:14 --> Helper loaded: text_helper
+INFO - 2019-01-07 11:30:14 --> Helper loaded: form_helper
+INFO - 2019-01-07 11:30:14 --> Database Driver Class Initialized
+DEBUG - 2019-01-07 11:30:14 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-01-07 11:30:14 --> Session: Class initialized using 'files' driver.
+INFO - 2019-01-07 11:30:14 --> Form Validation Class Initialized
+INFO - 2019-01-07 11:30:14 --> Controller Class Initialized
+ERROR - 2019-01-07 11:30:14 --> Severity: Notice --> Undefined variable: data /Applications/AMPPS/www/imphalangels/application/controllers/Payment.php 25
+ERROR - 2019-01-07 11:30:14 --> Severity: Notice --> Trying to get property of non-object /Applications/AMPPS/www/imphalangels/application/controllers/Payment.php 25
+INFO - 2019-01-07 11:30:14 --> Final output sent to browser
+DEBUG - 2019-01-07 11:30:14 --> Total execution time: 0.0369
+INFO - 2019-01-07 11:30:37 --> Config Class Initialized
+INFO - 2019-01-07 11:30:37 --> Hooks Class Initialized
+DEBUG - 2019-01-07 11:30:37 --> UTF-8 Support Enabled
+INFO - 2019-01-07 11:30:37 --> Utf8 Class Initialized
+INFO - 2019-01-07 11:30:37 --> URI Class Initialized
+INFO - 2019-01-07 11:30:37 --> Router Class Initialized
+INFO - 2019-01-07 11:30:37 --> Output Class Initialized
+INFO - 2019-01-07 11:30:37 --> Security Class Initialized
+DEBUG - 2019-01-07 11:30:37 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-07 11:30:37 --> Input Class Initialized
+INFO - 2019-01-07 11:30:37 --> Language Class Initialized
+INFO - 2019-01-07 11:30:37 --> Loader Class Initialized
+INFO - 2019-01-07 11:30:37 --> Helper loaded: url_helper
+INFO - 2019-01-07 11:30:37 --> Helper loaded: text_helper
+INFO - 2019-01-07 11:30:37 --> Helper loaded: form_helper
+INFO - 2019-01-07 11:30:37 --> Database Driver Class Initialized
+DEBUG - 2019-01-07 11:30:37 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-01-07 11:30:37 --> Session: Class initialized using 'files' driver.
+INFO - 2019-01-07 11:30:37 --> Form Validation Class Initialized
+INFO - 2019-01-07 11:30:37 --> Controller Class Initialized
+INFO - 2019-01-07 11:30:37 --> Final output sent to browser
+DEBUG - 2019-01-07 11:30:37 --> Total execution time: 0.0258
