@@ -13,24 +13,19 @@ public function checkout(){
 
 	public function process(){
 
-		if(strcasecmp($_SERVER['REQUEST_METHOD'], 'POST') == 0){
-			//Request hash
+		//Request hash
 			$merchantKey="ej6pDHZi";
 			$amount="500";
 			$salt="MVpQVkMo1R";
 			$txnNo="Txn" . rand(10000,99999999);
 			$productInfo="";
-			$contentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : '';
-			if(strcasecmp($contentType, 'application/json') == 0){
-				$data = json_decode(file_get_contents('php://input'));
-				$hash=hash('sha512', $merchantKey.'|'.$txnNo.'|'.$amount.'|'.$data->pinfo.'|'.$data->fname.'|'.$data->email.'|||||'.$data->udf5.'||||||'.$salt);
+			$name="";
+			$email="";
+			$udf5="";
+				$hash=hash('sha512', $merchantKey.'|'.$txnNo.'|'.$amount.'|'.$productInfo.'|'.$name.'|'.$email.'|||||'.$udf5.'||||||'.$salt);
 				$json=array();
 				$json['success'] = $hash;
 				echo json_encode($json);
-		
-			}
-			exit(0);
-		}
 		
 	}
 	public function payment_success(){
