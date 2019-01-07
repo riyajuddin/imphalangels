@@ -3649,3 +3649,187 @@ INFO - 2019-01-07 07:50:18 --> Model "Transaction_modal" initialized
 INFO - 2019-01-07 07:50:18 --> Helper loaded: security_helper
 INFO - 2019-01-07 07:50:18 --> Final output sent to browser
 DEBUG - 2019-01-07 07:50:18 --> Total execution time: 0.0228
+INFO - 2019-01-07 08:02:44 --> Config Class Initialized
+INFO - 2019-01-07 08:02:44 --> Hooks Class Initialized
+DEBUG - 2019-01-07 08:02:44 --> UTF-8 Support Enabled
+INFO - 2019-01-07 08:02:44 --> Utf8 Class Initialized
+INFO - 2019-01-07 08:02:44 --> URI Class Initialized
+INFO - 2019-01-07 08:02:44 --> Router Class Initialized
+INFO - 2019-01-07 08:02:44 --> Output Class Initialized
+INFO - 2019-01-07 08:02:44 --> Security Class Initialized
+DEBUG - 2019-01-07 08:02:44 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-07 08:02:44 --> Input Class Initialized
+INFO - 2019-01-07 08:02:44 --> Language Class Initialized
+ERROR - 2019-01-07 08:02:44 --> Severity: error --> Exception: syntax error, unexpected 'POST' (T_STRING) /Applications/AMPPS/www/imphalangels/application/controllers/Registration.php 202
+INFO - 2019-01-07 08:12:18 --> Config Class Initialized
+INFO - 2019-01-07 08:12:18 --> Hooks Class Initialized
+DEBUG - 2019-01-07 08:12:18 --> UTF-8 Support Enabled
+INFO - 2019-01-07 08:12:18 --> Utf8 Class Initialized
+INFO - 2019-01-07 08:12:18 --> URI Class Initialized
+INFO - 2019-01-07 08:12:18 --> Router Class Initialized
+INFO - 2019-01-07 08:12:18 --> Output Class Initialized
+INFO - 2019-01-07 08:12:18 --> Security Class Initialized
+DEBUG - 2019-01-07 08:12:18 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-07 08:12:18 --> Input Class Initialized
+INFO - 2019-01-07 08:12:18 --> Language Class Initialized
+INFO - 2019-01-07 08:12:18 --> Loader Class Initialized
+INFO - 2019-01-07 08:12:18 --> Helper loaded: url_helper
+INFO - 2019-01-07 08:12:18 --> Helper loaded: text_helper
+INFO - 2019-01-07 08:12:18 --> Helper loaded: form_helper
+INFO - 2019-01-07 08:12:18 --> Database Driver Class Initialized
+DEBUG - 2019-01-07 08:12:18 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-01-07 08:12:18 --> Session: Class initialized using 'files' driver.
+INFO - 2019-01-07 08:12:18 --> Form Validation Class Initialized
+INFO - 2019-01-07 08:12:18 --> Controller Class Initialized
+INFO - 2019-01-07 08:12:18 --> Model "Transaction_modal" initialized
+INFO - 2019-01-07 08:12:18 --> Helper loaded: security_helper
+INFO - 2019-01-07 08:12:18 --> Final output sent to browser
+DEBUG - 2019-01-07 08:12:18 --> Total execution time: 0.0433
+INFO - 2019-01-07 08:56:38 --> Config Class Initialized
+INFO - 2019-01-07 08:56:38 --> Hooks Class Initialized
+DEBUG - 2019-01-07 08:56:38 --> UTF-8 Support Enabled
+INFO - 2019-01-07 08:56:38 --> Utf8 Class Initialized
+INFO - 2019-01-07 08:56:38 --> URI Class Initialized
+INFO - 2019-01-07 08:56:38 --> Router Class Initialized
+INFO - 2019-01-07 08:56:38 --> Output Class Initialized
+INFO - 2019-01-07 08:56:38 --> Security Class Initialized
+DEBUG - 2019-01-07 08:56:38 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-07 08:56:38 --> Input Class Initialized
+INFO - 2019-01-07 08:56:38 --> Language Class Initialized
+INFO - 2019-01-07 08:56:38 --> Loader Class Initialized
+INFO - 2019-01-07 08:56:38 --> Helper loaded: url_helper
+INFO - 2019-01-07 08:56:38 --> Helper loaded: text_helper
+INFO - 2019-01-07 08:56:38 --> Helper loaded: form_helper
+INFO - 2019-01-07 08:56:38 --> Database Driver Class Initialized
+DEBUG - 2019-01-07 08:56:38 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-01-07 08:56:38 --> Session: Class initialized using 'files' driver.
+INFO - 2019-01-07 08:56:38 --> Form Validation Class Initialized
+INFO - 2019-01-07 08:56:38 --> Controller Class Initialized
+INFO - 2019-01-07 08:56:38 --> Model "Transaction_modal" initialized
+INFO - 2019-01-07 08:56:38 --> Helper loaded: security_helper
+INFO - 2019-01-07 08:56:38 --> File loaded: /Applications/AMPPS/www/imphalangels/application/views/registration/datafragment/payment_form.php
+INFO - 2019-01-07 08:56:38 --> Final output sent to browser
+DEBUG - 2019-01-07 08:56:38 --> Total execution time: 0.0389
+INFO - 2019-01-07 08:56:38 --> Config Class Initialized
+INFO - 2019-01-07 08:56:38 --> Hooks Class Initialized
+DEBUG - 2019-01-07 08:56:38 --> UTF-8 Support Enabled
+INFO - 2019-01-07 08:56:38 --> Utf8 Class Initialized
+INFO - 2019-01-07 08:56:38 --> URI Class Initialized
+INFO - 2019-01-07 08:56:38 --> Router Class Initialized
+INFO - 2019-01-07 08:56:38 --> Output Class Initialized
+INFO - 2019-01-07 08:56:38 --> Security Class Initialized
+DEBUG - 2019-01-07 08:56:38 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-07 08:56:38 --> Input Class Initialized
+INFO - 2019-01-07 08:56:38 --> Language Class Initialized
+ERROR - 2019-01-07 08:56:38 --> 404 Page Not Found: Registration/images
+INFO - 2019-01-07 09:08:09 --> Config Class Initialized
+INFO - 2019-01-07 09:08:09 --> Hooks Class Initialized
+DEBUG - 2019-01-07 09:08:09 --> UTF-8 Support Enabled
+INFO - 2019-01-07 09:08:09 --> Utf8 Class Initialized
+INFO - 2019-01-07 09:08:09 --> URI Class Initialized
+INFO - 2019-01-07 09:08:09 --> Router Class Initialized
+INFO - 2019-01-07 09:08:09 --> Output Class Initialized
+INFO - 2019-01-07 09:08:09 --> Security Class Initialized
+DEBUG - 2019-01-07 09:08:09 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-07 09:08:09 --> Input Class Initialized
+INFO - 2019-01-07 09:08:09 --> Language Class Initialized
+INFO - 2019-01-07 09:08:09 --> Loader Class Initialized
+INFO - 2019-01-07 09:08:09 --> Helper loaded: url_helper
+INFO - 2019-01-07 09:08:09 --> Helper loaded: text_helper
+INFO - 2019-01-07 09:08:09 --> Helper loaded: form_helper
+INFO - 2019-01-07 09:08:09 --> Database Driver Class Initialized
+DEBUG - 2019-01-07 09:08:09 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-01-07 09:08:09 --> Session: Class initialized using 'files' driver.
+INFO - 2019-01-07 09:08:09 --> Form Validation Class Initialized
+INFO - 2019-01-07 09:08:09 --> Controller Class Initialized
+INFO - 2019-01-07 09:08:09 --> Model "Transaction_modal" initialized
+INFO - 2019-01-07 09:08:09 --> Helper loaded: security_helper
+INFO - 2019-01-07 09:08:09 --> File loaded: /Applications/AMPPS/www/imphalangels/application/views/registration/datafragment/payment_form.php
+INFO - 2019-01-07 09:08:09 --> Final output sent to browser
+DEBUG - 2019-01-07 09:08:09 --> Total execution time: 0.0399
+INFO - 2019-01-07 09:08:09 --> Config Class Initialized
+INFO - 2019-01-07 09:08:09 --> Hooks Class Initialized
+DEBUG - 2019-01-07 09:08:09 --> UTF-8 Support Enabled
+INFO - 2019-01-07 09:08:09 --> Utf8 Class Initialized
+INFO - 2019-01-07 09:08:09 --> URI Class Initialized
+INFO - 2019-01-07 09:08:09 --> Router Class Initialized
+INFO - 2019-01-07 09:08:09 --> Output Class Initialized
+INFO - 2019-01-07 09:08:09 --> Security Class Initialized
+DEBUG - 2019-01-07 09:08:09 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-07 09:08:09 --> Input Class Initialized
+INFO - 2019-01-07 09:08:09 --> Language Class Initialized
+ERROR - 2019-01-07 09:08:09 --> 404 Page Not Found: Registration/images
+INFO - 2019-01-07 09:08:11 --> Config Class Initialized
+INFO - 2019-01-07 09:08:11 --> Hooks Class Initialized
+DEBUG - 2019-01-07 09:08:11 --> UTF-8 Support Enabled
+INFO - 2019-01-07 09:08:11 --> Utf8 Class Initialized
+INFO - 2019-01-07 09:08:11 --> URI Class Initialized
+INFO - 2019-01-07 09:08:11 --> Router Class Initialized
+INFO - 2019-01-07 09:08:11 --> Output Class Initialized
+INFO - 2019-01-07 09:08:11 --> Security Class Initialized
+DEBUG - 2019-01-07 09:08:11 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-07 09:08:11 --> Input Class Initialized
+INFO - 2019-01-07 09:08:11 --> Language Class Initialized
+INFO - 2019-01-07 09:08:11 --> Loader Class Initialized
+INFO - 2019-01-07 09:08:11 --> Helper loaded: url_helper
+INFO - 2019-01-07 09:08:11 --> Helper loaded: text_helper
+INFO - 2019-01-07 09:08:11 --> Helper loaded: form_helper
+INFO - 2019-01-07 09:08:11 --> Database Driver Class Initialized
+DEBUG - 2019-01-07 09:08:11 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-01-07 09:08:11 --> Session: Class initialized using 'files' driver.
+INFO - 2019-01-07 09:08:11 --> Form Validation Class Initialized
+INFO - 2019-01-07 09:08:11 --> Controller Class Initialized
+INFO - 2019-01-07 09:08:11 --> Model "Transaction_modal" initialized
+INFO - 2019-01-07 09:08:11 --> Helper loaded: security_helper
+INFO - 2019-01-07 09:08:11 --> File loaded: /Applications/AMPPS/www/imphalangels/application/views/registration/datafragment/payment_form.php
+INFO - 2019-01-07 09:08:11 --> Final output sent to browser
+DEBUG - 2019-01-07 09:08:11 --> Total execution time: 0.0228
+INFO - 2019-01-07 09:08:11 --> Config Class Initialized
+INFO - 2019-01-07 09:08:11 --> Hooks Class Initialized
+DEBUG - 2019-01-07 09:08:11 --> UTF-8 Support Enabled
+INFO - 2019-01-07 09:08:11 --> Utf8 Class Initialized
+INFO - 2019-01-07 09:08:11 --> URI Class Initialized
+INFO - 2019-01-07 09:08:11 --> Router Class Initialized
+INFO - 2019-01-07 09:08:11 --> Output Class Initialized
+INFO - 2019-01-07 09:08:11 --> Security Class Initialized
+DEBUG - 2019-01-07 09:08:11 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-07 09:08:11 --> Input Class Initialized
+INFO - 2019-01-07 09:08:11 --> Language Class Initialized
+ERROR - 2019-01-07 09:08:11 --> 404 Page Not Found: Registration/images
+INFO - 2019-01-07 09:12:26 --> Config Class Initialized
+INFO - 2019-01-07 09:12:26 --> Hooks Class Initialized
+DEBUG - 2019-01-07 09:12:26 --> UTF-8 Support Enabled
+INFO - 2019-01-07 09:12:26 --> Utf8 Class Initialized
+INFO - 2019-01-07 09:12:26 --> URI Class Initialized
+INFO - 2019-01-07 09:12:26 --> Router Class Initialized
+INFO - 2019-01-07 09:12:26 --> Output Class Initialized
+INFO - 2019-01-07 09:12:26 --> Security Class Initialized
+DEBUG - 2019-01-07 09:12:26 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-07 09:12:26 --> Input Class Initialized
+INFO - 2019-01-07 09:12:26 --> Language Class Initialized
+INFO - 2019-01-07 09:12:26 --> Loader Class Initialized
+INFO - 2019-01-07 09:12:26 --> Helper loaded: url_helper
+INFO - 2019-01-07 09:12:26 --> Helper loaded: text_helper
+INFO - 2019-01-07 09:12:26 --> Helper loaded: form_helper
+INFO - 2019-01-07 09:12:26 --> Database Driver Class Initialized
+DEBUG - 2019-01-07 09:12:26 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2019-01-07 09:12:26 --> Session: Class initialized using 'files' driver.
+INFO - 2019-01-07 09:12:26 --> Form Validation Class Initialized
+INFO - 2019-01-07 09:12:26 --> Controller Class Initialized
+INFO - 2019-01-07 09:12:26 --> Model "Transaction_modal" initialized
+INFO - 2019-01-07 09:12:26 --> Helper loaded: security_helper
+INFO - 2019-01-07 09:12:26 --> File loaded: /Applications/AMPPS/www/imphalangels/application/views/registration/datafragment/payment_form.php
+INFO - 2019-01-07 09:12:26 --> Final output sent to browser
+DEBUG - 2019-01-07 09:12:26 --> Total execution time: 0.0343
+INFO - 2019-01-07 09:12:26 --> Config Class Initialized
+INFO - 2019-01-07 09:12:26 --> Hooks Class Initialized
+DEBUG - 2019-01-07 09:12:26 --> UTF-8 Support Enabled
+INFO - 2019-01-07 09:12:26 --> Utf8 Class Initialized
+INFO - 2019-01-07 09:12:26 --> URI Class Initialized
+INFO - 2019-01-07 09:12:26 --> Router Class Initialized
+INFO - 2019-01-07 09:12:26 --> Output Class Initialized
+INFO - 2019-01-07 09:12:26 --> Security Class Initialized
+DEBUG - 2019-01-07 09:12:26 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-01-07 09:12:26 --> Input Class Initialized
+INFO - 2019-01-07 09:12:26 --> Language Class Initialized
+ERROR - 2019-01-07 09:12:26 --> 404 Page Not Found: Registration/images

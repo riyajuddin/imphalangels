@@ -1,150 +1,141 @@
 
-                <?php
-$this->session->set_userdata('pay',0);
-// Merchant key here as provided by Payu
-$MERCHANT_KEY = "ej6pDHZi";
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>PayUmoney BOLT PHP7 Kit</title>
 
-// Merchant Salt as provided by Payu
-$SALT = "MVpQVkMo1R";
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
-// End point - change to https://secure.payu.in for LIVE mode
-$PAYU_BASE_URL = "https://secure.payu.in";
+<!-- this meta viewport is required for BOLT //-->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" >
+<!-- BOLT Sandbox/test //-->
+<script id="bolt" src="https://sboxcheckout-static.citruspay.com/bolt/run/bolt.min.js" bolt-
+color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/Bolt-Logo-e14421724859591.png"></script>
+<!-- BOLT Production/Live //-->
+<!--// script id="bolt" src="https://checkout-static.citruspay.com/bolt/run/bolt.min.js" bolt-color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/Bolt-Logo-e14421724859591.png"></script //-->
 
-$action = '';
-
-$posted = array();
-if(!empty($_POST)) {
-    //print_r($_POST);
-  foreach($_POST as $key => $value) {    
-    $posted[$key] = $value; 
+</head>
+<style type="text/css">
+	.main {
+		margin-left:30px;
+		font-family:Verdana, Geneva, sans-serif, serif;
+	}
+	.text {
+		float:left;
+		width:180px;
+	}
+	.dv {
+		margin-bottom:5px;
+	}
+</style>
+<body>
+<div class="main">
+	<div>
+    	<img src="images/payumoney.png" />
+    </div>
+    <div>
+    	<h3>PHP7 BOLT Kit</h3>
+    </div>
+	<form action="#" id="payment_form">
+    <input type="hidden" id="udf5" name="udf5" value="BOLT_KIT_PHP7" />
+    <input type="hidden" id="surl" name="surl" value="<?php echo base_url();?>payment/response" />
+   <div class="dv">
+    <span class="text"><label>Merchant Key:</label></span>
+    <span><input type="text" id="key" name="key" placeholder="Merchant Key" value="" /></span>
+    </div>
     
-  }
-}
-
-$formError = 0;
-
-if(empty($posted['txnid'])) {
-  // Generate random transaction id
-  $txnid = substr(hash('sha256', mt_rand() . microtime()), 0, 20);
-  $hashKey=generateRandomString(50);
-//$sql="INSERT INTO `payment`(`amount`, `status`, `tranc_id`, `ref_id`)VALUES ('$amount','INCOMPLETE','$txnid','$hashKey')";
-  
- //$query=$this->db->query($sql);
-} else {
-  $txnid = $posted['txnid'];
-}
-$hash = '';
-// Hash Sequence
-$hashSequence = "key|txnid|amount|productinfo|firstname|email|udf1|udf2|udf3|udf4|udf5|udf6|udf7|udf8|udf9|udf10";
-if(empty($posted['hash']) && sizeof($posted) > 0) {
-  if(
-          empty($posted['key'])
-          || empty($posted['txnid'])
-          || empty($posted['amount'])
-          || empty($posted['firstname'])
-          || empty($posted['email'])
-          || empty($posted['phone'])
-          || empty($posted['productinfo'])
-          || empty($posted['surl'])
-          || empty($posted['furl'])
-          || empty($posted['service_provider'])
-  ) {
-    $formError = 1;
-  } else {
-    //$posted['productinfo'] = json_encode(json_decode('[{"name":"tutionfee","description":"","value":"500","isRequired":"false"},{"name":"developmentfee","description":"monthly tution fee","value":"1500","isRequired":"false"}]'));
-    $hashVarsSeq = explode('|', $hashSequence);
-    $hash_string = '';  
-    foreach($hashVarsSeq as $hash_var) {
-      $hash_string .= isset($posted[$hash_var]) ? $posted[$hash_var] : '';
-      $hash_string .= '|';
-    }
-
-    $hash_string .= $SALT;
-
-
-    $hash = strtolower(hash('sha512', $hash_string));
-    $action = $PAYU_BASE_URL . '/_payment';
-  }
-} elseif(!empty($posted['hash'])) {
-  $hash = $posted['hash'];
-  $action = $PAYU_BASE_URL . '/_payment';
-}
-
-function generateRandomString($length = 20) {
-    $characters = '0123456789abcdefghijklmnopqrstuvwxyz981u9unakhkkjhJHJGYFUFGKUGWW';
-    $randomString = '';
-    for ($i = 0; $i < $length; $i++) {
-        $randomString .= $characters[rand(0, strlen($characters) - 1)];
-    }
-    return $randomString;
-}
-
-
-?>
-
- 
-   
+    <div class="dv">
+    <span class="text"><label>Merchant Salt:</label></span>
+    <span><input type="text" id="salt" name="salt" placeholder="Merchant Salt" value="" /></span>
+    </div>
     
-
+    <div class="dv">
+    <span class="text"><label>Transaction/Order ID:</label></span>
+    <span><input type="text" id="txnid" name="txnid" placeholder="Transaction ID" value="<?php echo  "Txn" . rand(10000,99999999)?>" /></span>
+    </div>
     
-    <div class="">
-    <div class="row">
-    <div class="col-md-12">
-  <div id="Checkout" class="inline">
-      <h1>Pay Invoice</h1>
-      <div class="card-row">
-         <img src="https://www.payumoney.com//media/images/payby_payumoney/buttons/213.png" />
-      </div>
-          <br/>
- 
-
-        <form action="<?php echo $action; ?>" method="post" name="payuForm">
-       
-          <div class="form-group">
-              <label for="PaymentAmount">Payment amount</label>
-              <div class="amount-placeholder">
-                  <span>Rs.</span>
-                  <span><?php echo $this->session->userdata('user_amount');?>.00</span>
-              </div>
-          </div>
-             <?php if($formError) { ?>
-      <span style="color:red">Please fill all mandatory fields.</span>   
-    <?php } ?>
-          <input type="hidden" name="amount" value="<?php echo $this->session->userdata('user_amount');?>"/>
-           <input type="hidden" name="key" value="<?php echo $MERCHANT_KEY ?>" />
-      <input type="hidden" name="hash" value="<?php echo $hash ?>"/>
-      <input type="hidden" name="txnid" value="<?php echo $txnid ?>" />
-          <div class="form-group">
-              <label for="firstname">Firstname<span style="color:red" >*</span></label>
-              <input name="firstname" class="form-control" id="firstname" value="<?php echo $name;?>" />
-            
-          </div>
-          <div class="form-group">
-              <label for="email">Email<span style="color:red" >*</span></label>
-              <input class="form-control" name="email" id="email" value="<?php echo $email;?>" />
-          </div>
-
-          <div class="form-group">
-              <label for="phone">Phone<span style="color:red" >*</span></label>
-              <input id="phone" class="form-control" name="phone" value="<?php echo $contact;?>" />
-          </div>
-
-       
-         <input type="hidden"  name="surl" value="<?php echo base_url();?>registration/payment/payment_success" size="64" />
-         <input type="hidden" name="furl" value="<?php echo base_url();?>registration/payment/payment_fail" size="64" />
-         <input type="hidden" name="service_provider" value="payu_paisa" size="64" />
-            <?php if(!$hash) { ?>
-           <button id="PayButton" class="btn btn-block btn-success submit-button" type="submit">
-              <span class="align-middle">Pay Rs.<?php echo $this->session->userdata('user_amount');?>.00</span>
-          </button>
-          <?php } ?>
-          
-      </form>
-  </div>
-  </div>
-  </div>
+    <div class="dv">
+    <span class="text"><label>Amount:</label></span>
+    <span><input type="text" id="amount" name="amount" placeholder="Amount" value="6.00" /></span>    
+    </div>
+    
+    <div class="dv">
+    <span class="text"><label>Product Info:</label></span>
+    <span><input type="text" id="pinfo" name="pinfo" placeholder="Product Info" value="P01,P02" /></span>
+    </div>
+    
+    <div class="dv">
+    <span class="text"><label>First Name:</label></span>
+    <span><input type="text" id="fname" name="fname" placeholder="First Name" value="" /></span>
+    </div>
+    
+    <div class="dv">
+    <span class="text"><label>Email ID:</label></span>
+    <span><input type="text" id="email" name="email" placeholder="Email ID" value="" /></span>
+    </div>
+    
+    <div class="dv">
+    <span class="text"><label>Mobile/Cell Number:</label></span>
+    <span><input type="text" id="mobile" name="mobile" placeholder="Mobile/Cell Number" value="" /></span>
+    </div>
+    
+    <div class="dv">
+    <span class="text"><label>Hash:</label></span>
+    <span><input type="text" id="hash" name="hash" placeholder="Hash" value="" /></span>
+    </div>
+    
+    
+    <div><input type="submit" value="Pay" onclick="launchBOLT(); return false;" /></div>
+	</form>
 </div>
+<script type="text/javascript"><!--
+function launchBOLT()
+{
+	bolt.launch({
+	key: $('#key').val(),
+	txnid: $('#txnid').val(), 
+	hash: $('#hash').val(),
+	amount: $('#amount').val(),
+	firstname: $('#fname').val(),
+	email: $('#email').val(),
+	phone: $('#mobile').val(),
+	productinfo: $('#pinfo').val(),
+	udf5: $('#udf5').val(),
+	surl : $('#surl').val(),
+	furl: $('#surl').val(),
+	mode: 'dropout'	
+},{ responseHandler: function(BOLT){
+	console.log( BOLT.response.txnStatus );		
+	if(BOLT.response.txnStatus != 'CANCEL')
+	{
+		//Salt is passd here for demo purpose only. For practical use keep salt at server side only.
+		var fr = '<form action=\"'+$('#surl').val()+'\" method=\"post\">' +
+		'<input type=\"hidden\" name=\"key\" value=\"'+BOLT.response.key+'\" />' +
+		'<input type=\"hidden\" name=\"salt\" value=\"'+$('#salt').val()+'\" />' +
+		'<input type=\"hidden\" name=\"txnid\" value=\"'+BOLT.response.txnid+'\" />' +
+		'<input type=\"hidden\" name=\"amount\" value=\"'+BOLT.response.amount+'\" />' +
+		'<input type=\"hidden\" name=\"productinfo\" value=\"'+BOLT.response.productinfo+'\" />' +
+		'<input type=\"hidden\" name=\"firstname\" value=\"'+BOLT.response.firstname+'\" />' +
+		'<input type=\"hidden\" name=\"email\" value=\"'+BOLT.response.email+'\" />' +
+		'<input type=\"hidden\" name=\"udf5\" value=\"'+BOLT.response.udf5+'\" />' +
+		'<input type=\"hidden\" name=\"mihpayid\" value=\"'+BOLT.response.mihpayid+'\" />' +
+		'<input type=\"hidden\" name=\"status\" value=\"'+BOLT.response.status+'\" />' +
+		'<input type=\"hidden\" name=\"hash\" value=\"'+BOLT.response.hash+'\" />' +
+		'</form>';
+		var form = jQuery(fr);
+		jQuery('body').append(form);								
+		form.submit();
+	}
+},
+	catchException: function(BOLT){
+ 		alert( BOLT.message );
+	}
+});
+}
+//--
+</script>	
 
-  
-
-             </div>
+</body>
+</html>
+	
