@@ -77,9 +77,6 @@ $this->load->view ( 'registration/payment_checkout');
 
       echo json_encode($status); 
     }
-
-   
-
     public function ent_form() 
     {   
         
@@ -315,4 +312,12 @@ $this->load->view ( 'registration/payment_checkout');
 	
 	
    
+   }
+
+
+
+
+
+   {
+    "curl -X POST http://pp54.payumoney.com/payment/op/v1/invoice -H 'authorization: 1344022896' -H 'cache-control: no-cache' -H 'content-type: application/json' -H  -d '{ \"merchantId\" : \"4826524\", \"invoiceDescription\" : \" Sample description \", \"amount\" : { \"subAmount\" : 100.00 }, \"addedOn\":\"\", \"expiryDate\" : \"2017-06-23T11:38:00.000Z\", \"invoiceStatus\" : \"active\", \"maxPaymentsAllowed\" : \"\", \"userDetails\" : { \"name\" : \"pramod\", \"phone_number\" : \"8010280579\" , \"alternate_number\" : \"6010280579\", \"email\" : \"pramod.singh@payu.in\" }, \"source\" : \"payumoney_invoice\", \"signature\" : \"CD8E5479AD12F753D937C7CE02AAA142\", \"channel\" : { \"viaSms\":0, \"viaEmail\" :1 } }"
    }
