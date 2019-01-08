@@ -24,7 +24,6 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
 </head>
 
 
-
 <style type="text/css">
 	.main {
 		margin-left:30px;
@@ -94,7 +93,7 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
     
     <div class="dv">
     <span class="text"><label>Hash:</label></span>
-    <span class="form-group"><input type="text" id="hash" class="form-control"   name="hash" placeholder="Hash" value="<?php echo $this->session->userdata('hash');?>" /></span>
+    <span class="form-group"><input type="text" id="hash" class="form-control"   name="hash" placeholder="Hash" value="<?php  //$this->session->userdata('hash');?>" /></span>
     </div>
     
     
@@ -151,9 +150,46 @@ function launchBOLT()
 	}
 });
 }
+
+
+
+function hash_val(){
+		  
+		   var dataString = new FormData($('#payment_form')[0]);
+		         $.ajax({
+		          type: "post",
+		          url: "<?php echo site_url() . 'index.php/payment/process'; ?>",
+		          data: dataString,
+		          processData: false,
+		          contentType: false,
+		          dataType: 'json',
+		          success: function(response){   
+		          try{       
+		               if (response.success)
+		               {
+
+		               	$("#hash").val(response.success);
+
+		                    	                    
+		               } else
+		               { 
+		                   alert(response.msg);
+		               }
+		          }catch(e) {  
+		              alert(e);
+		          }  
+		          },
+		          error: function(){      
+		              alert('Error while request..');
+		          }
+		         });
+		     }
+		
+		hash_val();
 //--
 </script>	
 
+<?php $this->session->sess_destroy();?>
 
 </body>
 </html>

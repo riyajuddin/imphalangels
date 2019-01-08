@@ -1087,7 +1087,7 @@ $("#pitch_file").attr("data-parsley-error-message","Please upload a file");
 		               if (response.success)
 		               {
 		                    alert(response.msg); 
-							//window.location.href = 'registration/test';	                    
+							window.location.href = 'http://localhost/imphalangels/registration/test';	                    
 		               } else
 		               { 
 		                   alert(response.msg);

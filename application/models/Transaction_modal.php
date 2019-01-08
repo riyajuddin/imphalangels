@@ -170,8 +170,7 @@ function AddRegEntrepeneur($company_name,$company_contact,$company_email,$cofoun
             $this->session->set_userdata('name', $name); 
             $this->session->set_userdata('company_email', $email); 
             $this->session->set_userdata('company_contact', $company_contact);                         
-            $this->session->set_userdata('udf5', $udf5);                      
-            $this->session->set_userdata('hash', $hash);                                  
+            $this->session->set_userdata('udf5', $udf5);                                  
         
 
 
