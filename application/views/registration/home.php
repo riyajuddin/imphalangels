@@ -1087,7 +1087,7 @@ $("#pitch_file").attr("data-parsley-error-message","Please upload a file");
 		               if (response.success)
 		               {
 		                    alert(response.msg); 
-							window.location.href = 'test';	                    
+							//window.location.href = 'registration/test';	                    
 		               } else
 		               { 
 		                   alert(response.msg);

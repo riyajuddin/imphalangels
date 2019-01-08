@@ -183,7 +183,7 @@ class Registration extends CI_Controller
                     $status = array('success' => true,
                                     'msg'=> $result['message']);
                     
-                  
+                  redirect("registration/test");
 
                 }else{
                     $status = array("success" => false,"msg" => $result['message']);
