@@ -25,6 +25,27 @@ class Contactsubmit extends CI_Model
 	redirect("home");
     
   }
+   public function reg_contact($name,$email,$phone,$comments)
+  {    
+  $this->load->library('email');
+//  $list = array('contact@imphalangels.com');
+    $list = array('mdriya93@gmail.com');
+  $this->email->to($list);
+    $this->email->from('contact@imphalangels.com','IMPHAL ANGELS CONTACT');
+    $this->email->subject($name.' contact from  Imphal Angels website. ');
+    
+    $data['name']=$name;
+    $data['email']=$email;
+    $data['phone']=$phone;
+    $data['comments']=$comments;
+    $msg=$this->load->view("email/contact",$data,TRUE);
+    $this->email->message($msg);
+    $this->email->set_mailtype("html");
+    $this->email->send();
+    
+    
+    
+  }
   
   public function pitch_apply($name,$email,$phone,$contactcompanyname,$contactjobtitle,$attachpath)
   {
@@ -55,6 +76,34 @@ class Contactsubmit extends CI_Model
 	// After that you need to used redirect function instead of load view such as 
 	redirect("home");
       
+      
+  }
+
+   public function reg_pitch_apply($name,$email,$phone,$contactcompanyname,$contactjobtitle,$attachpath)
+  {
+      $this->load->library('email');
+    //  $list = array('startups@imphalangels.com');
+      $list = array('mdriya93@gmail.com');
+  $this->email->to($list);
+      $this->email->from('contact@imphalangels.com','IMPHAL ANGELS PITCH APPLY');
+      $this->email->subject('Pitch apply for '.$name);
+      
+      $data['name']=$name;
+      $data['email']=$email;
+      $data['phone']=$phone;
+      $data['contactcompanyname']=$contactcompanyname;
+      $data['contactjobtitle']=$contactjobtitle;
+
+      $msg=$this->load->view("email/pitch_apply",$data,TRUE);
+      
+      $this->email->message($msg);
+            
+      $this->email->attach($attachpath);
+      
+      $this->email->set_mailtype("html");
+      $this->email->send();
+   
+  
       
   }
   

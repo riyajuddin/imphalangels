@@ -3,12 +3,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Transaction_modal extends CI_Model{
 
 
-  function student_form_add($name,$college,$email,$contact,$dinner_attend,$type,$amount)
+  function student_form_add($name,$college,$email,$contact,$dinner_attend)
     {  
+        $application_id="IA".date("mdhis");
+        $txnNo = sha1(md5(time())); 
 
-    	if($dinner_attend==1)
-    	{$amount=500+800;
-    	}else{$amount=500;}
+         if($dinner_attend=="on")
+         {
+          $dinner_attend='1'; 
+          $amount=800+500;
+         }else
+         {
+            $dinner_attend='0';
+            $amount=500;
+         }
+
 
         $data = array(
                         'student_name'=>$name,
@@ -18,13 +27,23 @@ class Transaction_modal extends CI_Model{
                         'dinner_attend'=>$dinner_attend,
                         'user_amount'=>$amount
                     );
-            $this->db->trans_begin();
-            $this->db->insert('student_user',$data);
+          
 
+            $this->db->trans_begin();
+            $this->db->insert('student_user', $data);
             $student_id=$this->db->insert_id();
 
+            $payment_data = array(
+                        'user_id'=>$student_id,
+                        'payment_amount'=>$amount,
+                        'payment_status'=>"INCOMPLETE",                      
+                        'tranc_id'=>$txnNo,
+                        'ref_id'=>""
+            );
+            
+            $this->db->insert('payment', $payment_data);
 
-            if($this->db->trans_status() === FALSE)
+           if($this->db->trans_status() === FALSE)
             {
                 $this->db->trans_rollback();                    
                 $msg = "Fail to save !";
@@ -32,14 +51,59 @@ class Transaction_modal extends CI_Model{
             }
             else
             {
-                $this->db->trans_commit();
+            
+            $this->db->trans_commit();
 
- 				$this->session->set_userdata('user_id', $student_id);
- 				 $this->session->set_userdata('user_amount', $amount);
- 				 $this->session->set_userdata('user_type', $type);
+            if($dinner_attend ==1)
+            {
+            $dinner_attend_msg= "And your dinner session is confirmed.";
+            }else
+            {
+                $dinner_attend_msg="";
+            }
+           
+ $message_content= "Your registration to attend Northeast Startup Summit by Imphal Angels is confirmed.".$dinner_attend_msg." Your confirmation id is ".$application_id;
 
-                 $msg = "Save sucessfull!";
-                $code = true;
+
+   
+
+
+
+            $merchantKey="ej6pDHZi";
+            $amount=$amount;
+            $amount=1;
+           
+            $salt="MVpQVkMo1R";
+            $txnNo=$txnNo;
+            $productInfo="ImphalAngelsEventRegistration";
+            $name=$name;
+            $email=$email;
+            $udf5="enterprenure_reg";
+            $hash=hash('sha512', $merchantKey.'|'.$txnNo.'|'.$amount.'|'.$productInfo.'|'.$name.'|'.$email.'|||||'.$udf5.'||||||'.$salt);
+            /*    $json=array();
+                $json['success'] = $hash;
+                echo json_encode($json);
+               */ 
+
+            $this->session->set_userdata('student_id', $student_id);
+            $this->session->set_userdata('amount', $amount);
+            $this->session->set_userdata('user_type', "ent");
+            $this->session->set_userdata('merchantKey', $merchantKey);
+            $this->session->set_userdata('salt', $salt);
+            $this->session->set_userdata('txnNo', $txnNo);
+            $this->session->set_userdata('productInfo',$productInfo);
+            $this->session->set_userdata('name', $name); 
+            $this->session->set_userdata('company_email', $email); 
+            $this->session->set_userdata('company_contact', $contact);                         
+            $this->session->set_userdata('udf5', $udf5);                      
+            $this->session->set_userdata('hash', $hash); 
+            $this->session->set_userdata('message_content', $message_content);
+            $this->session->set_userdata('type', "student");
+                                             
+          
+
+            $msg = "Save sucessfull!";
+            $code = true;
             }
         return array('code' => $code, 'message' =>  $msg);
     }
@@ -49,7 +113,10 @@ class Transaction_modal extends CI_Model{
 function AddRegEntrepeneur($company_name,$company_contact,$company_email,$cofounderName,$dinner,$checkbox1,$checkbox2,$uploadFiles,$founder_no)
     {  
      $cofounderName=unserialize($cofounderName);
+      $event_attend=sizeof($cofounderName);
      $dinner_attend=sizeof(unserialize($dinner));
+     $application_id="IA".date("mdhis");
+    $txnNo = sha1(md5(time()));	
 
 
      if($checkbox1=="on")
@@ -68,6 +135,7 @@ function AddRegEntrepeneur($company_name,$company_contact,$company_email,$cofoun
         $checkbox2='0';
      }
      
+      $event_attend_amount=$event_attend*800;
 
         if($dinner_attend > 0)
         {   	
@@ -84,7 +152,10 @@ function AddRegEntrepeneur($company_name,$company_contact,$company_email,$cofoun
             $startup_stall=0;
         }
 
-        $amount=$diner_amount+$startup_stall+500;
+        $amount=$diner_amount+$startup_stall+$event_attend_amount;
+
+
+
 
         if($uploadFiles==" ")
         {
@@ -98,7 +169,7 @@ function AddRegEntrepeneur($company_name,$company_contact,$company_email,$cofoun
             $file_size=$uploadFiles[0]['file_size'];
         }
         
-
+      
        
             $data = array(
                         'company_name'=>$company_name,
@@ -111,9 +182,11 @@ function AddRegEntrepeneur($company_name,$company_contact,$company_email,$cofoun
                         'file_name'=>$file_name,
                         'file_ext'=>$file_ext,
                         'file_size'=>$file_size,
-                        'pitching'=>$checkbox2
+                        'pitching'=>$checkbox2,
+                        'application_id'=>$application_id
             );
-                $this->db->trans_begin();
+            
+            $this->db->trans_begin();
             $this->db->insert('company_details', $data);
             $company_id=$this->db->insert_id();
       
@@ -125,11 +198,23 @@ function AddRegEntrepeneur($company_name,$company_contact,$company_email,$cofoun
                         'company_id'=>$company_id,
                         'user_name'=>$value,
 						
+
                     );
            
             $this->db->insert('company_user_details',$data);
 
             }
+
+
+            $payment_data = array(
+                        'company_id'=>$company_id,
+                        'payment_amount'=>$amount,
+                        'payment_status'=>"INCOMPLETE",                      
+                        'tranc_id'=>$txnNo,
+                        'ref_id'=>""
+            );
+            
+            $this->db->insert('payment', $payment_data);
 
 
             if($this->db->trans_status() === FALSE)
@@ -143,14 +228,37 @@ function AddRegEntrepeneur($company_name,$company_contact,$company_email,$cofoun
             
             $this->db->trans_commit();
 
- 			//$txnNo = sha1(md5(time()));	
-            $txnNo="testing";
+ 			if($dinner_attend > 0)
+            {
+            $dinner_attend_msg= "And Networking & Dinner session is confirmed for " .$dinner_attend." attende/s. ";
+           
+            }else
+            {
+                $dinner_attend_msg="";
+            }
+            if($checkbox1 > 0)
+            {
+            $stall_msg="Startup stall is confirmed.  ";
+            }else
+            {
+                $stall_msg="";
+            }
+
+
+            $message_content= "Your registration to attend Northeast Startup Summit by Imphal Angels is confirmed for ".$event_attend." attendee(s). ".$stall_msg."".$dinner_attend_msg." Your confirmation id is ".$application_id;
+
+
+   
+
+
 
             $merchantKey="ej6pDHZi";
             $amount=$amount;
+            $amount=1;
+           
             $salt="MVpQVkMo1R";
             $txnNo=$txnNo;
-            $productInfo="imphalangels";
+            $productInfo="ImphalAngelsEventRegistration";
             $name=$company_name;
             $email=$company_email;
             $udf5="enterprenure_reg";
@@ -170,7 +278,10 @@ function AddRegEntrepeneur($company_name,$company_contact,$company_email,$cofoun
             $this->session->set_userdata('name', $name); 
             $this->session->set_userdata('company_email', $email); 
             $this->session->set_userdata('company_contact', $company_contact);                         
-            $this->session->set_userdata('udf5', $udf5);                                  
+            $this->session->set_userdata('udf5', $udf5);                      
+            $this->session->set_userdata('hash', $hash); 
+            $this->session->set_userdata('message_content', $message_content); 
+             $this->session->set_userdata('type', "enterprenure");                               
         
 
 
@@ -179,5 +290,7 @@ function AddRegEntrepeneur($company_name,$company_contact,$company_email,$cofoun
             }
         return array('code' => $code, 'message' =>  $msg);
     }
+
+   
 
 }      

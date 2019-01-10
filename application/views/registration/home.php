@@ -9,7 +9,14 @@
 						<!-- Start center Logo -->
 						<div class="mu-logo-area">
 							<!-- text based logo -->
-							<a class="mu-logo" href="#">Imphal Angels</a>
+						<!--	<a class="mu-logo" href="#">
+							<img src="https://www.imphalangels.com/assets/images/logo.png"/>
+							</a>
+							-->
+							<a class="site-logo pull-left" style="top: -42px;position: relative;" href="https://www.imphalangels.com/">
+                <img  style="width:160px;"src="https://www.imphalangels.com/assets/images/logo.png" alt="Homepage">
+            </a>
+							
 							<!-- image based logo -->
 							<!-- <a class="mu-logo" href="#"><img src="<?php echo base_url();?>assets/registration_assets/images/logo.jpg" alt="logo img"></a> -->
 						</div>
@@ -19,7 +26,9 @@
 
 							<h1>Welcome to Northeast Startup Summit 2019 </h1>
 							<h2>Join The BIGGEST startup event in North-East India</h2>
-							<p class="mu-event-date-line">10:00 AM, 6th February 2019</p>
+							<p class="mu-event-date-line">10:00 AM, 6th February 2019
+							<br>Venue: Hotel Imphal, North AOC, Manipur 
+							</p>
 
 							<div class="mu-event-counter-area">
 								<div id="mu-event-counter">
@@ -56,8 +65,11 @@
 									<div class="mu-about-right">
 										<h2>About Northeast Startup Summit </h2>
 										<p>
-										Northeast Startup Summit 2019 is a flagship startup event by Imphal Angels, the 1st private angel network in Northeast India. With a vision to create a vibrant and diverse startup ecosystem in North East India, Imphal Angels is organizing the largest gathering of entrepreneurs, investors and other ecosystem partners in Northeast India. 
-
+									Northeast Startup Summit 2019 is a flagship startup event by Imphal Angels, the 1st private Angel Network in North-East India. With a vision to create a vibrant and diverse startup ecosystem in North-East India, Imphal Angels is organizing the first summit of its kind, a startup summit to bring the various ecosystem players like aspiring entrepreneurs, startups, mentors, investors, VC funds, and local industry on one common platform to promote entrepreneurship and to build a robust startup and innovative ecosystem in North-East India. <br>
+									
+<!--
+This summit aims to provide opportunities to both the startups and the investors to interact and commence relationships that will nurture the most congenial and productive ecosystem beneficial to all the communities around us. 
+-->
 										</p>
 									</div>
 								</div>
@@ -70,9 +82,92 @@
 			</div>
 		</section>
 		<!-- End About -->
+		
+		<!--icon list -->
+		<div class="" style="background:#39b54a; ">
+		<div class="row">
+		    <div class="col-md-12">
+		        <br><br><br><br>
+		    <div class="mu-title-area">
+								<h2 class="mu-title" style="color:white;">What's in store</h2>
+								<br><br>
+							</div>
+		    </div>
+								<div class="" style="padding-bottom:40px;">
+								
+								<div class="col-md-3 ">
+										<div class="mu-sponsors-single icon_background">
+										    <i class="fa fa-inr highlight_icons" ></i>
+										    <p  class="icon_title">
+										        Angel Funding Opportunity 
+                                            </p>
+										</div>
+									</div>
+									<div class="col-md-3 ">
+										<div class="mu-sponsors-single icon_background">
+										    <i class="fa fa-trophy highlight_icons" ></i>
+										    <p  class="icon_title">
+										       Pitch Competition
+                                            </p>
+										</div>
+									</div>
+									<div class="col-md-3 ">
+										<div class="mu-sponsors-single icon_background">
+										    <i class="fa fa-star highlight_icons" ></i>
+										    <p  class="icon_title">
+										        Startup Showcase
+                                            </p>
+										</div>
+									</div>
+									<div class="col-md-3 ">
+										<div class="mu-sponsors-single icon_background">
+										    <i class="fa fa-inr highlight_icons" ></i>
+										    <p  class="icon_title">
+										        Angel Funding Opportunity 
+                                            </p>
+										</div>
+									</div>
+									<div class="col-md-3 ">
+										<div class="mu-sponsors-single icon_background">
+										    <i class="fa fa-plug highlight_icons" ></i>
+										    <p  class="icon_title">
+										       Investor Interaction
+                                            </p>
+										</div>
+									</div>
+									<div class="col-md-3 ">
+										<div class="mu-sponsors-single icon_background">
+										    <i class="fa fa-paper-plane highlight_icons" ></i>
+										    <p  class="icon_title">
+										       Mentoring session
+                                            </p>
+										</div>
+									</div>
+								
+									<div class="col-md-3 ">
+										<div class="mu-sponsors-single icon_background">
+										    <i class="fa fa-bandcamp highlight_icons" ></i>
+										    <p  class="icon_title">
+										        Keynotes & Panel Discussion
+                                            </p>
+										</div>
+									</div>
+										<div class="col-md-3 ">
+										<div class="mu-sponsors-single icon_background" style="margin-bottom:100px;">
+										    <i class="fa fa-handshake-o highlight_icons" ></i>
+										    <p  class="icon_title">
+										       	Business Networking
+                                            </p>
+										</div>
+									</div>
+</div>
+							
+
+								</div>
+		<!-- icon list -->
 
 		<!-- Start Video -->
-		<section id="mu-video">
+		<section id="mu-video" style="display:none;">
 			<div class="mu-video-overlay">
 				<div class="container">
 					<div class="row">
@@ -106,17 +201,17 @@
 						<div class="mu-schedule-area">
 
 							<div class="mu-title-area">
-								<h2 class="mu-title">Schedule Detail</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis unde, ut sapiente et voluptatum facilis consectetur incidunt provident asperiores at necessitatibus nulla sequi voluptas libero quasi explicabo veritatis minima porro.</p>
+								<h2 class="mu-title">Event Detail</h2>
+								<p>To be updated soon.</p>
 							</div>
 
 							<div class="mu-schedule-content-area">
 								<!-- Nav tabs -->
 								<ul class="nav nav-tabs mu-schedule-menu" role="tablist">
-								    <li role="presentation" class="active"><a href="#first-day" aria-controls="first-day" role="tab" data-toggle="tab">1 Day / 19 Feb</a></li>
-								    <li role="presentation"><a href="#second-day" aria-controls="second-day" role="tab" data-toggle="tab">2 Day / 20 Feb</a></li>
+								    <li role="presentation" class="active"><a href="#first-day" aria-controls="first-day" role="tab" data-toggle="tab"> 06 Feb</a></li>
+								   <!-- <li role="presentation"><a href="#second-day" aria-controls="second-day" role="tab" data-toggle="tab">2 Day / 20 Feb</a></li>
 								    <li role="presentation"><a href="#third-day" aria-controls="third-day" role="tab" data-toggle="tab">3 Day / 21 Feb</a></li>
-								    
+								    -->
 								</ul>
 
 								<!-- Tab panes -->
@@ -125,40 +220,109 @@
 								    	<ul>
 								    		<li>
 								    			<div class="mu-single-event">
-								    				<p class="mu-event-time">9.00 AM</p>
-								    				<h3>Breakfast</h3>
-								    			</div>
-								    		</li>
-								    		<li>
-								    			<div class="mu-single-event">
-								    				<img src="<?php echo base_url();?>assets/registration_assets/images/speaker-1.jpg" alt="event speaker">
 								    				<p class="mu-event-time">10.00 AM</p>
-								    				<h3>Advanced SVG Animations</h3>
-								    				<span>By Karl Groves</span>
+								    				<h3>Introduction of Imphal Angel</h3>
+								    			</div>
+								    		</li>
+								    			<li>
+								    			<div class="mu-single-event">
+								    				<p class="mu-event-time">10.00 AM to 04.00 PM</p>
+								    				<h3>	Startup stall: Showcase your startups</h3>
+								    			</div>
+								    		</li>
+								    	
+								    		<li>
+								    			<div class="mu-single-event">
+								    				<img style="display:none;" src="<?php echo base_url();?>assets/registration_assets/images/" alt="event speaker">
+								    				<p class="mu-event-time">10.10 AM</p>
+								    				<h3>How to become an Investable startup</h3>
+								    				<span style="display:none;"></span>
 								    			</div>
 								    		</li>
 								    		<li>
 								    			<div class="mu-single-event">
-								    				<img src="<?php echo base_url();?>assets/registration_assets/images/speaker-2.jpg" alt="event speaker">
+								    				<img style="display:none;" src="<?php echo base_url();?>assets/registration_assets/images/" alt="event speaker">
+								    				<p class="mu-event-time">10.40 AM</p>
+								    				<h3>How to Pitch to Investors</h3>
+								    				<span style="display:none;"></span>
+								    			</div>
+								    		</li>
+								    		<li>
+								    			<div class="mu-single-event">
+								    				<img style="display:none;" src="<?php echo base_url();?>assets/registration_assets/images/" alt="event speaker">
 								    				<p class="mu-event-time">11.00 AM</p>
-								    				<h3>Presenting Work with Confidence</h3>
-								    				<span>By Sarah Dransner</span>
+								    				<h3>How to raise your seed fund</h3>
+								    		    	<span style="display:none;"></span>
+								    			</div>
+								    		</li>
+								    			<li>
+								    			<div class="mu-single-event">
+								    				<img style="display:none;" src="<?php echo base_url();?>assets/registration_assets/images/" alt="event speaker">
+								    				<p class="mu-event-time">11.30 AM</p>
+								    				<h3>Nasscom initiative for startup</h3>
+								    		    	<span style="display:none;"></span>
+								    			</div>
+								    		</li>
+								    			<li>
+								    			<div class="mu-single-event">
+								    				<img style="display:none;" src="<?php echo base_url();?>assets/registration_assets/images/" alt="event speaker">
+								    				<p class="mu-event-time">12.00 PM</p>
+								    				<h3>	Business Lunch Break</h3>
+								    		    	<span style="display:none;"></span>
+								    			</div>
+								    		</li>
+								    			<li>
+								    			<div class="mu-single-event">
+								    				<img style="display:none;" src="<?php echo base_url();?>assets/registration_assets/images/" alt="event speaker">
+								    				<p class="mu-event-time">01.00 PM</p>
+								    				<h3>How a NE startup get VC funded</h3>
+								    		    	<span style="display:none;"></span>
+								    			</div>
+								    		</li>
+								    			<li>
+								    			<div class="mu-single-event">
+								    				<img style="display:none;" src="<?php echo base_url();?>assets/registration_assets/images/" alt="event speaker">
+								    				<p class="mu-event-time">01.30 PM</p>
+								    				<h3>The story of HOSPAL Investment</h3>
+								    		    	<span style="display:none;"></span>
+								    			</div>
+								    		</li>
+								    			<li>
+								    			<div class="mu-single-event">
+								    				<img style="display:none;" src="<?php echo base_url();?>assets/registration_assets/images/" alt="event speaker">
+								    				<p class="mu-event-time">02.00 PM</p>
+								    				<h3>10 Selected startups open door pitch to Investors (1st Feb 2019)</h3>
+								    		    	<span style="display:none;"></span>
 								    			</div>
 								    		</li>
 								    		<li>
 								    			<div class="mu-single-event">
-								    				<img src="<?php echo base_url();?>assets/registration_assets/images/speaker-3.jpg" alt="event speaker">
-								    				<p class="mu-event-time">12.00 AM</p>
-								    				<h3>Keynote on UX & UI Design</h3>
-								    				<span>By Ned Stark</span>
+								    				<img style="display:none;" src="<?php echo base_url();?>assets/registration_assets/images/" alt="event speaker">
+								    				<p class="mu-event-time">05.00 PM</p>
+								    				<h3>Announcement of the winning startups </h3>
+								    		    	<span style="display:none;"></span>
 								    			</div>
 								    		</li>
-								    		<li>
+								    	
+								    		
+								    			<li>
 								    			<div class="mu-single-event">
-								    				<p class="mu-event-time">1.00 PM</p>
-								    				<h3>The End</h3>
+								    				<img style="display:none;" src="<?php echo base_url();?>assets/registration_assets/images/" alt="event speaker">
+								    				<p class="mu-event-time">05.15 PM</p>
+								    				<h3>	Mentoring session with investors for 15 selected startups</h3>
+								    		    	<span style="display:none;"></span>
 								    			</div>
 								    		</li>
+								    			<li>
+								    			<div class="mu-single-event">
+								    				<img style="display:none;" src="<?php echo base_url();?>assets/registration_assets/images/" alt="event speaker">
+								    				<p class="mu-event-time">06.00 PM</p>
+								    				<h3>Networking & dinner with Investors & ecosystem partners</h3>
+								    		    	<span style="display:none;"></span>
+								    			</div>
+								    		</li>
+								    	
+								    	
 								    	</ul>
 								    </div>
 								    <div role="tabpanel" class="tab-pane fade mu-event-timeline" id="second-day">
@@ -254,7 +418,7 @@
 		<!-- End Schedule -->
 
 		<!-- Start Speakers -->
-		<section id="mu-speakers">
+		<section id="mu-speakers" style="display:none;">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
@@ -411,16 +575,21 @@
 
 					<div class="col-md-6">
 						<div class="mu-venue-map">
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508.8176744277202!2d-81.47150788457147!3d28.424757900613237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e77e378ec5a9a9%3A0x2feec9271ed22c5b!2sOrange+County+Convention+Center!5e0!3m2!1sen!2sbd!4v1503833952781" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+						
+							<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14486.15783971825!2d93.93174704796516!3d24.811218740466067!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x374927a7b6279f7f%3A0xde045f70441335bb!2sHotel+Imphal+By+The+Classic!5e0!3m2!1sen!2sin!4v1546954085241" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 						</div>
 					</div>
 
 					<div class="col-md-6">
 						<div class="mu-venue-address">
-							<h2>VENUE <i class="fa fa-chevron-right" aria-hidden="true"></i></h2>
-							<h3>Orange County Convention Center</h3>
-							<h4>9800 International Dr, Orlando, FL 32819, USA</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem reiciendis incidunt accusantium porro amet repellendus hic corporis fugiat officiis, sequi iste distinctio possimus dignissimos, veniam quae delectus. Fuga, modi, perferendis!</p>
+							<h2>VENUE & CONTACT <i class="fa fa-chevron-right" aria-hidden="true"></i></h2>
+							<h3 style="font-size:20px;">Hotel Imphal by The Classic</h3>
+							<h4>Sangai Hall, North AOC, Imphal</h4>
+							<p>
+							For more information: <br>
+							Call us- 9958169591 <br>
+							Email us- startups@imphalangels.com
+							</p>
 						</div>
 					</div>
 
@@ -437,8 +606,10 @@
 						<div class="mu-pricing-area">
 							
 							<div class="mu-title-area">
-								<h2 class="mu-title">Pricing plans</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis unde, ut sapiente et voluptatum facilis consectetur incidunt provident asperiores at necessitatibus nulla sequi voluptas libero quasi explicabo veritatis minima porro.</p>
+								<h2 class="mu-title">Register Now</h2>
+								<p>
+								Attend the biggest startup event in Northeast India and join the largest gathering of entrepreneurs, investors and other ecosystem partners in the region. 
+								</p>
 							</div>
 							
 							<div class="mu-pricing-conten">
@@ -497,11 +668,16 @@
 					<div class="col-md-12">
 						<div class="mu-register-area" id="stusection">
 							<div class="mu-title-area">
-								<h2 class="mu-title">Registar as Student</h2>
+								<h2 class="mu-title">Registar as a Student</h2>
 							</div>
-								<p align="center">Access to all sessions
+								<p align="center">
+								    	  <span style="color:#39b54a;">  
+								    Registration fee of Rs.500 per student.
+								    </span>
+								    <br>
+								    Access to all sessions.
 Include light lunch
-*Limited to only 1 person
+*Limited to only 1 person.
 </p>
 							<div class="mu-register-content">
 								<form class="mu-register-form" id="student_form_field" data-parsley-validate="" >
@@ -509,28 +685,28 @@ Include light lunch
 									<div class="row">
 										<div class="col-md-6">
 											<div class="form-group">                
-												<input type="text" class="form-control name" required placeholder="Your Full Name" id="name" name="name" >
+												<input type="text" class="form-control name" required placeholder="Your Full Name" id="name" name="name" data-parsley-required="true" data-parsley-error-message="Name is required." >
 											</div>
 										</div>
 
 										<div class="col-md-6">
 											<div class="form-group">                
-												<input type="text" class="form-control name" required placeholder="College/University Name" id="college" name="college" >
+												<input type="text" class="form-control name" required placeholder="College/University Name" id="college" name="college" data-parsley-required="true" data-parsley-error-message="University/college name is required." data-parsley-maxlength="100">
 											</div>     
 										</div>
 										<div class="col-md-6">
 											<div class="form-group">                
-												<input type="text" class="form-control number" required maxlength="10"  placeholder="Mobile" id="contact" name="contact" >
+												<input type="text" class="form-control number" required maxlength="10"  placeholder="Mobile" id="contact" name="contact" data-parsley-required="true" data-parsley-error-message="Mobile no. is required." data-parsley-type="number"  data-parsley-minlength="10" data-parsley-maxlength="10">
 											</div>
 										</div>
 
 										<div class="col-md-6">
 											<div class="form-group">                
-												<input type="email" class="form-control email" placeholder=" Email" id="email" name="email" data-parsley-required="true" data-parsley-error-message="Email is required.">
+												<input type="email" class="form-control email" placeholder=" Email" id="email" name="email" data-parsley-required="true" data-parsley-error-message="Email is required." data-parsley-type="email" data-parsley-maxlength="100">
 											</div>   
 										</div>
 										<div class="col-md-12">
-											<label class="radio-inline" style="color:white; "><input type="checkbox" name="dinner_attend" id="dinner_attend" value="1"  style="margin: 0px 15px;margin-bottom: 10px; color:white;">Are you interested in attending dinner and net? (Rs.800/person)</label>
+											<label class="radio-inline" style="color:white; "><input type="checkbox" name="dinner_attend" id="dinner_attend"   style="margin: 0px 15px;margin-bottom: 10px; color:white;">Are you interested in attending dinner and net? (Additional Rs.800/person)</label>
 					 					</div>
 									</div>
 
@@ -542,12 +718,15 @@ Include light lunch
 						
 						<div class="mu-register-area" id="enterepeneur">
 							<div class="mu-title-area">
-								<h2 class="mu-title">Registar as Entrepeneur</h2>
+								<h2 class="mu-title">Registar as an Entrepeneur</h2>
 							</div>
-								<p align="center">Access to all sessions
-								Include light lunch
-								Opportunity to pitch to Investors
-								Limited to only 1 person  
+								<p align="center">
+								  <span style="color:#39b54a;">  Registration fee of Rs.800 per person.</span>
+								    <br>
+								    Access to all sessions.
+								Include light lunch.
+								Opportunity to pitch to Investors.
+								Limited to only 1 person.
 								</p>
 							<div class="mu-register-content">
 							 <form class="mu-register-form" role="form" id="EntrepeneurForm"  data-parsley-validate="">
@@ -561,12 +740,12 @@ Include light lunch
 										</div>
 										<div class="col-md-4">
 											<div class="form-group">                
-												<input type="text" class="form-control number" placeholder=" Contact" id="company_contact" name="company_contact" data-parsley-required="true" data-parsley-error-message="Company contact is required.">
+												<input type="text" class="form-control number" placeholder=" Contact" id="company_contact" name="company_contact" data-parsley-required="true" data-parsley-error-message="Company contact is required." data-parsley-type="number"  data-parsley-minlength="10" data-parsley-maxlength="10">
 											</div>
 										</div>
 										<div class="col-md-8">
 											<div class="form-group">                
-												<input type="email" class="form-control email" placeholder=" email" id="company_email" name="company_email" data-parsley-required="true" data-parsley-error-message="Company email is required.">
+												<input type="email" class="form-control email" placeholder=" Email" id="company_email" name="company_email" data-parsley-error-message="Company Email is required." data-parsley-type="email" data-parsley-maxlength="100"">
 											</div>
 										</div>
 
@@ -579,8 +758,11 @@ Include light lunch
 											<div id="entrepreneurFounder">
 											</div> 
 											
+											
+											
 										  <div class="" align="left">
-											<label class="radio-inline" style="color:white;padding-left: 0px;"><input type="checkbox" name="checkbox1" id="checkbox1" style="margin: 0px 15px;margin-bottom: 10px; color:white;">Are you interested in showcasing your startup with a startup stall? (Rs. 3000 per stall )
+										  
+											<label  class="radio-inline" style="color:white;padding-left: 0px; margin-top:20px;"><input type="checkbox" name="checkbox1" id="checkbox1" style="margin: 0px 15px;margin-bottom: 10px; color:white;">Are you interested in showcasing your startup with a startup stall? (Additional Rs. 3000 per stall )
 </label>
 					 					</div>
 					 					<br>
@@ -588,7 +770,7 @@ Include light lunch
 											<div class="" align="left">
 											<label class="radio-inline" style="color:white;padding-left: 0px;"><input type="checkbox" name="checkbox2" id="viewFileUpload" onclick="myFunction()" style="margin: 0px 15px;margin-bottom: 10px; color:white;">
 
-											*10 startups will be selected to pitch in front of the investors and also get a chance to win Rs.2 Lakhs on the spot. Are you intersted in pitching?
+											*10 startups will be selected to pitch in front of the investors. Are you intersted in pitching? (Attach your startup prasentation file)
 </label>
 					 					</div>
 					 					<div class="col-md-4">
@@ -612,6 +794,55 @@ Include light lunch
 			</div>
 		</section>
 		<!-- End Register -->
+		
+		
+    <!-- clients ECOSYSTEM PARTNERS
+    ================================================== -->
+    <section id="partners" class="s-clients" style="display:none;">
+
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead">ECOSYSTEM PARTNERS</h3>
+                <!-- <h1 class="display-2">Imphal Angels has been honored to
+                partner up with these clients</h1> -->
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row clients-outer" data-aos="fade-up">
+            <div class="col-full">
+                <div class="clients">
+                    <a href="#0" title="" class="clients__slide"><img src="<?php echo base_url()?>assets/images/clients/nasscom.png" /></a>
+                    <a href="#0" title="" class="clients__slide"><img src="<?php echo base_url()?>assets/images/clients/yourstory.png" /></a>
+                    <a href="#0" title="" class="clients__slide"><img src="<?php echo base_url()?>assets/images/clients/gsf.png" /></a>
+                    <a href="#0" title="" class="clients__slide"><img src="<?php echo base_url()?>assets/images/clients/spiralventures.png" /></a>
+                    <a href="#0" title="" class="clients__slide"><img src="<?php echo base_url()?>assets/images/clients/innnov8.png" /></a>
+                    <a href="#0" title="" class="clients__slide"><img src="<?php echo base_url()?>assets/images/clients/northeasttoday.png" /></a>
+                    <a href="#0" title="" class="clients__slide"><img src="<?php echo base_url()?>assets/images/clients/innerchef.png" /></a>
+                    <a href="#0" title="" class="clients__slide"><img src="<?php echo base_url()?>assets/images/clients/jcre.png" /></a>
+                    <a href="#0" title="" class="clients__slide"><img src="<?php echo base_url()?>assets/images/clients/mobimp.png" /></a>
+                    <a href="#0" title="" class="clients__slide"><img src="<?php echo base_url()?>assets/images/clients/manipurtimes.png" /></a>
+                     <a href="#0" title="" class="clients__slide"><img src="<?php echo base_url()?>assets/images/clients/startupgrind.png" /></a>
+                    
+                    <a href="#0" title="" class="clients__slide"><img src="<?php echo base_url()?>assets/images/clients/t9l.png" /></a>
+
+                    
+
+
+
+
+
+
+                    
+                    
+
+
+                </div> <!-- end clients -->
+            </div> <!-- end col-full -->
+        </div> <!-- end clients-outer -->
+
+
+
+    </section> <!-- end s-clients -->
 
 		<!-- Start FAQ -->
 		<section id="mu-faq">
@@ -622,7 +853,7 @@ Include light lunch
 
 							<div class="mu-title-area">
 								<h2 class="mu-title">FAQ</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint assumenda ut molestias doloremque ipsam, fugit laborum totam, pariatur est cumque at, repudiandae officia ex dolores quas minus optio, iusto soluta?</p>
+							
 							</div>
 
 							<div class="mu-faq-content">
@@ -633,13 +864,16 @@ Include light lunch
 							          <div class="panel-heading">
 							            <h4 class="panel-title">
 							              <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true">
-							                <span class="fa fa-angle-down"></span> Lorem ipsum dolor sit amet.
+							                <span class="fa fa-angle-down"></span>How do I register to attend the Summit? Is it free?
+
 							              </a>
 							            </h4>
 							          </div>
 							          <div id="collapseOne" class="panel-collapse collapse in">
 							            <div class="panel-body">
-							              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+							            You can either register it online and purchase ticket at selected locations (To be announced soon). No, it is not free. <br><br>
+							            Registration fee to attend the Summit: Student - Rs. 500 per person AND Entrepreneur - Rs. 800 per person. 
+
 							            </div>
 							          </div>
 							        </div>
@@ -648,13 +882,14 @@ Include light lunch
 							          <div class="panel-heading">
 							            <h4 class="panel-title">
 							              <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-							                <span class="fa fa-angle-up"></span> Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							                <span class="fa fa-angle-up"></span>We are 3 co-founders, do we all have to pay the registration fee?
+
 							              </a>
 							            </h4>
 							          </div>
 							          <div id="collapseTwo" class="panel-collapse collapse">
 							            <div class="panel-body">
-							              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+							             Yes, each co-founder/attendee have to pay the registration fee and networking & dinner fee separately.
 							            </div>
 							          </div>
 							        </div>
@@ -663,13 +898,17 @@ Include light lunch
 							          <div class="panel-heading">
 							            <h4 class="panel-title">
 							              <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-							                <span class="fa fa-angle-up"></span> Lorem ipsum dolor sit amet, consectetur. 
+							                <span class="fa fa-angle-up"></span> What is included in the registration fee?
+
 							              </a>
 							            </h4>
 							          </div>
 							          <div id="collapseThree" class="panel-collapse collapse">
 							            <div class="panel-body">
-							              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+							             Access to all sessions. <br>
+Include business lunch. <br>
+Opportunity to pitch to Investors ( to increase your chances of getting selected for the pitch competition please include your pitch deck while registering). Only 10 startups will be selected to pitch (open-door) in front of the leading investors.
+
 							            </div>
 							          </div>
 							        </div>
@@ -678,13 +917,15 @@ Include light lunch
 							          <div class="panel-heading">
 							            <h4 class="panel-title">
 							              <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
-							                <span class="fa fa-angle-up"></span> Lorem ipsum dolor sit amet, consectetur adipisicing. 
+							                <span class="fa fa-angle-up"></span> Is networking & dinner with investors and ecosystem partners included in the registration fee?
+
 							              </a>
 							            </h4>
 							          </div>
 							          <div id="collapseFour" class="panel-collapse collapse">
 							            <div class="panel-body">
-							              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+							             No, you have to pay a separate Rs.800 per person (for both student and entrepreneur) to be part of networking & dinner. 
+
 							            </div>
 							          </div>
 							        </div>
@@ -693,13 +934,98 @@ Include light lunch
 							          <div class="panel-heading">
 							            <h4 class="panel-title">
 							              <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
-							                <span class="fa fa-angle-up"></span> Lorem ipsum dolor sit amet, consectetur. 
+							                <span class="fa fa-angle-up"></span>Is startup stall included in the registration fee?
 							              </a>
 							            </h4>
 							          </div>
 							          <div id="collapseFive" class="panel-collapse collapse">
 							            <div class="panel-body">
-							              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+							            No, you have to pay Rs.3000 for the stall. We have a limited number of stalls (6 stalls) and will be given on first come first basis. 
+
+							            </div>
+							          </div>
+							        </div>
+							          <div class="panel panel-default">
+							          <div class="panel-heading">
+							            <h4 class="panel-title">
+							              <a data-toggle="collapse" data-parent="#accordion" href="#collapseSix">
+							                <span class="fa fa-angle-up"></span>What types of equipment and facilities do I get with the stall?
+
+							              </a>
+							            </h4>
+							          </div>
+							          <div id="collapseSix" class="panel-collapse collapse">
+							            <div class="panel-body">
+							           We only provide the stall. You have to get your own devices, banners etc. We will not be liable for any loss, so please take care of your belongings. 
+
+
+							            </div>
+							          </div>
+							        </div>
+							          <div class="panel panel-default">
+							          <div class="panel-heading">
+							            <h4 class="panel-title">
+							              <a data-toggle="collapse" data-parent="#accordion" href="#collapseSeven">
+							                <span class="fa fa-angle-up"></span>How do I participate in the pitch competition?
+
+							              </a>
+							            </h4>
+							          </div>
+							          <div id="collapseSeven" class="panel-collapse collapse">
+							            <div class="panel-body">
+							          While registering for the event please attach your startup pitch deck. Attaching your startup pitch deck increase your chances of being selected. 10 startups will be selected to participate in the pitch competition. 
+
+							            </div>
+							          </div>
+							        </div>
+							             <div class="panel panel-default">
+							          <div class="panel-heading">
+							            <h4 class="panel-title">
+							              <a data-toggle="collapse" data-parent="#accordion" href="#collapseEight">
+							                <span class="fa fa-angle-up"></span>What’s are the criteria for selection to participate in the pitch competition?
+							              </a>
+							            </h4>
+							          </div>
+							          <div id="collapseEight" class="panel-collapse collapse">
+							            <div class="panel-body">
+							       We don’t have specific criteria. However, we will look at the overall business, how innovative & scalable it is, is it investable, how strong the team is? Etc. 
+
+
+							            </div>
+							          </div>
+							        </div>
+							         <div class="panel panel-default">
+							          <div class="panel-heading">
+							            <h4 class="panel-title">
+							              <a data-toggle="collapse" data-parent="#accordion" href="#collapseNine">
+							                <span class="fa fa-angle-up"></span>Will the pitch competition be held close door?
+							              </a>
+							            </h4>
+							          </div>
+							          <div id="collapseNine" class="panel-collapse collapse">
+							            <div class="panel-body">
+							    No. It is an open-door pitch competition. We believe that idea is not worth much, it’s execution that matters. However, you may choose to not include trade secrets, important business numbers etc in your pitch deck/presentation. <br>
+
+What are the prizes for the startup pitch competition?
+Prizes to the top 3 selected startups, We are finalizing the prizes at this moment. 
+
+
+							            </div>
+							          </div>
+							        </div>
+							        
+							                 <div class="panel panel-default">
+							          <div class="panel-heading">
+							            <h4 class="panel-title">
+							              <a data-toggle="collapse" data-parent="#accordion" href="#collapseTen">
+							                <span class="fa fa-angle-up"></span>Where do I contact for info or queries?
+							              </a>
+							            </h4>
+							          </div>
+							          <div id="collapseTen" class="panel-collapse collapse">
+							            <div class="panel-body">
+							     Please drop an email at startups@imphalangels.com or call us at +91 9958169591
+
 							            </div>
 							          </div>
 							        </div>
@@ -716,7 +1042,7 @@ Include light lunch
 		<!-- End FAQ -->
 
 		<!-- Start Sponsors -->
-		<section id="mu-sponsors">
+		<section id="mu-sponsors" style="display:none;">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
@@ -849,70 +1175,42 @@ Include light lunch
 			// student to get input value.
 			$('#student_form').click(function() {
 
-
-				var flag="";
-				if($('#name').val().trim() == '') {
-					 $('#name').focus();
-				     $('#name').addClass("warning_color");
-				     flag=1;
-					return false;
-					}else{ $('#name').removeClass("warning_color");}
-				if($('#college').val().trim() == '') {
-					$('#college').focus();
-				     $('#college').addClass("warning_color");
-				     flag=1;
-					return false;
-					}else{ $('#name').removeClass("warning_color");}
-				
-				if($('#contact').val().trim() == '') {
-					 $('#contact').focus();
-				     $('#contact').addClass("warning_color");
-				     flag=1;
-					return false;
-					}else{ $('#name').removeClass("warning_color");}
-				if($('#email').val().trim() == '') {
-					 $('#email').focus();
-				     $('#email').addClass("warning_color");
-				     flag=1;
-					return false;
-					}else{ $('#name').removeClass("warning_color");}
-
-					if(flag!=1)
-					{
+  				if ( $('#student_form_field').parsley().validate({force: true}) )
+		    {    
+		        $('#student_form_field').parsley().reset();
 
 
 						 var form_data = new FormData($('#student_form_field')[0]); 
-					
+	
 				         $.ajax({
-				          type: "post",
-				          url: "<?php echo site_url() . '/registration/student_form'; ?>",
-				          data: form_data,
-				          processData: false,
-				          contentType: false,
-				          dataType: 'json',
-				          success: function(response){
-				      
-				            
-				          try{       
-				               if (response.success)
-				               {
+						          type: "post",
+						          url: "<?php echo site_url() . 'index.php/registration/student_form'; ?>",
+						          data: form_data,
+						          processData: false,
+						          contentType: false,
+						          dataType: 'json',
+						          success: function(response){   
+						          try{       
+						               if (response.success)
+						               {
+						                    alert(response.msg); 
+											window.location.href = 'http://events.imphalangels.com/registration/payment ';	
+											//http://localhost/imphalangels/registration/payment        
+											//http://events.imphalangels.com/registration/payment            
+						               } else
+						               { 
+						                   alert(response.msg);
+						               }
+						          }catch(e) {  
+						              alert(e);
+						          }  
+						          },
+						          error: function(){      
+						              alert('Error while request..');
+						          }
+						         });
 
-				                 //   swal(response.msg);
-				                    $('#payment_modal').html(response.html);
-				                    $('.modal').modal('show');
-				                   
-				               } else
-				               { 
-				                   swal(response.msg);
-				               }
-				          }catch(e) {  
-				              swal(e);
-				          }  
-				          },
-				          error: function(){      
-				              swal("Error while request..");
-				          }
-				         });
+
 											
 					}
 				
@@ -1057,7 +1355,7 @@ $("#pitch_file").attr("data-parsley-error-message","Please upload a file");
 		{
 			for(var i=0;i<num;i++) 
 		{
-		$('#entrepreneurFounder').append('<div class="col-md-8"><div class="form-group"><input type="text" class="form-control" placeholder="Co-founder name '+(i+1)+'" id="name" name="cofounderName[]" data-parsley-required="true" data-parsley-error-message="Co-founder name '+(i+1)+' is required."></div></div><div class="col-md-4" style="text-align:left;"><label class="radio-inline" style="color:white; "><input type="checkbox" name="dinner[]" value="1"  style="margin: 19px 10px 0px 0px; color:white;">Dinner attend</label></div>');
+		$('#entrepreneurFounder').append('<div class="col-md-8"><div class="form-group"><input type="text" class="form-control" placeholder="Co-founder name '+(i+1)+'" id="name" name="cofounderName[]" data-parsley-required="true" data-parsley-error-message="Co-founder name '+(i+1)+' is required."></div></div><div class="col-md-4" style="text-align:left;"><label class="radio-inline" style="color:white; "><input type="checkbox" name="dinner[]" value="1"  style="margin: 8px 10px 0px 0px; color:white;">Dinner attend (Additional Rs.800 per person)</label></div>');
 		}
 		}
 		
@@ -1074,7 +1372,7 @@ $("#pitch_file").attr("data-parsley-error-message","Please upload a file");
 
 		        var dataString = new FormData($('#EntrepeneurForm')[0]);
 		        //dataString.append('task_desc', $(".ql-editor").html());
-		        console.log(dataString);
+		      //  console.log(dataString);
 		         $.ajax({
 		          type: "post",
 		          url: "<?php echo site_url() . 'index.php/registration/ent_form'; ?>",
@@ -1087,7 +1385,9 @@ $("#pitch_file").attr("data-parsley-error-message","Please upload a file");
 		               if (response.success)
 		               {
 		                    alert(response.msg); 
-							window.location.href = 'http://localhost/imphalangels/registration/test';	                    
+							window.location.href = 'http://events.imphalangels.com/registration/payment ';	
+							//http://localhost/imphalangels/registration/payment        
+							//http://events.imphalangels.com/registration/payment            
 		               } else
 		               { 
 		                   alert(response.msg);

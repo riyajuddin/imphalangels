@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Imphal Angels</title>
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/icon" href="<?php echo base_url();?>assets/registration_assets/images/favicon.ico"/>
+   
     <!-- Font Awesome -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
     <!-- Bootstrap -->
@@ -28,7 +27,11 @@
 	<!-- Montserrat for title -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
- 
+   <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="<?php echo base_url()?>assets/favicon.png" type="image/x-icon">
+    <link rel="icon" href="<?php echo base_url()?>assets/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   </head>
   <body >

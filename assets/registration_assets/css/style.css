@@ -221,7 +221,7 @@ button:focus {
 /*--------------------*/
 
 #mu-hero {
-	background-image: url("assets/registration_assets/images/head-featured-bg.jpg");
+	background-image: url("https://www.imphalangels.com/assets/images/hero-bg.jpg");
 	display: inline;
 	float: left;
 	width: 100%;
@@ -963,7 +963,7 @@ button:focus {
 /*--------------------*/
 
 #mu-register {
-	background-image: url("assets/registration_assets/images/register-bg.jpg");
+/*	background-image: url("assets/registration_assets/images/register-bg.jpg");*/
 	background-position: center center;
 	background-size: cover;
 	background-attachment: fixed;
@@ -971,10 +971,13 @@ button:focus {
 	float: left;
 	position: relative;
 	width: 100%;
+	background-color:#333333;
+	
+	
 }
 
 #mu-register::before {
-	background: rgba(0,0,0,0.9);
+	background: none;
 	bottom: 0;
 	content: '';
 	left: 0;
@@ -1147,10 +1150,12 @@ button:focus {
 	-webkit-transition: all 0.5s;
 	-o-transition: all 0.5s;
 	transition: all 0.5s;
+	font-weight: 600;
 }
 
 .mu-faq-content .panel-title a>span {
-	margin-right: 5px;
+    margin-right: 15px;
+    margin-bottom: 10px;
 }
 
 
@@ -1789,4 +1794,22 @@ li.parsley-required {
     line-height: 1.59;
     list-style: none;
     text-align: left;
+}
+
+
+i.highlight_icons {
+       font-size: 45px;
+    color: white;
+    margin-bottom: 10px;
+}
+.icon_background
+{
+        background: none;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.icon_title
+{
+    font-weight:600;
 }

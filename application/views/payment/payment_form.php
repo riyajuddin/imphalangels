@@ -12,10 +12,11 @@
 <!-- this meta viewport is required for BOLT //-->
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" >
 <!-- BOLT Sandbox/test //-->
-<script id="bolt" src="https://sboxcheckout-static.citruspay.com/bolt/run/bolt.min.js" bolt-
-color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/Bolt-Logo-e14421724859591.png"></script>
+<!--script id="bolt" src="https://sboxcheckout-static.citruspay.com/bolt/run/bolt.min.js" bolt-
+color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/Bolt-Logo-e14421724859591.png"></script //-->
 <!-- BOLT Production/Live //-->
-<!--// script id="bolt" src="https://checkout-static.citruspay.com/bolt/run/bolt.min.js" bolt-color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/Bolt-Logo-e14421724859591.png"></script //-->
+
+<script id="bolt" src="https://checkout-static.citruspay.com/bolt/run/bolt.min.js" bolt-color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/Bolt-Logo-e14421724859591.png"></script>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -41,27 +42,28 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
 <div class="main">
 	 <div class="col-md-6 col-md-offset-3">
 	<div>
-    	<img src="images/payumoney.png" />
+    	<img width="200px" style="margin-top: 20px;"src="<?php echo base_url();?>assets/registration_assets/images/money_logo.jpg" />
     </div>
     <div>
-    	<h3>Payment checkout</h3>
+    	<h3>Payment Checkout</h3>
+    	<h5>Registratioin fee payment for Northeast Startup Summit by Imphal Angels 2019</h5>
     </div>
    
 	<form action="#" id="payment_form">
     <input type="hidden" id="udf5" name="udf5" value="<?php echo $this->session->userdata('udf5');?>" />
-    <input type="hidden" id="surl" name="surl" value="<?php echo base_url();?>payment/response" />
-     <input type="hidden" id="furl" name="furl" value="<?php echo base_url();?>payment/response" />
-   <div class="dv">
+    <input type="hidden" id="surl" name="surl" value="<?php echo base_url();?>payment/payment_success" />
+     <input type="hidden" id="furl" name="furl" value="<?php echo base_url();?>payment/payment_fail" />
+   <div class="dv" hidden>
     <span class="text"><label>Merchant Key:</label></span>
     <span class="form-group"><input type="text" id="key" name="key" class="form-control" placeholder="Merchant Key" value="<?php echo $this->session->userdata('merchantKey'); ?>" /></span>
     </div>
     
-    <div class="dv">
+    <div class="dv" hidden>
     <span class="text"><label>Merchant Salt:</label></span>
     <span class="form-group"><input type="text" id="salt" name="salt" class="form-control" placeholder="Merchant Salt" value="<?php echo $this->session->userdata('salt'); ?>" /></span>
     </div>
     
-    <div class="dv">
+    <div class="dv"hidden>
     <span class="text"><label>Transaction/Order ID:</label></span>
     <span class="form-group"><input type="text" id="txnid" name="txnid" class="form-control" placeholder="Transaction ID" value="<?php echo $this->session->userdata('txnNo'); ?>" /></span>
     </div>
@@ -71,7 +73,7 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
     <span class="form-group"><input type="text" id="amount" class="form-control" name="amount" placeholder="Amount" value="<?php echo $this->session->userdata('amount'); ?>" /></span>    
     </div>
     
-    <div class="dv">
+    <div class="dv"hidden>
     <span class="text"><label>Product Info:</label></span>
     <span class="form-group"><input type="text" id="pinfo" class="form-control" name="pinfo" placeholder="Product Info" value="<?php echo $this->session->userdata('productInfo'); ?>" /></span>
     </div>
@@ -91,18 +93,20 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
     <span class="form-group"><input type="text" id="mobile" class="form-control" name="mobile" placeholder="Mobile/Cell Number" value="<?php echo $this->session->userdata('company_contact'); ?>" /></span>
     </div>
     
-    <div class="dv">
+    <div class="dv"hidden>
     <span class="text"><label>Hash:</label></span>
     <span class="form-group"><input type="text" id="hash" class="form-control"   name="hash" placeholder="Hash" value="<?php  //$this->session->userdata('hash');?>" /></span>
     </div>
     
     
-    
-    <div class="col-md-2">
-    <a href="<?php echo base_url()?>registration" class="btn btn-danger">Cancel</a>
+    <br>
+
+    <div class="col-md-3 col-md-offset-3" align="center">
+    <a href="<?php echo base_url()?>registration" style="width: 100%; margin-bottom: 10px;" class="btn btn-danger">Cancel</a>
     	
     </div>
-    <div class="col-md-2"><input type="submit" value="Pay" class="form-control btn btn-success"  onclick="launchBOLT(); return false;" /></div>
+    <div class="col-md-3"><input type="submit" value="Pay <?php echo "Rs.".$this->session->userdata('amount'); ?>" class="form-control btn btn-success"  onclick="launchBOLT(); return false;" /></div>
+    <br><br>
 	</form>
 	</div>
 </div>
@@ -129,7 +133,7 @@ function launchBOLT()
 		//Salt is passd here for demo purpose only. For practical use keep salt at server side only.
 		var fr = '<form action=\"'+$('#surl').val()+'\" method=\"post\">' +
 		'<input type=\"hidden\" name=\"key\" value=\"'+BOLT.response.key+'\" />' +
-		'<input type=\"hidden\" name=\"salt\" value=\"'+$('#salt').val()+'\" />' +
+		'<input type=\"hidden\" name=\"salt\" value=\"'+BOLT.response.salt+'\" />' +
 		'<input type=\"hidden\" name=\"txnid\" value=\"'+BOLT.response.txnid+'\" />' +
 		'<input type=\"hidden\" name=\"amount\" value=\"'+BOLT.response.amount+'\" />' +
 		'<input type=\"hidden\" name=\"productinfo\" value=\"'+BOLT.response.productinfo+'\" />' +
@@ -189,7 +193,7 @@ function hash_val(){
 //--
 </script>	
 
-<?php $this->session->sess_destroy();?>
+
 
 </body>
 </html>

@@ -6,15 +6,12 @@
 				<div class="mu-footer-area">
 					<div class="mu-footer-top">
 						<div class="mu-social-media">
-							<a href="#"><i class="fa fa-facebook"></i></a>
-							<a href="#"><i class="fa fa-twitter"></i></a>
-							<a href="#"><i class="fa fa-google-plus"></i></a>
-							<a href="#"><i class="fa fa-linkedin"></i></a>
-							<a href="#"><i class="fa fa-youtube"></i></a>
+							<a href="https://www.facebook.com/ImphalAngels/"><i class="fa fa-facebook"></i></a>
+							<a href="https://twitter.com/ImphalAngels"><i class="fa fa-twitter"></i></a>
 						</div>
 					</div>
 					<div class="mu-footer-bottom">
-						<p class="mu-copy-right">&copy; Copyright <a rel="nofollow" href="http://markups.io">markups.io</a>. All right reserved.</p>
+						<p class="mu-copy-right">&copy; Copyright 2019 <a rel="nofollow" href="https://imphalangels.com/">Imphal Angels</a>. All right reserved.</p>
 					</div>
 				</div>
 			</div>
